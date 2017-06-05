@@ -1,0 +1,119 @@
+***CPU0_Read*******
+cpu0 cache0 - 1 1
+cache1 cache0 - 2 0.5
+membus mem - 3 0.05
+membus gfx - 7 0.05
+membus audio - 9 0.05
+membus usb - 11 0.05
+membus uart - 13 0.05
+cache0 cpu0 - 14 1
+
+***CPU1_Read*******
+cpu1 cache1 - 1 1
+cache0 cache1 - 2 0.5
+membus mem - 3 0.05
+membus gfx - 7 0.05
+membus audio - 9 0.05
+membus usb - 11 0.05
+membus uart - 13 0.05
+cache1 cpu1 - 14 1
+
+***CPU0_write*******
+cpu0 cache0 - 1 1
+cache1 cache0 - 2 0.5
+membus mem - 3 0.05
+membus gfx - 7 0.05
+membus audio - 9 0.05
+membus usb - 11 0.05
+membus uart - 13 0.05
+cache0 cpu0 - 14 1
+
+***CPU1_write*******
+cpu1 cache1 - 1 1
+cache0 cache1 - 2 0.5
+membus mem - 3 0.05
+membus gfx - 7 0.05
+membus audio - 9 0.05
+membus usb - 11 0.05
+membus uart - 13 0.05
+cache1 cpu1 - 14 1
+
+****audio_upstream_write******
+audio membus - 1 1
+cache1 cache0 - 2 0.5
+cache0 membus - 3 1
+membus mem - 4 0.2
+membus gfx - 8 0.2
+membus usb - 10 0.2
+membus uart - 12 0.2
+membus audio - 13 1
+
+****gfx_upstream_write******
+gfx membus - 1 1
+cache1 cache0 - 2 0.5
+cache0 membus - 3 1
+membus mem - 4 0.2
+membus audio - 8 0.2
+membus usb - 10 0.2
+membus uart - 12 0.2
+membus gfx - 13 1
+
+****audio_upstream_read******
+audio membus - 1 1
+cache1 cache0 - 2 0.5
+cache0 membus - 3 1
+membus mem - 4 0.2
+membus gfx - 8 0.2
+membus usb - 10 0.2
+membus uart - 12 0.2
+membus audio - 13 1
+
+****gfx_upstream_read******
+gfx membus - 1 1
+cache1 cache0 - 2 0.5
+cache0 membus - 3 1
+membus mem - 4 0.2
+membus audio - 8 0.2
+membus usb - 10 0.2
+membus uart - 12 0.2
+membus gfx - 13 1
+
+****usb_upstream_read******
+usb membus - 1 1
+cache1 cache0 - 2 0.5
+cache0 membus - 3 1
+membus mem - 4 0.2
+membus audio - 8 0.2
+membus gfx - 10 0.2
+membus uart - 12 0.2
+membus usb - 13 1
+
+****uart_upstream_read******
+uart membus - 1 1
+cache1 cache0 - 2 0.5
+cache0 membus - 3 1
+membus mem - 4 0.2
+membus audio - 8 0.2
+membus usb - 10 0.2
+membus gfx - 12 0.2
+membus uart - 13 1
+
+**cpu0 power up****
+cpu0 cache0 - 1 1 
+cache0 cpu0 - 2 1
+
+**cpu1 power up****
+cpu1 cache1 - 1 1 
+cache1 cpu1 - 2 1
+
+
+
+**cpu0 power off****
+cpu0 cache0 - 1 1 
+cache0 cpu0 - 2 1
+
+**cpu1 power off****
+cpu1 cache1 - 1 1 
+cache1 cpu1 - 2 1
+
+

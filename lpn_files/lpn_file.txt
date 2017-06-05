@@ -1,0 +1,248 @@
+***CPU0_Read*******
+cpu0 cache0 rd 1 1
+cache0 cache1 rdreq 2 0.5
+cache1 cache0 rdres 3 0.5
+cache0 membus rd 4 0.25
+membus mem rd 5 0.05
+membus gfx rd 7 0.05
+membus audio rd 9 0.05
+membus usb rd 11 0.05
+membus uart rd 13 0.05
+mem membus rd 6 0.05
+gfx membus rd 8 0.05
+audio membus rd 10 0.05
+usb membus rd 12 0.05
+uart membus rd 14 0.05
+membus cache0 rd 15 0.25
+cache0 cpu0 rd 16 1
+
+***CPU1_Read*******
+cpu1 cache1 rd 1 1
+cache1 cache0 rdreq 2 0.5
+cache0 cache1 rdres 3 0.5
+cache1 membus rd 4 0.25
+membus mem rd 5 0.05
+membus gfx rd 7 0.05
+membus audio rd 9 0.05
+membus usb rd 11 0.05
+membus uart rd 13 0.05
+mem membus rd 6 0.05
+gfx membus rd 8 0.05
+audio membus rd 10 0.05
+usb membus rd 12 0.05
+uart membus rd 14 0.05
+membus cache1 rd 15 0.25
+cache1 cpu1 rd 16 1
+
+***CPU0_Write*******
+cpu0 cache0 wt 1 1
+cache0 cache1 wtreq 2 0.5
+cache1 cache0 wtres 3 0.5
+cache0 membus wt 4 0.25
+membus mem rd 5 0.05
+membus gfx rd 7 0.05
+membus audio rd 9 0.05
+membus usb rd 11 0.05
+membus uart rd 13 0.05
+mem membus rd 6 0.05
+gfx membus rd 8 0.05
+audio membus rd 10 0.05
+usb membus rd 12 0.05
+uart membus rd 14 0.05
+membus cache0 wt 15 0.25
+cache0 cpu0 wt 16 1
+
+***CPU1_Write*******
+cpu1 cache1 wt 1 1
+cache1 cache0 wtreq 2 0.5
+cache0 cache1 wtres 3 0.5
+cache1 membus wt 4 0.25
+membus mem rd 5 0.05
+membus gfx rd 7 0.05
+membus audio rd 9 0.05
+membus usb rd 11 0.05
+membus uart rd 13 0.05
+mem membus rd 6 0.05
+gfx membus rd 8 0.05
+audio membus rd 10 0.05
+usb membus rd 12 0.05
+uart membus rd 14 0.05
+membus cache1 wt 15 0.25
+cache1 cpu1 wt 16 1
+
+****audio_upstream_write******
+audio membus upwt 1 1
+membus cache0 wtreq 2 1
+cache0 cache1 wtreq 3 0.5
+cache1 cache0 wtres 4 0.5
+cache0 membus wtres 5 1
+membus mem wt 6 0.2
+membus gfx wt 8 0.2
+membus usb wt 10 0.2
+membus uart wt 12 0.2
+mem membus wt 7 0.2
+gfx membus wt 9 0.2
+usb membus wt 11 0.2
+uart membus wt 13 0.2
+membus audio upwt 14 1
+
+****GFX_upstream_write******
+gfx membus upwt 1 1
+membus cache0 wtreq 2 1
+cache0 cache1 wtreq 3 0.5
+cache1 cache0 wtres 4 0.5
+cache0 membus wtres 5 1
+membus mem wt 6 0.2
+membus audio wt 8 0.2
+membus usb wt 10 0.2
+membus uart wt 12 0.2
+mem membus wt 7 0.2
+audio membus wt 9 0.2
+usb membus wt 11 0.2
+uart membus wt 13 0.2
+membus gfx upwt 14 1
+
+
+
+****audio_upstream_read******
+audio membus uprd 1 1
+membus cache0 rdreq 2 1
+cache0 cache1 rdreq 3 0.5
+cache1 cache0 rdres 4 0.5
+cache0 membus rdres 5 1
+membus mem rd 6 0.2
+membus gfx rd 8 0.2
+membus usb rd 10 0.2
+membus uart rd 12 0.2
+mem membus rd 7 0.2
+gfx membus rd 9 0.2
+usb membus rd 11 0.2
+uart membus rd 13 0.2
+membus audio uprd 14 1
+
+****GFX_upstream_read******
+gfx membus uprd 1 1
+membus cache0 rdreq 2 1
+cache0 cache1 rdreq 3 0.5
+cache1 cache0 rdres 4 0.5
+cache0 membus rdres 5 1
+membus mem rd 6 0.2
+membus audio rd 8 0.2
+membus usb rd 10 0.2
+membus uart rd 12 0.2
+mem membus rd 7 0.2
+audio membus rd 9 0.2
+usb membus rd 11 0.2
+uart membus rd 13 0.2
+membus gfx uprd 14 1
+
+
+****usb_upstream_read******
+usb membus uprd 1 1
+membus cache0 rdreq 2 1
+cache0 cache1 rdreq 3 0.5
+cache1 cache0 rdres 4 0.5
+cache0 membus rdres 5 1
+membus mem rd 6 0.2
+membus gfx rd 8 0.2
+membus audio rd 10 0.2
+membus uart rd 12 0.2
+mem membus rd 7 0.2
+gfx membus rd 9 0.2
+audio membus rd 11 0.2
+uart membus rd 13 0.2
+membus usb uprd 14 1
+
+
+****uart_upstream_read******
+uart membus uprd 1 1
+membus cache0 rdreq 2 1
+cache0 cache1 rdreq 3 0.5
+cache1 cache0 rdres 4 0.5
+cache0 membus rdres 5 1
+membus mem rd 6 0.2
+membus gfx rd 8 0.2
+membus audio rd 10 0.2
+membus usb rd 12 0.2
+mem membus rd 7 0.2
+gfx membus rd 9 0.2
+audio membus rd 11 0.2
+usb membus rd 13 0.2
+membus uart uprd 14 1
+
+**cpu0 power up****
+cpu0 cache0 pwr_on 1 1 
+cache0 membus pwr_on 2 1
+membus pwr pwr_on 3 1
+pwr gfx pwr_on 4 0.25
+pwr usb pwr_on 6 0.25
+pwr uart pwr_on 8 0.25
+pwr audio pwr_on 10 0.25
+gfx pwr pwr_on 5 0.25
+usb pwr pwr_on 7 0.25
+uart pwr pwr_on 9 0.25
+audio pwr pwr_on 11 0.25
+pwr membus pwr_on 12 1
+membus cache0 pwr_on 13 1
+cache0 cpu0 pwr_on 14 1
+
+**cpu1 power up****
+cpu1 cache1 pwr_on 1 1 
+cache1 membus pwr_on 2 1
+membus pwr pwr_on 3 1
+pwr gfx pwr_on 4 0.25
+pwr usb pwr_on 6 0.25
+pwr uart pwr_on 8 0.25
+pwr audio pwr_on 10 0.25
+gfx pwr pwr_on 5 0.25
+usb pwr pwr_on 7 0.25
+uart pwr pwr_on 9 0.25
+audio pwr pwr_on 11 0.25
+pwr membus pwr_on 12 1
+membus cache1 pwr_on 13 1
+cache1 cpu1 pwr_on 14 1
+
+
+**cpu0 power off****
+cpu0 cache0 pwr_off 1 1 
+cache0 membus pwr_off 2 1
+membus pwr pwr_off 3 1
+pwr gfx pwr_off 4 0.25
+pwr usb pwr_off 6 0.25
+pwr uart pwr_off 8 0.25
+pwr audio pwr_off 10 0.25
+gfx pwr pwr_off 5 0.25
+usb pwr pwr_off 7 0.25
+uart pwr pwr_off 9 0.25
+audio pwr pwr_off 11 0.25
+pwr membus pwr_off 12 1
+membus cache0 pwr_off 13 1
+cache0 cpu0 pwr_off 14 1
+
+**cpu1 power off****
+cpu1 cache1 pwr_off 1 1 
+cache1 membus pwr_off 2 1
+membus pwr pwr_off 3 1
+pwr gfx pwr_off 4 0.25
+pwr usb pwr_off 6 0.25
+pwr uart pwr_off 8 0.25
+pwr audio pwr_off 10 0.25
+gfx pwr pwr_off 5 0.25
+usb pwr pwr_off 7 0.25
+uart pwr pwr_off 9 0.25
+audio pwr pwr_off 11 0.25
+pwr membus pwr_off 12 1
+membus cache1 pwr_off 13 1
+cache1 cpu1 pwr_off 14 1
+
+
+
+
+
+
+
+
+
+
+
+
