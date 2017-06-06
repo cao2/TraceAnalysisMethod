@@ -237,6 +237,31 @@ cache1 cpu1 pwr_off 14 1
 
 
 
+***CPU0_Writeback*******
+cache0 membus wb 1 1
+membus mem wb 2 0.2
+membus gfx wb 4 0.2
+membus audio wb 6 0.2
+membus usb wb 8 0.2
+membus uart wb 10 0.2
+mem membus wb 3 0.2
+gfx membus wb 5 0.2
+audio membus wb 7 0.2
+usb membus wb 9 0.2
+uart membus wb 11 0.2
+
+***CPU1_Writeback*******
+cache1 membus wb 1 1
+membus mem wb 2 0.2
+membus gfx wb 4 0.2
+membus audio wb 6 0.2
+membus usb wb 8 0.2
+membus uart wb 10 0.2
+mem membus wb 3 0.2
+gfx membus wb 5 0.2
+audio membus wb 7 0.2
+usb membus wb 9 0.2
+uart membus wb 11 0.2
 
 
 

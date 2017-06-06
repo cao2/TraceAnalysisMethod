@@ -307,7 +307,7 @@ public:
         
         //cout<<"begin"<<endl;
         vector<message_t>().swap(trace);
-        int pl[num_sigs+1];
+        int pl[num_sigs+4];
         int num =0;
         uint32_t state=0;
         for (uint32_t i = 0; i < line.size(); i++)
@@ -456,17 +456,23 @@ public:
                         new_msg.addr=0;
                         new_msg.tag=0;
                         bool valid=false;
-                        if (j==17 && tag==true){
-                            //set the tag
-                           // cout<<"here:"<<line.substr(pl[74],9)<<" : "<<stoi(line.substr(pl[74]+1,8),nullptr,2)<<endl;
-                            new_msg.tag=new_msg.get_tag(stoi(line.substr(pl[74]+1,8),nullptr,2));
-                            //cout<<"tag:"<<new_msg.tag<<endl;
+                        if (j==17 ){
+                            if (tag)
+                                new_msg.tag=new_msg.get_tag(stoi(line.substr(pl[74]+1,8),nullptr,2));
+                            if (addr_en){
+                                new_msg.addr=stoi(line.substr(pl[75]+1,8),nullptr,2);
+                            }
+                        }
+                        else if (j==21 ){
+                            if (tag)
+                                new_msg.tag=new_msg.get_tag(stoi(line.substr(pl[76]+1,8),nullptr,2));
+                            if (addr_en){
+                                new_msg.addr=stoi(line.substr(pl[77]+1,8),nullptr,2);
+                            }
                         }
                         if (j==17 || j==25||j==33 ||j==41||j==49 ){
                             //cout<<j<<": "<<line.substr(pl[j-1]+1,36);
                             new_msg.cmd = rd;
-                            
-                            new_msg.addr=0;
                             valid=true;
                             j++;
                         }
@@ -480,8 +486,6 @@ public:
                         else{
                             new_msg.cmd = wt;
                             if (j==21|| j==29||j==37|| j==45  || j==53){
-                                
-                                new_msg.addr=0;
                                 valid=true;
                                 j++;
                                 

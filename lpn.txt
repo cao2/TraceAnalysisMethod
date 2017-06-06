@@ -324,3 +324,33 @@ cache1:cpu1:pwr_off:-:0 pre 13 post 14
 
 
 
+******************lpn ***CPU0_Writeback*******
+cache0:membus:wb:-:0 pre 0 post 1
+membus:mem:wb:-:0 pre 1 post 2
+membus:gfx:wb:-:0 pre 1 post 3
+membus:audio:wb:-:0 pre 1 post 4
+membus:usb:wb:-:0 pre 1 post 5
+membus:uart:wb:-:0 pre 1 post 6
+mem:membus:wb:-:0 pre 2 post 7
+gfx:membus:wb:-:0 pre 3 post 8
+audio:membus:wb:-:0 pre 4 post 9
+usb:membus:wb:-:0 pre 5 post 10
+uart:membus:wb:-:0 pre 6 post 11
+
+
+
+******************lpn ***CPU1_Writeback*******
+cache1:membus:wb:-:0 pre 0 post 1
+membus:mem:wb:-:0 pre 1 post 2
+membus:gfx:wb:-:0 pre 1 post 3
+membus:audio:wb:-:0 pre 1 post 4
+membus:usb:wb:-:0 pre 1 post 5
+membus:uart:wb:-:0 pre 1 post 6
+mem:membus:wb:-:0 pre 2 post 7
+gfx:membus:wb:-:0 pre 3 post 8
+audio:membus:wb:-:0 pre 4 post 9
+usb:membus:wb:-:0 pre 5 post 10
+uart:membus:wb:-:0 pre 6 post 11
+
+
+
