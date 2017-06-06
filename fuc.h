@@ -327,9 +327,7 @@ void dscen(stack<scenario_t> &sk){
                         match=true;
                         break;
                         }
-                    else
-                        cout<<"order different"<<endl;
-                }
+                                    }
         
         sk.pop();
         if (!match)

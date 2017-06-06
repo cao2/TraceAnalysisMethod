@@ -164,7 +164,6 @@ int main(int argc, char *argv[]) {
         string cfg_str;
         msgs* readmsg=new msgs();
         readmsg->init(stoi(argv[3]));
-        readmsg->set_offset(23);
         while (getline(trace_file, line)){
             tim++;
             stack<uint32_t> tri_stack;
@@ -231,7 +230,7 @@ int main(int argc, char *argv[]) {
                         for (uint32_t i = 0; i < scenario.active_t.size(); i++) {
                             flow_instance_t f = scenario.active_t.at(i);
                             new_cfg = f.flow_inst->accept(msg, f.cfg);
-                            if ((new_cfg != null_cfg && f.time!=tim &&(f.flow_inst->get_tag()==msg.tag || msg.tag==0) && (f.addr==msg.addr||(msg.dest==membus&&                                                                                           msg.addr==0)))) {
+                            if ((new_cfg != null_cfg && f.time!=tim &&(f.flow_inst->get_tag()==msg.tag || msg.tag==0) && (f.addr==msg.addr||((msg.dest==membus&&                                                                                           msg.addr==0)))) {
                                // cout<<"matched "<<f.flow_inst->get_flow_name()<<" addr:"<<f.addr<<endl;
                                 uint32_t flow_index = f.flow_inst->get_index();
                                 new_scenario = scenario;

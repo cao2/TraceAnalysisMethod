@@ -25,7 +25,7 @@ private:
     bool addr_en;
     bool cmd;
     bool tag;
-    int offset;
+    //int offset;
     bool control;
     vector<int> traced_signal;
     vector<int> be_signal;
@@ -36,15 +36,13 @@ public:
         cmd=true;
         tag=true;
         addr_en=true;
-        offset=21;
+        //offset=21;
         control=false;
     }
     void set_control(bool x){
         control=x;
     }
-    void set_offset(int x){
-        offset=x;
-    }
+    
     void set_addr_en(bool addr){
         addr_en=addr;
     }
@@ -336,7 +334,7 @@ public:
                         cout<<"cmd doesn't looks right. Error 1"<<endl;
            //set address bits
             if (addr_en)
-                new_msg.addr = stol(tmp_str.substr(25+offset,32-offset),nullptr,2);
+                new_msg.addr = stol(tmp_str.substr(17,8),nullptr,2);
             else
                 new_msg.addr=0;
             
@@ -430,7 +428,7 @@ public:
                         else
                             cout<<"cmd doesn't looks right. Error 1: "<<tmp_str<<endl;
                         if (addr_en)
-                            new_msg.addr = stol(tmp_str.substr(25+offset,32-offset),nullptr,2);
+                            new_msg.addr = stol(tmp_str.substr(17,8),nullptr,2);
                         else
                             new_msg.addr=0;
                         
@@ -467,10 +465,8 @@ public:
                         if (j==17 || j==25||j==33 ||j==41||j==49 ){
                             //cout<<j<<": "<<line.substr(pl[j-1]+1,36);
                             new_msg.cmd = rd;
-                            if (addr_en)
-                                new_msg.addr=stoll(line.substr(pl[j]+1+offset,32-offset),nullptr,2);
-                            else
-                                new_msg.addr=0;
+                            
+                            new_msg.addr=0;
                             valid=true;
                             j++;
                         }
@@ -484,10 +480,8 @@ public:
                         else{
                             new_msg.cmd = wt;
                             if (j==21|| j==29||j==37|| j==45  || j==53){
-                                if (addr_en)
-                                    new_msg.addr=stoll(line.substr(pl[j]+1+offset,32-offset),nullptr,2);
-                                else
-                                    new_msg.addr=0;
+                                
+                                new_msg.addr=0;
                                 valid=true;
                                 j++;
                                 
