@@ -19,7 +19,7 @@
 
 
 using namespace std;
-bool memcheck=false;
+bool memcheck=true;
 bool order_en=false;
 //vector<message_t> uniq_msg;
 set<message_t> uniq_msg;
@@ -130,7 +130,7 @@ int main(int argc, char *argv[]) {
             bool fin=false;
             old_size=s_stack.size();
             if(tim%200==0){
-                
+                dscen(s_stack);
                
                 if (memcheck)
                     getMemUsage(pid, "log");
@@ -268,7 +268,9 @@ int main(int argc, char *argv[]) {
                     s_stack.swap(new_s_stack);
                     
                 if (fin){
-                    dscen(s_stack);
+                    cout<<"Flow Finished "<<endl;
+
+                    //dscen(s_stack);
                     //flag=true;
                    // break;
                 }
