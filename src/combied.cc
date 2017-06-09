@@ -19,26 +19,10 @@
 
 
 using namespace std;
-bool memcheck=true;
+bool memcheck=false;
 bool order_en=false;
 //vector<message_t> uniq_msg;
 set<message_t> uniq_msg;
-void uniq(lpn_t* protocol){/**
-                            ofstream uniq_msg;
-                            uniq_msg.open("uniq_msg.txt", ios::trunc);
-                            uniq_msg.close();**/
-    for (message_t x: protocol->msg_vector){
-        //        flag=false;
-        //        for (message_t y: uniq_msg)
-        //            if (y.src==x.src && y.dest==x.dest && y.cmd==x.cmd){
-        //                flag=true;
-        //                break;
-        //            }
-        //        if (flag==false)
-        //            uniq_msg.push_back(x);
-        uniq_msg.insert(x);
-    }
-}
 
 int main(int argc, char *argv[]) {
     //obtain process id for memory tracking
@@ -47,7 +31,7 @@ int main(int argc, char *argv[]) {
     uint32_t max=0;
     //clear out the log file
     ofstream memfile;
-    memfile.open("log",ios::trunc);
+    memfile.open("bin/log",ios::trunc);
     memfile.close();
 
     vector<lpn_t*> flow_spec;
@@ -78,25 +62,6 @@ int main(int argc, char *argv[]) {
     flow_spec=x.get_flow_spec();
     cout<<"totoal flows "<<flow_spec.size()<<endl;
     
-    
-    
-    
-
-    //sort(uniq_msg.begin(),uniq_msg.end());
-    //uniq_msg.erase( unique( uniq_msg.begin(), uniq_msg.end() ), uniq_msg.end() );
-    
-    //get the unique mesgs, USEFULLLL!!!!!!!!!!!!!
-    /**
-     cout<<"unique messages:"<<endl;
-     ofstream uni_msg;
-     uni_msg.open("uniq_msgs.txt",ios::trunc);
-     for(message_t x: uniq_msg){
-     uni_msg<<x.toString()<<"\n";
-     cout<<x.toString()<<endl;}
-     uni_msg.close();
-     **/
-    ofstream errorfile;
-    errorfile.open ("erromsg.txt",ios::trunc);
     
     
     
@@ -133,7 +98,7 @@ int main(int argc, char *argv[]) {
                 dscen(s_stack);
                
                 if (memcheck)
-                    getMemUsage(pid, "log");
+                    getMemUsage(pid, "bin/log");
                 //break;
             }
             stack<scenario_t> tmp_stack;
@@ -285,7 +250,6 @@ int main(int argc, char *argv[]) {
                 break;
             }
         }
-        errorfile.close();
         bool succ = false;
         cout<<"==============================================="<<endl;
         cout<<"==============================================="<<endl;
@@ -331,8 +295,8 @@ int main(int argc, char *argv[]) {
                 cout << endl;}
         }
         if (memcheck){
-            getMemUsage(pid, "log");
-            max_mem("log");}
+            getMemUsage(pid, "bin/log");
+            max_mem("bin/log");}
         cout<<"max # of flow execution scenario: "<<max<<endl;
     }
     else{

@@ -55,7 +55,7 @@ public:
         
     }
     void parse(string filename){
-        ofstream myfile ("lpn.txt");
+        ofstream myfile ("bin/lpn.txt");
         string line;
         ifstream lpn_file(filename);
         index=0;
@@ -163,13 +163,10 @@ public:
                                     sum_condi+=tmp.condition;
                                     msg_1.pre_cfg=trees.at(i).postcfg;
                                     
-                                    //trees.at(i).condition=stod(condition);
-                                    ////cout<<"update treees at "<<i<<" sequence:"<<trees.at(i).sequence<<" postcfg:"<<trees.at(i).postcfg<<endl;
-                                    //cout<<line<<" :pre "<<msg_1.pre_cfg<<" post: "<<msg_1.post_cfg<<endl;
+                                   
                                     lpn->insert_msg(msg_1);
                                     
                                     if (sum_condi<stod(condition)){
-                                        ////cout<<"i : "<<i<<" delete it"<<endl;
                                         trees.erase(trees.begin()+i);
                                     }
 
@@ -185,20 +182,14 @@ public:
                         }
                         else if (stod(condition)==precondi){
                             //find a pre sequence.
-                            ////cout<<"here"<<endl;
                             int pre=findindex(stol(sequence)-1);
                             if (pre>-1){
-                                ////cout<<line<<endl;
-                                ////cout<<"find, index is "<<pre<<endl;
-                                //tmp_branch=trees.at(pre);
                                 trees.at(pre).sequence=stol(sequence);
                                 trees.at(pre).condition=stod(condition);
                                 msg.pre_cfg=trees.at(pre).postcfg;
                                 trees.at(pre).postcfg=msg.post_cfg;
-                                ////cout<<"update treees at "<<pre<<" sequence:"<<trees.at(pre).sequence<<" postcfg:"<<trees.at(pre).postcfg<<endl;
                             }
                             else{
-                                ////cout<<"can't find index with sequence ="<<stol(sequence)-1<<" add new  branch"<<endl;
                                 num_branch--;
                                 msg.pre_cfg=tmp_branch.postcfg;
                                 path_node cur=tmp_branch;
@@ -206,14 +197,12 @@ public:
                                 cur.postcfg=msg.post_cfg;
                                 cur.condition=stod(condition);
                                 trees.push_back(cur);
-                                ////cout<<"push back to trees "<<cur.sequence<<" "<<cur.postcfg<<" "<<cur.condition<<endl;
                             }
 
                         }
                         
                     }
                     if (flag==false){
-                        //cout<<line<<" :pre "<<msg.pre_cfg<<" post: "<<msg.post_cfg<<endl;
                         lpn->insert_msg(msg);}
                     precondi=stod(condition);
                 }
@@ -230,6 +219,9 @@ public:
             }
                 
             }
+        }
+        else{
+            cout<<"ERROR lpn file "<<filename<<" can't be opened"<<endl;
         }
         myfile.close();
     }

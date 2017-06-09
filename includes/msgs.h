@@ -25,6 +25,7 @@ private:
     bool addr_en;
     bool cmd;
     bool tag;
+    bool uniq_en;
     //int offset;
     bool control;
     vector<int> traced_signal;
@@ -38,6 +39,7 @@ public:
         addr_en=true;
         //offset=21;
         control=false;
+        uniq_en=false;
     }
     void set_control(bool x){
         control=x;
@@ -110,6 +112,17 @@ public:
                     tag=true;
                     addr_en=true;
                 }
+                else if (selec==19){
+                    cmd=false;
+                    tag=true;
+                    addr_en=true;
+                }
+                else if (selec==20){
+                    cmd=false;
+                    tag=true;
+                    addr_en=true;
+                    uniq_en=true;
+                }
 
             }
             else if (selec%2==0)
@@ -132,8 +145,9 @@ public:
                 traced_signal.push_back(53);
             if (selec ==4){
                     cmd=false;
-                    tag=false;
+                    tag=true;
                     addr_en=true;
+                    uniq_en=true;
                 }
                 else if (selec ==6){
                     cmd=false;
@@ -174,8 +188,9 @@ public:
                 traced_signal.push_back(53);
                 if (selec ==5){
                     cmd=false;
-                    tag=false;
+                    tag=true;
                     addr_en=true;
+                    uniq_en=true;
                 }
                 else if (selec ==7){
                     cmd=false;
@@ -304,8 +319,6 @@ public:
         srcs[74]=audio;       dests[74]=pwr;          lengths[74]=89;//audio pwr res
     }
     void parse(std::string line){
-        
-        //cout<<"begin"<<endl;
         vector<message_t>().swap(trace);
         int pl[num_sigs+4];
         int num =0;
@@ -317,7 +330,6 @@ public:
                     }
         uint32_t j =0;
         string tmp_str = line.substr(0, lengths[0]);
-        //cout<<tmp_str<<endl;
         if (tmp_str.at(0)=='1'){
                     new_msg.src = cpu0;
                     new_msg.dest = cache0;
@@ -347,23 +359,19 @@ public:
             
             
             
-            if (!cmd )
+            if (!cmd &&!uniq_en)
                 new_msg.cmd=0;
                 
-                    //new_msg.addr=0;
-                    //msg_file<<new_msg.toString()<<"|";
+            
                     trace.push_back(new_msg);
-                    //cout<<"0 : "<<new_msg.toString()<<endl;
                     num++;
                 }
                 for (j=1; j<num_sigs; j++)
                 if (std::find(std::begin(traced_signal), std::end(traced_signal),j)!=std::end(traced_signal))
                     {
-                       // cout<<j<<":"<<endl;
                     tmp_str = line.substr(pl[j-1]+1,lengths[j]);
                     
                     if (j>66 )
-                        //cout<<j<<": "<<tmp_str<<endl;
                     if (tmp_str.size()<lengths[j]){
                         break;}
                     
@@ -371,17 +379,6 @@ public:
                        
                         new_msg.src = srcs[j];
                         new_msg.dest = dests[j];
-                        //new_msg //
-//                        if (j==10 ||j ==11){
-//                            if (tmp_str.substr(1,8)=="01000000")
-//                                new_msg.cmd=snprd;
-//                            else if (tmp_str.substr(1,8)=="10000000")
-//                                new_msg.cmd=snpwt;
-//                            else
-//                                cout<<"ERROR SNP RD?WT"<<endl;
-//                        
-//                        }
-                        //else
                         if (tmp_str.substr(1,8)=="01000000"){
                             if (j>56)
                                 new_msg.cmd = uprd;
@@ -399,7 +396,6 @@ public:
                             }
                             else
                                 new_msg.cmd=rd;
-                            //cout<<"1"<<endl;
                         
                         }
                         else if (tmp_str.substr(1,8)=="00100000")
@@ -438,15 +434,12 @@ public:
                         else
                             new_msg.tag=0;
                         
-                        //msg_file<<new_msg.toString()<<"|";
-                        //cout<<"addr :"<<new_msg.addr<<endl;
-                        if (!cmd )
+                        bool uniq= uniq_en && std::find(std::begin(be_signal), std::end(be_signal),j)!=std::end(be_signal);
+                        if (!cmd &&!uniq )
                             new_msg.cmd=0;
                         trace.push_back(new_msg);
                         num++;
-                        //cout<<j<<": "<<tmp_str<<endl;
-                        //if (j==25)
-                        //cout<<j<<": "<<new_msg.toString()<<endl;
+                       
                         
                     }
                     else if (lengths[j]==1 and tmp_str.at(0)=='1' and j!=6 and j!=9 and j!=12){
@@ -471,7 +464,6 @@ public:
                             }
                         }
                         if (j==17 || j==25||j==33 ||j==41||j==49 ){
-                            //cout<<j<<": "<<line.substr(pl[j-1]+1,36);
                             new_msg.cmd = rd;
                             valid=true;
                             j++;
@@ -500,30 +492,17 @@ public:
                             
                         }
                         if (valid==true){
-                            //msg_file<<new_msg.toString()<<"|";
                             if (!cmd )
                                 new_msg.cmd=0;
                             trace.push_back(new_msg);
                             num++;
-                            //cout<<j<<": "<<line.substr(pl[j-1]+1,10)<<endl;
-                            //cout<<j<<" lala: "<<new_msg.toString()<<endl;
+                           
                         }
                         
                     }
                     
                 }
-                //msg_file<<"\n";
-            //}
-           //cout<<"finished"<<endl;
-           // trace_file.close();
-           //msg_file.close();
-        //cout<<"line finished"<<endl;
-            
-        //}
-        //else {
-         //   cout << "Unable to open file" << endl;
-        //}
-        //cout << "Info: read " << trace.size() << " messages." << endl;
+        
     }
     
     vector<message_t> getMsgs(){

@@ -1,0 +1,146 @@
+******************lpn ***CPU0_Read*******
+cpu0:cache0:rd:-:0 pre 0 post 1
+cache1:cache0:-:-:0 pre 1 post 2
+cache1:cache0:-:-:0 pre 1 post 3
+cache0:cpu0:rd:-:0 pre 1 post 4
+cache0:cpu0:rd:-:0 pre 1 post 4
+cache0:cpu0:rd:-:0 pre 3 post 4
+cache0:cpu0:rd:-:0 pre 2 post 4
+
+
+
+******************lpn ***CPU1_Read*******
+cpu1:cache1:rd:-:0 pre 0 post 1
+cache0:cache1:-:-:0 pre 1 post 2
+cache0:cache1:-:-:0 pre 1 post 3
+cache1:cpu1:rd:-:0 pre 1 post 4
+cache1:cpu1:rd:-:0 pre 1 post 4
+cache1:cpu1:rd:-:0 pre 3 post 4
+cache1:cpu1:rd:-:0 pre 2 post 4
+
+
+
+******************lpn ***CPU0_Write*******
+cpu0:cache0:wt:-:0 pre 0 post 1
+cache1:cache0:-:-:0 pre 1 post 2
+cache1:cache0:-:-:0 pre 1 post 3
+cache0:cpu0:wt:-:0 pre 1 post 4
+cache0:cpu0:wt:-:0 pre 1 post 4
+cache0:cpu0:wt:-:0 pre 3 post 4
+cache0:cpu0:wt:-:0 pre 2 post 4
+
+
+
+******************lpn ***CPU1_Write*******
+cpu1:cache1:wt:-:0 pre 0 post 1
+cache0:cache1:-:-:0 pre 1 post 2
+cache0:cache1:-:-:0 pre 1 post 3
+cache1:cpu1:wt:-:0 pre 1 post 4
+cache1:cpu1:wt:-:0 pre 1 post 4
+cache1:cpu1:wt:-:0 pre 3 post 4
+cache1:cpu1:wt:-:0 pre 2 post 4
+
+
+
+******************lpn ****audio_upstream_write******
+audio:membus:upwt:-:0 pre 0 post 1
+cache1:cache0:-:-:0 pre 1 post 2
+cache1:cache0:-:-:0 pre 1 post 3
+cache0:membus:-:-:0 pre 2 post 4
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 3 post 5
+membus:audio:upwt:-:0 pre 5 post 6
+membus:audio:upwt:-:0 pre 4 post 6
+
+
+
+******************lpn ****gfx_upstream_write******
+gfx:membus:upwt:-:0 pre 0 post 1
+cache1:cache0:-:-:0 pre 1 post 2
+cache1:cache0:-:-:0 pre 1 post 3
+cache0:membus:-:-:0 pre 2 post 4
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 3 post 5
+membus:gfx:upwt:-:0 pre 5 post 6
+membus:gfx:upwt:-:0 pre 4 post 6
+
+
+
+******************lpn ****audio_upstream_read******
+audio:membus:uprd:-:0 pre 0 post 1
+cache1:cache0:-:-:0 pre 1 post 2
+cache1:cache0:-:-:0 pre 1 post 3
+cache0:membus:-:-:0 pre 2 post 4
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 3 post 5
+membus:audio:uprd:-:0 pre 5 post 6
+membus:audio:uprd:-:0 pre 4 post 6
+
+
+
+******************lpn ****gfx_upstream_read******
+gfx:membus:uprd:-:0 pre 0 post 1
+cache1:cache0:-:-:0 pre 1 post 2
+cache1:cache0:-:-:0 pre 1 post 3
+cache0:membus:-:-:0 pre 2 post 4
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 3 post 5
+membus:gfx:uprd:-:0 pre 5 post 6
+membus:gfx:uprd:-:0 pre 4 post 6
+
+
+
+******************lpn ****usb_upstream_read******
+usb:membus:uprd:-:0 pre 0 post 1
+cache1:cache0:-:-:0 pre 1 post 2
+cache1:cache0:-:-:0 pre 1 post 3
+cache0:membus:-:-:0 pre 2 post 4
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 3 post 5
+membus:usb:uprd:-:0 pre 5 post 6
+membus:usb:uprd:-:0 pre 4 post 6
+
+
+
+******************lpn ****uart_upstream_read******
+uart:membus:uprd:-:0 pre 0 post 1
+cache1:cache0:-:-:0 pre 1 post 2
+cache1:cache0:-:-:0 pre 1 post 3
+cache0:membus:-:-:0 pre 2 post 4
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 1 post 5
+cache0:membus:-:-:0 pre 3 post 5
+membus:uart:uprd:-:0 pre 5 post 6
+membus:uart:uprd:-:0 pre 4 post 6
+
+
+
+******************lpn **cpu0 power up****
+cpu0:cache0:pwr_on:-:0 pre 0 post 1
+cache0:cpu0:pwr_on:-:0 pre 1 post 2
+
+
+
+******************lpn **cpu1 power up****
+cpu1:cache1:pwr_on:-:0 pre 0 post 1
+cache1:cpu1:pwr_on:-:0 pre 1 post 2
+
+
+
+******************lpn **cpu0 power off****
+cpu0:cache0:pwr_off:-:0 pre 0 post 1
+cache0:cpu0:pwr_off:-:0 pre 1 post 2
+
+
+
+******************lpn **cpu1 power off****
+cpu1:cache1:pwr_off:-:0 pre 0 post 1
+cache1:cpu1:pwr_off:-:0 pre 1 post 2
+
+
+
