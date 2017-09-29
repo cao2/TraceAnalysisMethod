@@ -21,6 +21,8 @@ private:
     uint32_t srcs[75];
     uint32_t dests[75];
     uint32_t lengths[75];
+    message_t last_valid[75];
+
     message_t new_msg;
     bool addr_en;
     bool cmd;
@@ -30,6 +32,8 @@ private:
     bool control;
     vector<int> traced_signal;
     vector<int> be_signal;
+    bool rd_en, wt_en, pwron_en,pwroff_en;
+    int id_offset;
 public:
     msgs() {
         num_sigs=75;
@@ -40,11 +44,21 @@ public:
         //offset=21;
         control=false;
         uniq_en=false;
+        id_offset=0;
+        rd_en= wt_en=pwron_en=pwroff_en=true;
+    }
+    void set_cmd_en(bool x, bool y, bool a, bool b){
+        rd_en=x;
+        wt_en=y;
+        pwron_en=a;
+        pwroff_en=b;
     }
     void set_control(bool x){
         control=x;
     }
-    
+    void set_idoffset(int x){
+        id_offset=x;
+    }
     void set_addr_en(bool addr){
         addr_en=addr;
     }
@@ -318,6 +332,15 @@ public:
         srcs[73]=pwr;       dests[73]=audio;          lengths[73]=89;//audio pwr req
         srcs[74]=audio;       dests[74]=pwr;          lengths[74]=89;//audio pwr res
     }
+    uint16_t channelof(const message_t& msg){
+        for(uint16_t i=0;i<75;i++){
+            if (srcs[i]==msg.src && dests[i]==msg.dest){
+                
+                return i;
+            }
+        }
+        return 90;
+    }
     void parse(std::string line){
         vector<message_t>().swap(trace);
         int pl[num_sigs+4];
@@ -333,20 +356,21 @@ public:
         if (tmp_str.at(0)=='1'){
                     new_msg.src = cpu0;
                     new_msg.dest = cache0;
+                    new_msg.cmd=0;
                     //new_msg //
-                    if (tmp_str.substr(1,8)=="01000000")
+                    if (tmp_str.substr(1,8)=="01000000" &&rd_en)
                         new_msg.cmd = rd;
-                    else if (tmp_str.substr(1,8)=="00100000")
+                    else if (tmp_str.substr(1,8)=="00100000"&& pwron_en)
                         new_msg.cmd =pwron;
-                    else if (tmp_str.substr(1,8)=="00010000")
+                    else if (tmp_str.substr(1,8)=="00010000"&& pwroff_en)
                         new_msg.cmd =pwroff;
-                    else if (tmp_str.substr(1,8)=="10000000")
+                    else if (tmp_str.substr(1,8)=="10000000" && wt_en)
                         new_msg.cmd = wt;
                     else
                         cout<<"cmd doesn't looks right. Error 1"<<endl;
            //set address bits
             if (addr_en)
-                new_msg.addr = stol(tmp_str.substr(17,8),nullptr,2);
+                new_msg.addr = stol(tmp_str.substr(17+id_offset,8-id_offset),nullptr,2);
             else
                 new_msg.addr=0;
             
@@ -361,12 +385,11 @@ public:
             
             if (!cmd &&!uniq_en)
                 new_msg.cmd=0;
-                
-            
-                    trace.push_back(new_msg);
-                    num++;
-                }
-                for (j=1; j<num_sigs; j++)
+            trace.push_back(new_msg);
+            num++;
+            last_valid[0]=new_msg;
+        }
+        for (j=1; j<num_sigs; j++)
                 if (std::find(std::begin(traced_signal), std::end(traced_signal),j)!=std::end(traced_signal))
                     {
                     tmp_str = line.substr(pl[j-1]+1,lengths[j]);
@@ -379,7 +402,7 @@ public:
                        
                         new_msg.src = srcs[j];
                         new_msg.dest = dests[j];
-                        if (tmp_str.substr(1,8)=="01000000"){
+                        if (tmp_str.substr(1,8)=="01000000" &&rd_en){
                             if (j>56)
                                 new_msg.cmd = uprd;
                             else if (j==4||j==7||j==10)
@@ -398,12 +421,12 @@ public:
                                 new_msg.cmd=rd;
                         
                         }
-                        else if (tmp_str.substr(1,8)=="00100000")
+                        else if (tmp_str.substr(1,8)=="00100000" && pwron_en)
                             new_msg.cmd =pwron;
-                        else if (tmp_str.substr(1,8)=="00010000")
+                        else if (tmp_str.substr(1,8)=="00010000" && pwroff_en)
                             new_msg.cmd =pwroff;
                         
-                        else if (tmp_str.substr(1,8)=="10000000"){
+                        else if (tmp_str.substr(1,8)=="10000000" &&wt_en){
                             if (j>56)
                                 new_msg.cmd = upwt;
                             else if (j==4||j==7||j==10)
@@ -421,10 +444,12 @@ public:
                             else
                                 new_msg.cmd =wt;
                         }
-                        else
-                            cout<<"cmd doesn't looks right. Error 1: "<<tmp_str<<endl;
+                        else{
+                            new_msg.cmd=0;
+                            cout<<"cmd doesn't looks right. Error 1 "<<endl;
+                        }
                         if (addr_en)
-                            new_msg.addr = stol(tmp_str.substr(17,8),nullptr,2);
+                            new_msg.addr = stol(tmp_str.substr(17+id_offset,8-id_offset),nullptr,2);
                         else
                             new_msg.addr=0;
                         
@@ -438,6 +463,7 @@ public:
                         if (!cmd &&!uniq )
                             new_msg.cmd=0;
                         trace.push_back(new_msg);
+                        last_valid[j]=new_msg;
                         num++;
                        
                         
@@ -448,12 +474,13 @@ public:
                         new_msg.dest=dests[j];
                         new_msg.addr=0;
                         new_msg.tag=0;
+                        new_msg.cmd=0;
                         bool valid=false;
                         if (j==17 ){
                             if (tag)
                                 new_msg.tag=new_msg.get_tag(stoi(line.substr(pl[74]+1,8),nullptr,2));
                             if (addr_en){
-                                new_msg.addr=stoi(line.substr(pl[75]+1,8),nullptr,2);
+                                new_msg.addr=stoi(line.substr(pl[75]+1+id_offset,8-id_offset),nullptr,2);
                             }
                         }
                         else if (j==21 ){
@@ -495,6 +522,7 @@ public:
                             if (!cmd )
                                 new_msg.cmd=0;
                             trace.push_back(new_msg);
+                            last_valid[j]=new_msg;
                             num++;
                            
                         }
@@ -504,7 +532,9 @@ public:
                 }
         
     }
-    
+    message_t * get_last(){
+        return last_valid;
+    }
     vector<message_t> getMsgs(){
         return trace;
     }

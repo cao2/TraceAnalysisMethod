@@ -24,7 +24,10 @@ bool order_en=false;
 //vector<message_t> uniq_msg;
 set<message_t> uniq_msg;
 
+message_t last_valid[75];
+
 int main(int argc, char *argv[]) {
+    int tagoffset=20;
     //obtain process id for memory tracking
     unsigned int pid = getpid();
     //keep track of the max # of scenario
@@ -86,39 +89,31 @@ int main(int argc, char *argv[]) {
         
         while (getline(trace_file, line)){
             tim++;
-            stack<uint32_t> tri_stack;
-            tri_stack.push(0);
             readmsg->parse(line);
             trace=readmsg->getMsgs();
+            //readmsg->set_idoffset(6);
+            //readmsg->set_cmd_en(true,true,false,false);
             bool match = true;
             bool flag =false;
             bool fin=false;
             old_size=s_stack.size();
-            if(tim%200==0){
+            if(tim%50==0){
                 dscen(s_stack);
-               
                 if (memcheck)
                     getMemUsage(pid, "bin/log");
+                //max_mem("bin/log");
                 //break;
             }
             stack<scenario_t> tmp_stack;
-            while (tri_stack.size() != 0) {
+            for(tri=0;tri<trace.size();tri++){
                 tmp_stack=s_stack;
                 match=false;
-                tri= tri_stack.top();
-                tri_stack.pop();
-                
-                // If index tri reaches the end of trace, store the current scenario.
-                if (tri == trace.size()) {
-                    //break if a scenario is found to match all messages.
-                    break;
-                }
-                
+                cout<<"2"<<endl;
                 message_t msg(trace.at(tri));
                 
-                
+                last_valid[readmsg->channelof(msg)]=msg;
                 cout << tim
-                <<"***  " << msg.toString() <<"  "<<s_stack.size() <<endl << endl;
+                <<"***  " << msg.toString() <<"  "<<s_stack.size() <<" max:" <<max<<endl << endl;
                 
                 
                 bool newflag=false;
@@ -131,7 +126,7 @@ int main(int argc, char *argv[]) {
                     config_t new_cfg = f->accept(msg);
                     //cout<<"tag :"<<msg.tag<<" : "<<f->get_tag()<<endl;
                     //cout<<"new_cfg="<<new_cfg<<endl;
-                    if (new_cfg != null_cfg && (f->get_tag()==msg.tag||msg.tag==0 )){
+                    if (new_cfg != null_cfg && (f->get_tag()%tagoffset==msg.tag%tagoffset||msg.tag==0 )){
                         cout<<" matched new flow "<<f->get_flow_name()<<endl;
                         //flow_spec_flag.push_back(new_cfg);
                         newflag=true;
@@ -149,10 +144,11 @@ int main(int argc, char *argv[]) {
                     if (newflag==false){
                         for (uint32_t i = 0; i < scenario.active_t.size(); i++) {
                             flow_instance_t f = scenario.active_t.at(i);
-                            new_cfg = f.flow_inst->accept(msg, f.cfg);
-                            if (new_cfg != null_cfg && f.time!=tim && (f.flow_inst->get_tag()==msg.tag || msg.tag==0) && (f.addr==msg.addr||msg.addr==0))
+                            new_cfg = f.flow_inst->accept(msg, f.cfg).post_cfg;
+                            if (new_cfg != null_cfg && f.time!=tim && (f.flow_inst->get_tag()%tagoffset==msg.tag%tagoffset || msg.tag==0) && (f.addr==msg.addr||(msg.addr==0&&(msg.src==mem||msg.src==gfx||msg.src==usb||msg.src==uart||msg.src==audio))))
                             {
                                 //cout<<"matched "<<f.flow_inst->get_flow_name()<<" addr:"<<f.addr<<endl;
+                                
                                 uint32_t flow_index = f.flow_inst->get_index();
                                 new_scenario = scenario;
                                 cfg_str=cfg_str_c(new_cfg);
@@ -162,6 +158,7 @@ int main(int argc, char *argv[]) {
                                     // cout<<"finished 17"<<f.flow_inst->get_flow_name()<<endl;
                                     new_scenario.finished.at(flow_index)=new_scenario.finished.at(flow_index)+1;
                                     //cout<<"1"<<endl;
+                                    
                                     if (order_en){
                                         order_inst end;
                                         end.start=false;
@@ -179,25 +176,23 @@ int main(int argc, char *argv[]) {
                                 }
                                 match = true;
                                 new_s_stack.push(new_scenario);
-                                tri_stack.push(tri+1);
                             }
                         }
                     }
                     // Create a new flow instance to match msg.
                    else{
+                       
                         for(int i=0;i<newflow.size();i++){
                             new_scenario = scenario;
-                            
                             flow_instance_t new_f;
                             new_f.flow_inst = flow_spec.at(newflow.at(i));
                             new_f.cfg = newflowcfg.at(i);
                             new_f.addr = msg.addr;
                             new_f.time=tim;
                             new_f.it=tim;
-                            
+                           // cout<<"new flow "<<endl;
                             new_scenario.active_t.push_back(new_f);
                         
-                            tri_stack.push(tri+1);
                             
                             match = true;
                             if (order_en){
@@ -218,10 +213,8 @@ int main(int argc, char *argv[]) {
                     s_stack.pop();
                     
                 }
-                
                 if (match == false) {
                     flag=true;
-                    tri_stack.push(tri+1);
                     cout << "Info: " << trace.at(tri).toString() << " not matched, backtrack." << endl;
                     pair< vector<scenario_t>,uint32_t> tmp_bad;
                     s_stack=tmp_stack;
@@ -245,10 +238,19 @@ int main(int argc, char *argv[]) {
                     max= s_stack.size();
                 }
                 cout << "======================================" << endl;
+            
             }
             if (flag==true){
                 break;
             }
+        }
+        message_t * last_from_trace;
+        last_from_trace=readmsg->get_last();
+        for(int i=0;i<75;i++){
+            //not valid 6 9 12 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55
+            cout<<"correct:::::::::interpreted"<<endl;
+            cout<<i<<":  " << (last_from_trace+i)->toString() <<"::::::::::"<<last_valid[i].toString()<<endl;
+            
         }
         bool succ = false;
         cout<<"==============================================="<<endl;

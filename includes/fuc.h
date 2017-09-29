@@ -313,6 +313,8 @@ bool equal_act(const vector<flow_instance_t> &o1, const vector<flow_instance_t> 
     return true;
 }
 void dscen(stack<scenario_t> &sk){
+    if (sk.size()>2){
+       
     vector<scenario_t> vec;
     cout<<"decen: orignal size: "<<sk.size()<<endl;
     while(!sk.empty()){
@@ -335,35 +337,11 @@ void dscen(stack<scenario_t> &sk){
     }
     for(int i=0;i<vec.size();i++)
         sk.push(vec.at(i));
-//    while (!sk.empty())
-//    {
-//        vec.push_back(sk.top());
-//        sk.pop();
-//    }
-//    stack<scenario_t> new_sk;
-//    
-//
-//
-//    vector<int> red;
-//
-//    for(int i=vec.size()-1;i>=0;i--){
-//        if (find(red.begin(),red.end(),i)==red.end()){
-//        sk.push(vec.at(i));
-//        for(int j=i-1; j>=0; j--){
-//            if (find(red.begin(),red.end(),j)==red.end())
-//            if(equalscen(vec.at(i),vec.at(j))&&equal_act(vec.at(i).active_t,vec.at(j).active_t)&&equalorder(vec.at(i).order,vec.at(j).order)){
-//                    red.push_back(j);
-//            }
-//        }
-//        }
-//    }
+
     
     cout<<"decen: new   size: "<<sk.size()<<endl;
     vector<scenario_t>().swap(vec);
-    //vector<int>().swap(red);
-    //vec=&rst;
-    
-    //return sk;
+    }
 }
 
 string cfg_str_c(const uint32_t& xcfg){

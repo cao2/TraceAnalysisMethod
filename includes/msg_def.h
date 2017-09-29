@@ -9,6 +9,7 @@ using namespace std;
 typedef uint64_t config_t;
 const config_t null_cfg = 0;
 
+
 // Define indices for components.
 const uint16_t cpu0 = 1;
 const uint16_t cache0 = 2;
@@ -93,6 +94,7 @@ public:
             return cpu1;
         else
             cout<<"ERROR!!! tag unrecognized "<<x<<endl;
+        return cache0;
     }
     int get_cmd(string cmd){
         for (int i=0;i<19;i++)

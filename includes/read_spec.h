@@ -24,10 +24,11 @@ private:
     vector<lpn_t*> flow_spec;
     vector<string> flow_names;
     int index;
-    bool pt=true;
+    bool pt;
 public:
     read_spec(){
         index=0;
+        pt=true;
     }
     int findindex(int sequence){
         for (int i=0;i<trees.size();i++){
