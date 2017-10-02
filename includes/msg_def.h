@@ -67,8 +67,9 @@ public:
     address_t addr;
     config_t pre_cfg, post_cfg;
     uint16_t tag;
+    uint16_t channel;
     message_t() {
-        src = dest = cmd = addr =tag = NDEF;
+        src = dest = cmd = addr =tag =channel= NDEF;
         pre_cfg = post_cfg = null_cfg;
     };
     
@@ -113,6 +114,7 @@ public:
         pre_cfg = other.pre_cfg;
         post_cfg = other.post_cfg;
         tag=other.tag;
+        channel=other.channel;
     }
     
     message_t& operator=(const message_t& other) {
@@ -123,6 +125,7 @@ public:
         pre_cfg = other.pre_cfg;
         post_cfg = other.post_cfg;
         tag=other.tag;
+        channel=other.channel;
         return *this;
     }
     
@@ -133,7 +136,8 @@ public:
                 addr == other.addr &&
                 pre_cfg == other.pre_cfg &&
                 post_cfg == other.post_cfg&&
-                tag==other.tag);
+                tag==other.tag&&
+                channel==other.channel);
     }
 
     bool operator <(const message_t &other) const {

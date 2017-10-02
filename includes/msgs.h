@@ -332,15 +332,7 @@ public:
         srcs[73]=pwr;       dests[73]=audio;          lengths[73]=89;//audio pwr req
         srcs[74]=audio;       dests[74]=pwr;          lengths[74]=89;//audio pwr res
     }
-    uint16_t channelof(const message_t& msg){
-        for(uint16_t i=0;i<75;i++){
-            if (srcs[i]==msg.src && dests[i]==msg.dest){
-                
-                return i;
-            }
-        }
-        return 90;
-    }
+    
     void parse(std::string line){
         vector<message_t>().swap(trace);
         int pl[num_sigs+4];
@@ -385,6 +377,7 @@ public:
             
             if (!cmd &&!uniq_en)
                 new_msg.cmd=0;
+            new_msg.channel=0;
             trace.push_back(new_msg);
             num++;
             last_valid[0]=new_msg;
@@ -462,6 +455,7 @@ public:
                         bool uniq= uniq_en && std::find(std::begin(be_signal), std::end(be_signal),j)!=std::end(be_signal);
                         if (!cmd &&!uniq )
                             new_msg.cmd=0;
+                        new_msg.channel=j;
                         trace.push_back(new_msg);
                         last_valid[j]=new_msg;
                         num++;
@@ -521,6 +515,7 @@ public:
                         if (valid==true){
                             if (!cmd )
                                 new_msg.cmd=0;
+                            new_msg.channel=j;
                             trace.push_back(new_msg);
                             last_valid[j]=new_msg;
                             num++;
@@ -534,6 +529,25 @@ public:
     }
     message_t * get_last(){
         return last_valid;
+    }
+    bool check_last_valid(const vector<message_t>& other){
+        
+        for(int i=0;i<75;i++){
+            //not valid 6 9 12 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55
+            bool match_flag=false;
+            if (other[i].src==last_valid[i].src)
+                if (other[i].dest==last_valid[i].dest)
+                    if (other[i].cmd==last_valid[i].cmd)
+                        if (other[i].tag==last_valid[i].tag)
+                            if (other[i].addr==last_valid[i].addr)
+                                match_flag=true;
+            if (match_flag==false){
+                cout<< i<<": "<< other[i].toString() <<"::::::::::"<<last_valid[i].toString()<<endl;
+                return false;
+            }
+        }
+        cout<<"all message matched"<<endl;
+        return true;
     }
     vector<message_t> getMsgs(){
         return trace;

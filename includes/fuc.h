@@ -166,14 +166,20 @@ struct scenario_t{
     //active_list active_sort;
     vector<order_inst> order;
     //vector<uint32_t> order_addr;
+    vector<message_t> last_valid;
+    
     scenario_t(){
         for( uint32_t i=0;i<num_flow+4;i++)
             finished.push_back(0);
+        message_t tmp;
+        for(uint16_t i=0;i<75;i++)
+            last_valid.push_back(tmp);
     }
     scenario_t(const scenario_t &other){
         finished=other.finished;
         active_t=other.active_t;
         order=other.order;
+        last_valid=other.last_valid;
         
     }
 };

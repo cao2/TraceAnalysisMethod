@@ -24,7 +24,7 @@ bool order_en=false;
 //vector<message_t> uniq_msg;
 set<message_t> uniq_msg;
 
-message_t last_valid[75];
+
 
 int main(int argc, char *argv[]) {
     int tagoffset=20;
@@ -111,7 +111,7 @@ int main(int argc, char *argv[]) {
                 cout<<"2"<<endl;
                 message_t msg(trace.at(tri));
                 
-                last_valid[readmsg->channelof(msg)]=msg;
+                //last_valid[msg.channel]=msg;
                 cout << tim
                 <<"***  " << msg.toString() <<"  "<<s_stack.size() <<" max:" <<max<<endl << endl;
                 
@@ -151,6 +151,7 @@ int main(int argc, char *argv[]) {
                                 
                                 uint32_t flow_index = f.flow_inst->get_index();
                                 new_scenario = scenario;
+                                new_scenario.last_valid.at(msg.channel)=msg;
                                 cfg_str=cfg_str_c(new_cfg);
                                 if(cfg_str==cfg_str_c(f.flow_inst->get_end_cfg()))
                                 {
@@ -184,6 +185,9 @@ int main(int argc, char *argv[]) {
                        
                         for(int i=0;i<newflow.size();i++){
                             new_scenario = scenario;
+                            //cout<<"channel:   "<<msg.channel<<endl;
+                            new_scenario.last_valid.at(msg.channel)=msg;
+                            //cout<<"why"<<endl;
                             flow_instance_t new_f;
                             new_f.flow_inst = flow_spec.at(newflow.at(i));
                             new_f.cfg = newflowcfg.at(i);
@@ -244,14 +248,7 @@ int main(int argc, char *argv[]) {
                 break;
             }
         }
-        message_t * last_from_trace;
-        last_from_trace=readmsg->get_last();
-        for(int i=0;i<75;i++){
-            //not valid 6 9 12 17 19 21 23 25 27 29 31 33 35 37 39 41 43 45 47 49 51 53 55
-            cout<<"correct:::::::::interpreted"<<endl;
-            cout<<i<<":  " << (last_from_trace+i)->toString() <<"::::::::::"<<last_valid[i].toString()<<endl;
-            
-        }
+        
         bool succ = false;
         cout<<"==============================================="<<endl;
         cout<<"==============================================="<<endl;
@@ -271,6 +268,7 @@ int main(int argc, char *argv[]) {
                 }
                 cout<<"possiblity #"<<ctt<<endl;
                 print_scenario(good_scen);
+                readmsg->check_last_valid(good_scen.last_valid);
                 break;
                 
                 
