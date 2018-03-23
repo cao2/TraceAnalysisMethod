@@ -53,8 +53,7 @@ bin/combied trace1.txt 3 1 examples/lpn_files/lpn_file4.txt
 bin/combied trace1.txt 3 2 examples/lpn_files/lpn_file2.txt
 bin/combied trace1.txt 3 3 examples/lpn_files/lpn_file3.txt
 bin/combied trace1.txt 3 4 examples/lpn_files/lpn_file2_3.txt
-bin/combied trace1.txt 3 5 examples/lpn_files/lpn_file3_3.txt
-bin/combied trace1.txt 3 6 examples/lpn_files/lpn_file2_2.txt
+timbin/combied trace1.txt 3 6 examples/lpn_files/lpn_file2_2.txt
 bin/combied trace1.txt 3 7 examples/lpn_files/lpn_file3_2.txt
 bin/combied trace1.txt 3 8 examples/lpn_files/lpn_file2.txt
 bin/combied trace1.txt 3 9 examples/lpn_files/lpn_file3.txt

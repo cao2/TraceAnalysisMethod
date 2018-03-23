@@ -20,14 +20,16 @@
 
 using namespace std;
 bool memcheck=false;
-bool order_en=false;
+bool order_en=true;
 //vector<message_t> uniq_msg;
 set<message_t> uniq_msg;
-
+vector<message_t> trace_tt;
 
 
 int main(int argc, char *argv[]) {
-    int tagoffset=20;
+    int tagoffset=1;
+    uint16_t tst_trace=0;
+    
     //obtain process id for memory tracking
     unsigned int pid = getpid();
     //keep track of the max # of scenario
@@ -40,13 +42,17 @@ int main(int argc, char *argv[]) {
     vector<lpn_t*> flow_spec;
     vector<uint32_t> noneed_monitors;
     
-    
-    //read the trace file name from argv[1]
     vector<message_t> trace;
     string filename(argv[1]);
     ifstream trace_file(filename);
     cout<<"trace name is "<<filename<<endl;
     
+    //cout<<filename.substr(filename.length()-3)<<endl;
+    if (filename.substr(filename.length()-3)=="tst")
+        tst_trace=1;
+    else if (filename.substr(filename.length()-4)=="tstt")
+        tst_trace=2;
+//cout<<"tst_trace is "<<tst_trace<<endl;
     //read type of execution scenario from argv[2]
     int sc_type=atoi(argv[2]);
     if (sc_type==3)
@@ -55,7 +61,10 @@ int main(int argc, char *argv[]) {
     
     //parse in the signal selection option from argv[3
     msgs* readmsg=new msgs();
-    readmsg->init(stoi(argv[3]));
+    if (tst_trace>0)
+        readmsg->init_transaction(stoi(argv[3]));
+    else
+        readmsg->init(stoi(argv[3]));
     cout<<"signal selection optin: "<<stoi(argv[3])<<endl;
     
     //read in specification from argv[4]
@@ -69,7 +78,7 @@ int main(int argc, char *argv[]) {
     
     
     if (trace_file.is_open()) {
-        
+        uint32_t max_msg_line=0;
         std::string line;
         stack<scenario_t> s_stack;
         s_stack.push(scenario_t());
@@ -86,29 +95,83 @@ int main(int argc, char *argv[]) {
         config_t new_cfg;
         
         string cfg_str;
-        
+        message_t new_msg;
+        uint32_t total_data_drop=0;
+        uint32_t data_drop=0;
+        uint32_t drop_round=0;
+        uint16_t tmp_drop=0;
+        bool tstt_start=false;
         while (getline(trace_file, line)){
-            tim++;
-            readmsg->parse(line);
-            trace=readmsg->getMsgs();
+            
+            if (tst_trace==1){
+                readmsg->parse_transaction(line);
+                trace=readmsg->getMsgs();
+                tim++;
+            }
+            else if (tst_trace==2){
+                //do something here
+                if (line.at(32)=='1'){
+                    //this is the first event
+                    //vector<message_t>().swap(trace_tt);
+                    trace=trace_tt;
+                    tim++;
+                    tstt_start=true;
+                    tmp_drop=stoi(line.substr(line.length()-5),nullptr,2);
+                    if (tmp_drop>0){
+                        total_data_drop+=tmp_drop;
+                        data_drop+=tmp_drop;
+                        drop_round+=1;
+                        
+                    }
+                    cout<<"total_data drop: "<<total_data_drop<<"   data_drop: "<<data_drop<<"   round: "<<drop_round<<endl;
+                    //cout<<line<<endl;
+                    if (line.at(0)=='1'){
+                        //cout<<line<<endl;
+                        new_msg=readmsg->parse_message(line);
+                    }
+                }
+               else if (line.at(0)=='1'){
+                    //cout<<line<<endl;
+                    new_msg=readmsg->parse_message(line);
+                  // if (new_msg.src==1 || new_msg.src==3 || new_msg.dest==1 || new_msg.dest==3)
+                    trace_tt.push_back(new_msg);
+                   //cout<<"add to trace"<<endl;
+                    tstt_start=false;
+                }
+                else
+                    tstt_start=false;
+                
+            }
+            else if (tst_trace==0){
+                readmsg->parse(line);
+                trace=readmsg->getMsgs();
+                tim++;
+            }
+            
+            
+            
+            
+            //cout<<"parsed one line " <<tim<<endl;
             //readmsg->set_idoffset(6);
             //readmsg->set_cmd_en(true,true,false,false);
-            bool match = true;
-            bool flag =false;
-            bool fin=false;
-            old_size=s_stack.size();
-            if(tim%50==0){
-                dscen(s_stack);
-                if (memcheck)
-                    getMemUsage(pid, "bin/log");
-                //max_mem("bin/log");
-                //break;
+            if (tstt_start==true || tst_trace!=2){
+                bool match = true;
+                bool flag =false;
+                bool fin=false;
+                old_size=s_stack.size();
+                if(tim%100==0){
+                    //dscen(s_stack);
+                    if (memcheck)
+                        getMemUsage(pid, "bin/log");
+                    //max_mem("bin/log");
+                    //break;
             }
             stack<scenario_t> tmp_stack;
+            if (trace.size()>max_msg_line)
+                max_msg_line=trace.size();
             for(tri=0;tri<trace.size();tri++){
                 tmp_stack=s_stack;
                 match=false;
-                cout<<"2"<<endl;
                 message_t msg(trace.at(tri));
                 
                 //last_valid[msg.channel]=msg;
@@ -123,9 +186,8 @@ int main(int argc, char *argv[]) {
                 for (uint32_t i = 0; i < flow_spec.size(); i++) {
                     lpn_t* f = flow_spec.at(i);
                     //cout<<"flow name "<<f->get_flow_name()<<endl;
+                    uint16_t ct=2;
                     config_t new_cfg = f->accept(msg);
-                    //cout<<"tag :"<<msg.tag<<" : "<<f->get_tag()<<endl;
-                    //cout<<"new_cfg="<<new_cfg<<endl;
                     if (new_cfg != null_cfg && (f->get_tag()%tagoffset==msg.tag%tagoffset||msg.tag==0 )){
                         cout<<" matched new flow "<<f->get_flow_name()<<endl;
                         //flow_spec_flag.push_back(new_cfg);
@@ -144,8 +206,9 @@ int main(int argc, char *argv[]) {
                     if (newflag==false){
                         for (uint32_t i = 0; i < scenario.active_t.size(); i++) {
                             flow_instance_t f = scenario.active_t.at(i);
-                            new_cfg = f.flow_inst->accept(msg, f.cfg).post_cfg;
-                            if (new_cfg != null_cfg && f.time!=tim && (f.flow_inst->get_tag()%tagoffset==msg.tag%tagoffset || msg.tag==0) && (f.addr==msg.addr||(msg.addr==0&&(msg.src==mem||msg.src==gfx||msg.src==usb||msg.src==uart||msg.src==audio))))
+                            new_cfg = f.flow_inst->accept(msg, f.cfg);
+                            if (new_cfg != null_cfg && f.time!=tim && (f.flow_inst->get_tag()==msg.tag || msg.tag==0) && (f.addr==msg.addr||f.addr==0))
+                                //&&(msg.src==mem||msg.src==gfx||msg.src==usb||msg.src==uart||msg.src==audio))
                             {
                                 //cout<<"matched "<<f.flow_inst->get_flow_name()<<" addr:"<<f.addr<<endl;
                                 
@@ -178,6 +241,14 @@ int main(int argc, char *argv[]) {
                                 match = true;
                                 new_s_stack.push(new_scenario);
                             }
+//                            else if (new_cfg!=null_cfg){
+//                                
+//                               cout<<"new_cfg: "<<new_cfg<<endl;
+//                               cout<<"tag "<<msg.tag<<endl;
+//                                                          cout<<"addr "<<msg.addr<<endl;
+//                                
+//                                cout<<"check "<<f.flow_inst->get_flow_name()<<" addr:"<<f.addr<<endl;
+//                            }
                         }
                     }
                     // Create a new flow instance to match msg.
@@ -220,6 +291,7 @@ int main(int argc, char *argv[]) {
                 if (match == false) {
                     flag=true;
                     cout << "Info: " << trace.at(tri).toString() << " not matched, backtrack." << endl;
+                    //cout <<"tag "<<trace.at(tri).tag<<endl;
                     pair< vector<scenario_t>,uint32_t> tmp_bad;
                     s_stack=tmp_stack;
                     break;
@@ -247,6 +319,14 @@ int main(int argc, char *argv[]) {
             if (flag==true){
                 break;
             }
+            if (tst_trace==2 ){
+                vector<message_t>().swap(trace_tt);
+                if (line.at(0)=='1'){
+                    trace_tt.push_back(new_msg);
+                    //cout<<"add to trace"<<endl;
+                }
+            }
+            }
         }
         
         bool succ = false;
@@ -265,6 +345,7 @@ int main(int argc, char *argv[]) {
                     << "***************"<<endl<<
                     "  Success -  the scenario that matches all messages is" << endl;
                     succ = true;
+                    cout<<"maximum tracfic number is "<<max_msg_line<<endl;
                 }
                 cout<<"possiblity #"<<ctt<<endl;
                 print_scenario(good_scen);
@@ -298,6 +379,7 @@ int main(int argc, char *argv[]) {
             getMemUsage(pid, "bin/log");
             max_mem("bin/log");}
         cout<<"max # of flow execution scenario: "<<max<<endl;
+        
     }
     else{
         cout<<"ERROR 1: Trace file "<<filename<<" cannot be opened!!!!!!!!"<<endl;

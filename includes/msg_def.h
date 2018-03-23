@@ -56,7 +56,11 @@ const uint32_t DMEM = 2;
 const uint32_t MMIO = 3;
 string addr_vector[4] = {"-", "INTR", "DMEM", "MMIO"};
 
-
+//Define the 2 bits relationship of addr or id
+const uint16_t same=0;
+const uint16_t seq=1;
+const uint16_t other=2;
+string relat[3]={"SAME", "SEQ","OTHER"};
 
 class message_t
 {
@@ -93,9 +97,9 @@ public:
             return audio;
         else if (x==5)
             return cpu1;
-        else
-            cout<<"ERROR!!! tag unrecognized "<<x<<endl;
-        return cache0;
+        //else
+         //   cout<<"ERROR!!! tag unrecognized "<<x<<endl;
+        return 0;
     }
     int get_cmd(string cmd){
         for (int i=0;i<19;i++)

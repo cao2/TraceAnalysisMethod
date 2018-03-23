@@ -60,16 +60,45 @@ public:
     
     config_t accept(const message_t& other) const {
         
-            const message_t& msg = msg_vector.at(0);
+        const message_t& msg = msg_vector.at(0);
         if (msg.src == other.src && msg.dest == other.dest && (msg.cmd == other.cmd ||other.cmd==0)&& ((init_cfg & msg.pre_cfg) == msg.pre_cfg)){
-            
                 return msg.post_cfg;
         }
                 return null_cfg;
     }
-
+    config_t accept(const message_t& other, const uint16_t ct) const {
+        //cout<<"accept other, cf "<<ct<<endl;
+        if (ct==0)
+            return accept(other);
+        else{
+            return accept(other,msg_vector.at(0).post_cfg,ct-1);
+        }
+    }
+    config_t accept(const message_t& other, const config_t& cfg, const uint16_t ct) const{
+        //cout<<"accpet other, cfg "<< cfg <<", ct "<<ct<<endl;
+        if (ct>0){
+            
+            for (unsigned i=0; i<msg_vector.size(); i++) {
+                const message_t& msg = msg_vector.at(i);
+                
+                if ((cfg&msg.pre_cfg)==msg.pre_cfg  ) {
+                    //--cout<<"find cfg "<< msg.toString()<<endl;
+                    if (accept(other, msg.post_cfg, ct-1)!=null_cfg){
+                        //cout<<"return "<<endl;
+                        return accept(other, msg.post_cfg, ct-1);
+                        
+                    }
+                }
+            }
+        }
+        else{
+            return accept(other, cfg);
+        }
+        
+        return null_cfg;
+    }
     
-    message_t accept(const message_t& other, const config_t& cfg) const {
+    config_t accept(const message_t& other, const config_t& cfg) const {
         for (unsigned i=0; i<msg_vector.size(); i++) {
             const message_t& msg = msg_vector.at(i);
  
@@ -83,12 +112,11 @@ public:
                 //}
                
                // return (cfg & ~msg.pre_cfg) | msg.post_cfg;
-                return msg;
+                return msg.post_cfg;
             }
         }
-        message_t null_msg;
-        null_msg.post_cfg=null_cfg;
-        return null_msg;
+        
+        return null_cfg;
     }
 };
 
