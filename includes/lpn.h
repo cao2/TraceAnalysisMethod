@@ -61,8 +61,10 @@ public:
     config_t accept(const message_t& other) const {
         
         const message_t& msg = msg_vector.at(0);
-        if (msg.src == other.src && msg.dest == other.dest && (msg.cmd == other.cmd ||other.cmd==0)&& ((init_cfg & msg.pre_cfg) == msg.pre_cfg)){
+        //cout<<"name "<<name<<"other.tag "<<other.tag <<" tag "<<tag<<endl;
+        if (msg.src == other.src && msg.dest == other.dest && (other.tag==tag || other.tag==0)&& (msg.cmd == other.cmd ||other.cmd==0)&& ((init_cfg & msg.pre_cfg) == msg.pre_cfg)){
                 return msg.post_cfg;
+            cout<<"return"<<endl;
         }
                 return null_cfg;
     }
@@ -102,7 +104,7 @@ public:
         for (unsigned i=0; i<msg_vector.size(); i++) {
             const message_t& msg = msg_vector.at(i);
  
-            if (msg.src == other.src && msg.dest == other.dest && (msg.cmd == other.cmd || other.cmd==0)  && ((cfg & msg.pre_cfg) == msg.pre_cfg)) {
+            if (msg.src == other.src && msg.dest == other.dest &&(other.tag==tag||other.tag==0)&& (msg.cmd == other.cmd || other.cmd==0)  && ((cfg & msg.pre_cfg) == msg.pre_cfg)) {
                 //if ((cfg & ~msg.pre_cfg & msg.post_cfg) != 0) {
 //                    //cout << bitset<12>(cfg) << endl
 //                        << bitset<12>(msg.pre_cfg) << endl

@@ -696,7 +696,7 @@ public:
             else
                 new_msg.addr=0;
             //last_valid[j]=new_msg;
-           //cout<<"new_msg link id "<<linkid <<" sequence id "<< new_msg.addr <<" "<<tmp_str<<endl;
+          // cout<<"new_msg "<<new_msg.toString()<<"   line "<<tmp_str <<endl;
         }
         
         return new_msg;

@@ -105,12 +105,14 @@ struct flow_instance_t
     uint32_t addr;
     uint32_t time;
     uint32_t it;
+    bool start;
     flow_instance_t() {
         flow_inst = nullptr;
         cfg = null_cfg;
         time=0;
         addr=0;
         it=0;
+        start=false;
     }
     
     flow_instance_t(uint32_t x) {
@@ -126,6 +128,7 @@ struct flow_instance_t
         addr= other.addr;
         time=other.time;
         it=other.it;
+        start=other.start;
     }
     
     bool operator==(const flow_instance_t& other) const {
@@ -139,6 +142,7 @@ struct flow_instance_t
         addr= other.addr;
         time=other.time;
         it=other.it;
+        start=other.start;
         return *this;
     }
     
@@ -161,7 +165,7 @@ struct active_list{
 
 struct scenario_t{
     vector<uint32_t> finished;
-    
+    vector<uint32_t> complete;
     vector<flow_instance_t> active_t;
     //active_list active_sort;
     vector<order_inst> order;
@@ -169,14 +173,17 @@ struct scenario_t{
     vector<message_t> last_valid;
     
     scenario_t(){
-        for( uint32_t i=0;i<num_flow+4;i++)
+        for( uint32_t i=0;i<num_flow+4;i++){
             finished.push_back(0);
+            complete.push_back(0);
+        }
         message_t tmp;
         for(uint16_t i=0;i<75;i++)
             last_valid.push_back(tmp);
     }
     scenario_t(const scenario_t &other){
         finished=other.finished;
+        complete=other.complete;
         active_t=other.active_t;
         order=other.order;
         last_valid=other.last_valid;
@@ -229,15 +236,36 @@ void print_scenario( const scenario_t& sce)
     }
     cout<<"==============================================="<<endl;
     cout << "finished flow instances:" << endl;
-    
+    int total_finished=0;
     for(uint32_t j=0;j<sce.finished.size();j++){
         if (sce.finished.at(j)){
             if (j< num_flow)
                 if (sce.finished.at(j)>0){
                     cout<<"        *****"<<flow_names.at(j)<<": ";
-                    cout<<sce.finished.at(j)<<endl;}
+                    cout<<sce.finished.at(j)<<endl;
+                    
+                    total_finished+=sce.finished.at(j);
+                }
         }
     }
+    cout<<"totoal number of finished is *********************************************************"<<total_finished<<endl;
+
+
+    cout<<"==============================================="<<endl;
+        cout << "complete flow instances:" << endl;
+        int total_complete=0;
+        for(uint32_t j=0;j<sce.complete.size();j++){
+                if (j< num_flow)
+                    if (sce.complete.at(j)>0){
+                        cout<<"        *****"<<flow_names.at(j)<<": ";
+                        cout<<sce.complete.at(j)<<endl;
+                        total_complete+=sce.complete.at(j);
+                    }
+        }
+        cout<<"totoal number of complete is *********************************************************"<<total_complete<<endl;
+
+
+    
     cout<<"==============================================="<<endl;
     if(sce.active_t.size()!=0){
         cout<<"active flow specification states: "<<endl;
@@ -255,12 +283,16 @@ void print_scenario( const scenario_t& sce)
                 cout<<endl;
             }
         }
+        int total_flows=0;
        cout<<"==============================================="<<endl;
-        cout << "total flow instances:" << endl;
+        cout << "total flow instances: *********************************************************" << endl;
         for (uint32_t i = 0; i < num_flow; i++) {
-            if (flow_inst_cnt.at(i)>0)
-            cout << "\t" << flow_names.at(i) << ": \t" << flow_inst_cnt.at(i) << endl;
+            if (flow_inst_cnt.at(i)>0){
+                cout << "\t" << flow_names.at(i) << ": \t" << flow_inst_cnt.at(i) << endl;
+                total_flows+=flow_inst_cnt.at(i);
+            }
         }
+        cout<<"total : "<<total_flows<<endl;
         cout<<"==============================================="<<endl;
         cout<<"==============================================="<<endl;
     }

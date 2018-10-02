@@ -87,15 +87,15 @@ public:
     uint16_t get_tag(int x){
         if (x==0)
             return cpu0;
-        else if (x==1)
-            return gfx;
         else if (x==2)
-            return uart;
+            return gfx;
         else if (x==3)
-            return usb;
+            return uart;
         else if (x==4)
-            return audio;
+            return usb;
         else if (x==5)
+            return audio;
+        else if (x==1)
             return cpu1;
         //else
          //   cout<<"ERROR!!! tag unrecognized "<<x<<endl;
