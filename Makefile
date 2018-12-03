@@ -1,4 +1,5 @@
 OBJS4= combied.o
+OBJS1 = translate_trace.o
 
 SRC = $(OBJS:.o=.cc)
 
@@ -13,6 +14,11 @@ INCLUDES        = -Iincludes
 
 all: $(OBJS4)
 
+translate_trace: $(OBJS1)
+	$(CC) $(CFLAGS)  -o bin/$@ build/$(OBJS1)
+translate_trace.o: 
+	$(CC) $(CFLAGS) $(INCLUDES) -c -o build/translate_trace.o src/translate_trace.cc
+	
 combied: $(OBJS4)
 	$(CC) $(CFLAGS)  -o bin/$@ build/$(OBJS4)
 combied.o: 

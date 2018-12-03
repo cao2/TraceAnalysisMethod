@@ -1,0 +1,3352 @@
+cpu0:cache0:wt:cpu0:1	----
+cpu1:cache1:wt:cpu1:1
+cpu0:cache0:rd:cpu0:2	----
+cpu1:cache1:rd:cpu1:2
+gfx:membus:upwt:gfx:1	----
+audio:membus:upwt:audio:1
+usb:membus:uprd:usb:1
+cache1:cache0:wtreq:cpu1:1	----
+cache0:cache1:wtreq:cpu0:1
+cpu0:cache0:rd:cpu0:3	----
+cpu1:cache1:rd:cpu1:3
+gfx:membus:upwt:gfx:2	----
+audio:membus:upwt:audio:2
+usb:membus:uprd:usb:2
+membus:cache0:wtreq:gfx:1	----
+membus:cache0:wtreq:audio:1	----
+gfx:membus:upwt:gfx:3	----
+audio:membus:upwt:audio:3
+usb:membus:uprd:usb:3
+membus:cache0:rdreq:usb:1
+cpu0:cache0:rd:cpu0:4	----
+cpu1:cache1:rd:cpu1:4
+gfx:membus:upwt:gfx:4	----
+audio:membus:upwt:audio:4
+usb:membus:uprd:usb:4
+membus:cache0:wtreq:gfx:2
+membus:cache0:wtreq:audio:2	----
+membus:cache0:rdreq:usb:2	----
+cache0:cache1:wtres:cpu1:1	----
+cache1:cache0:wtres:cpu0:1
+gfx:membus:upwt:gfx:5	----
+audio:membus:upwt:audio:5
+usb:membus:uprd:usb:5
+cache0:membus:wt:cpu0:1	----
+cache1:membus:wt:cpu1:1
+cpu0:cache0:rd:cpu0:5	----
+cpu1:cache1:rd:cpu1:5
+membus:cache0:wtreq:gfx:3
+membus:cache0:wtreq:audio:3	----
+cache0:cache1:wtreq:gfx:1
+membus:cache0:rdreq:usb:3	----
+gfx:membus:upwt:gfx:6	----
+audio:membus:upwt:audio:6
+usb:membus:uprd:usb:6
+membus:cache0:wtreq:gfx:4	----
+gfx:membus:upwt:gfx:7	----
+audio:membus:upwt:audio:7
+usb:membus:uprd:usb:7
+membus:cache0:wtreq:audio:4
+cpu0:cache0:wt:cpu0:6	----
+cpu1:cache1:wt:cpu1:6
+membus:mem:rd:cpu0:1
+membus:cache0:rdreq:usb:4
+cache1:cache0:rdreq:cpu1:2	----
+cache0:cache1:rdreq:cpu0:2	----
+gfx:membus:upwt:gfx:8	----
+audio:membus:upwt:audio:8
+usb:membus:uprd:usb:8
+membus:cache0:wtreq:gfx:5	----
+membus:cache0:wtreq:audio:5	----
+cache1:cache0:wtres:gfx:1
+membus:cache0:rdreq:usb:5	----
+cpu0:cache0:rd:cpu0:7	----
+cpu1:cache1:rd:cpu1:7
+gfx:membus:upwt:gfx:9
+audio:membus:upwt:audio:9
+usb:membus:uprd:usb:9
+cache0:membus:wtres:gfx:1
+membus:cache0:wtreq:gfx:6	----
+membus:cache0:wtreq:audio:6	----
+gfx:membus:upwt:gfx:10	----
+audio:membus:upwt:audio:10
+usb:membus:uprd:usb:10
+membus:cache0:rdreq:usb:6
+cache1:cache0:rdres:cpu0:2	----
+cpu0:cache0:wt:cpu0:8	----
+cpu1:cache1:wt:cpu1:8
+cache0:cache1:rdres:cpu1:2
+gfx:membus:upwt:gfx:11	----
+audio:membus:upwt:audio:11
+usb:membus:uprd:usb:11
+membus:cache0:wtreq:gfx:7
+cache0:cache1:wtreq:audio:1
+cache0:membus:rd:cpu0:2	----
+membus:cache0:wtreq:audio:7
+cache1:membus:rd:cpu1:2	----
+membus:cache0:rdreq:usb:7
+gfx:membus:upwt:gfx:12	----
+audio:membus:upwt:audio:12
+usb:membus:uprd:usb:12
+membus:cache0:wtreq:gfx:8	----
+cpu0:cache0:rd:cpu0:9	----
+cpu1:cache1:rd:cpu1:9
+membus:cache0:wtreq:audio:8
+membus:cache0:rdreq:usb:8	----
+gfx:membus:upwt:gfx:13	----
+audio:membus:upwt:audio:13
+usb:membus:uprd:usb:13
+cache0:cache1:rdreq:cpu0:3	----
+membus:cache0:wtreq:gfx:9	----
+cache1:cache0:rdreq:cpu1:3
+gfx:membus:upwt:gfx:14	----
+audio:membus:upwt:audio:14
+usb:membus:uprd:usb:14
+membus:cache0:wtreq:audio:9
+cache1:cache0:wtres:audio:1
+mem:membus:rd:cpu0:1	----
+membus:cache0:rdreq:usb:9
+cpu0:cache0:rd:cpu0:10	----
+cpu1:cache1:rd:cpu1:10
+cache0:membus:wtres:audio:1	----
+gfx:membus:upwt:gfx:15	----
+audio:membus:upwt:audio:15
+usb:membus:uprd:usb:15
+membus:cache0:wtreq:gfx:10	----
+membus:cache0:wt:cpu0:1	----
+membus:cache0:wtreq:audio:10
+membus:cache0:rdreq:usb:10	----
+gfx:membus:upwt:gfx:16	----
+audio:membus:upwt:audio:16
+usb:membus:uprd:usb:16
+cpu0:cache0:wt:cpu0:11	----
+cpu1:cache1:wt:cpu1:11
+membus:mem:rd:cpu1:1	----
+membus:cache0:wtreq:gfx:11
+cache1:cache0:rdres:cpu0:3
+membus:cache0:wtreq:audio:11	----
+gfx:membus:upwt:gfx:17	----
+audio:membus:upwt:audio:17
+usb:membus:uprd:usb:17
+membus:cache0:rdreq:usb:11
+cache0:cache1:rdres:cpu1:3
+cache0:membus:rd:cpu0:3	----
+cache0:cache1:rdreq:usb:1	----
+cache1:membus:rd:cpu1:3	----
+cache0:cpu0:wt:cpu0:1	----
+cpu0:cache0:rd:cpu0:12	----
+cpu1:cache1:rd:cpu1:12
+gfx:membus:upwt:gfx:18
+audio:membus:upwt:audio:18
+usb:membus:uprd:usb:18
+membus:cache0:wtreq:gfx:12
+membus:cache0:wtreq:audio:12	----
+membus:cache0:rdreq:usb:12	----
+gfx:membus:upwt:gfx:19	----
+audio:membus:upwt:audio:19
+usb:membus:uprd:usb:19
+cache0:cpu0:rd:cpu0:4	----
+membus:cache0:wtreq:gfx:13	----
+membus:cache0:wtreq:audio:13	----
+cpu0:cache0:wt:cpu0:13	----
+cpu1:cache1:wt:cpu1:13
+membus:cache0:rdreq:usb:13
+gfx:membus:upwt:gfx:20	----
+audio:membus:upwt:audio:20
+usb:membus:uprd:usb:20
+cache1:cache0:rdreq:cpu1:4
+cache1:cache0:rdres:usb:1	----
+membus:cache0:wtreq:gfx:14	----
+gfx:membus:upwt:gfx:21	----
+audio:membus:upwt:audio:21
+usb:membus:uprd:usb:21
+membus:cache0:wtreq:audio:14
+cache0:membus:rdres:usb:1
+membus:cache0:rdreq:usb:14	----
+cache0:cpu0:rd:cpu0:5	----
+cpu0:cache0:wt:cpu0:14	----
+cpu1:cache1:wt:cpu1:14
+gfx:membus:upwt:gfx:22	----
+audio:membus:upwt:audio:22
+usb:membus:uprd:usb:22
+membus:cache0:wtreq:gfx:15	----
+membus:cache0:wtreq:audio:15	----
+membus:cache0:rdreq:usb:15	----
+cache0:cache1:rdres:cpu1:4	----
+gfx:membus:upwt:gfx:23	----
+audio:membus:upwt:audio:23
+usb:membus:uprd:usb:23
+cpu0:cache0:rd:cpu0:15	----
+cpu1:cache1:rd:cpu1:15
+cache1:membus:rd:cpu1:4
+mem:membus:rd:cpu1:1
+membus:cache0:wtreq:gfx:16	----
+cache0:cache1:wtreq:cpu0:6
+membus:cache0:wtreq:audio:16	----
+cache0:cache1:wtreq:gfx:2
+gfx:membus:upwt:gfx:24	----
+audio:membus:upwt:audio:24
+usb:membus:uprd:usb:24
+membus:cache0:rdreq:usb:16
+membus:cache1:wt:cpu1:1	----
+gfx:membus:upwt:gfx:25	----
+audio:membus:upwt:audio:25
+usb:membus:uprd:usb:25
+membus:cache0:wtreq:gfx:17
+cpu0:cache0:wt:cpu0:16	----
+cpu1:cache1:wt:cpu1:16
+membus:cache0:wtreq:audio:17
+membus:cache0:rdreq:usb:17	----
+membus:mem:rd:cpu0:2	----
+gfx:membus:upwt:gfx:26	----
+audio:membus:upwt:audio:26
+usb:membus:uprd:usb:26
+cache1:cache0:rdreq:cpu1:5	----
+membus:cache0:wtreq:gfx:18	----
+membus:cache0:wtreq:audio:18	----
+membus:cache0:rdreq:usb:18	----
+cpu0:cache0:rd:cpu0:17	----
+cpu1:cache1:rd:cpu1:17
+cache1:cpu1:wt:cpu1:1
+gfx:membus:upwt:gfx:27
+audio:membus:upwt:audio:27
+usb:membus:uprd:usb:27
+cache1:cache0:wtres:cpu0:6	----
+cache0:membus:wt:cpu0:6	----
+membus:cache0:wtreq:gfx:19
+gfx:membus:upwt:gfx:28	----
+audio:membus:upwt:audio:28
+usb:membus:uprd:usb:28
+membus:cache0:wtreq:audio:19
+membus:cache0:rdreq:usb:19	----
+cpu0:cache0:wt:cpu0:18	----
+cpu1:cache1:wt:cpu1:18
+gfx:membus:upwt:gfx:29	----
+audio:membus:upwt:audio:29
+usb:membus:uprd:usb:29
+cache0:cache1:rdres:cpu1:5
+membus:cache0:wtreq:gfx:20	----
+membus:cache0:wtreq:audio:20	----
+cache1:cache0:wtres:gfx:2
+cache0:cpu0:rd:cpu0:7	----
+cache1:membus:rd:cpu1:5
+membus:cache0:rdreq:usb:20
+gfx:membus:upwt:gfx:30	----
+audio:membus:upwt:audio:30
+usb:membus:uprd:usb:30
+cache0:membus:wtres:gfx:2
+cpu0:cache0:rd:cpu0:19	----
+cpu1:cache1:rd:cpu1:19
+membus:cache0:wtreq:gfx:21
+membus:cache0:wtreq:audio:21	----
+gfx:membus:upwt:gfx:31	----
+audio:membus:upwt:audio:31
+usb:membus:uprd:usb:31
+membus:cache0:rdreq:usb:21
+gfx:membus:upwt:gfx:32	----
+audio:membus:upwt:audio:32
+usb:membus:uprd:usb:32
+membus:cache0:wtreq:gfx:22
+cache0:cache1:wtreq:cpu0:8
+membus:cache0:wtreq:audio:22	----
+cache0:cache1:wtreq:audio:2
+cpu0:cache0:wt:cpu0:20	----
+cpu1:cache1:wt:cpu1:20
+membus:cache0:rdreq:usb:22
+cache1:cache0:wtreq:cpu1:6
+mem:membus:rd:cpu0:2	----
+gfx:membus:upwt:gfx:33	----
+audio:membus:upwt:audio:33
+usb:membus:uprd:usb:33
+membus:cache0:wtreq:gfx:23	----
+membus:cache0:rd:cpu0:2	----
+membus:cache0:wtreq:audio:23
+membus:cache0:rdreq:usb:23	----
+gfx:membus:upwt:gfx:34	----
+audio:membus:upwt:audio:34
+usb:membus:uprd:usb:34
+cpu0:cache0:rd:cpu0:21	----
+cpu1:cache1:rd:cpu1:21
+membus:mem:rd:cpu1:2	----
+membus:cache0:wtreq:gfx:24
+gfx:membus:upwt:gfx:35	----
+audio:membus:upwt:audio:35
+usb:membus:uprd:usb:35
+membus:cache0:wtreq:audio:24
+membus:cache0:rdreq:usb:24	----
+cache1:cache0:wtres:cpu0:8
+cache0:cpu0:rd:cpu0:2	----
+cache0:membus:wt:cpu0:8
+cpu0:cache0:rd:cpu0:22	----
+cpu1:cache1:rd:cpu1:22
+gfx:membus:upwt:gfx:36
+audio:membus:upwt:audio:36
+usb:membus:uprd:usb:36
+membus:cache0:wtreq:gfx:25	----
+cache0:cache1:wtres:cpu1:6
+membus:cache0:wtreq:audio:25	----
+membus:cache0:rdreq:usb:25	----
+cache1:membus:wt:cpu1:6	----
+gfx:membus:upwt:gfx:37	----
+audio:membus:upwt:audio:37
+usb:membus:uprd:usb:37
+cache0:cpu0:rd:cpu0:9	----
+membus:cache0:wtreq:gfx:26
+cpu0:cache0:wt:cpu0:23	----
+cpu1:cache1:wt:cpu1:23
+membus:cache0:wtreq:audio:26
+cache1:cache0:wtres:audio:2
+gfx:membus:upwt:gfx:38	----
+audio:membus:upwt:audio:38
+usb:membus:uprd:usb:38
+membus:cache0:rdreq:usb:26
+cache0:membus:wtres:audio:2	----
+cache1:cache0:rdreq:cpu1:7	----
+gfx:membus:upwt:gfx:39	----
+audio:membus:upwt:audio:39
+usb:membus:uprd:usb:39
+membus:cache0:wtreq:gfx:27
+membus:cache0:wtreq:audio:27	----
+membus:cache0:rdreq:usb:27	----
+cpu0:cache0:rd:cpu0:24	----
+cpu1:cache1:rd:cpu1:24
+cache0:cpu0:rd:cpu0:10	----
+gfx:membus:upwt:gfx:40	----
+audio:membus:upwt:audio:40
+usb:membus:uprd:usb:40
+membus:cache0:wtreq:gfx:28	----
+cache0:cache1:rdreq:usb:2
+membus:cache0:wtreq:audio:28	----
+membus:cache0:rdreq:usb:28	----
+gfx:membus:upwt:gfx:41	----
+audio:membus:upwt:audio:41
+usb:membus:uprd:usb:41
+cpu0:cache0:rd:cpu0:25	----
+cpu1:cache1:rd:cpu1:25
+mem:membus:rd:cpu1:2	----
+cache0:cache1:rdres:cpu1:7
+membus:cache0:wtreq:gfx:29	----
+gfx:membus:upwt:gfx:42	----
+audio:membus:upwt:audio:42
+usb:membus:uprd:usb:42
+membus:cache0:wtreq:audio:29
+cache1:membus:rd:cpu1:7	----
+membus:cache0:rdreq:usb:29
+cache0:cache1:wtreq:cpu0:11	----
+membus:cache1:rd:cpu1:2	----
+gfx:membus:upwt:gfx:43	----
+audio:membus:upwt:audio:43
+usb:membus:uprd:usb:43
+cpu0:cache0:wt:cpu0:26	----
+cpu1:cache1:wt:cpu1:26
+membus:cache0:wtreq:gfx:30
+cache1:cache0:rdres:usb:2
+membus:cache0:wtreq:audio:30	----
+membus:cache0:rdreq:usb:30	----
+cache0:membus:rdres:usb:2	----
+gfx:membus:upwt:gfx:44	----
+audio:membus:upwt:audio:44
+usb:membus:uprd:usb:44
+membus:mem:rd:cpu0:3
+membus:cache0:wtreq:gfx:31	----
+membus:cache0:wtreq:audio:31	----
+cache1:cache0:wtreq:cpu1:8
+cpu0:cache0:wt:cpu0:27	----
+gfx:membus:upwt:gfx:45
+audio:membus:upwt:audio:45
+usb:membus:uprd:usb:45
+membus:cache0:rdreq:usb:31
+cache1:cpu1:rd:cpu1:2	----
+cache1:cache0:wtres:cpu0:11	----
+cache0:cache1:wtreq:gfx:3	----
+gfx:membus:upwt:gfx:46	----
+audio:membus:upwt:audio:46
+usb:membus:uprd:usb:46
+membus:cache0:wtreq:gfx:32
+cache0:membus:wt:cpu0:11	----
+membus:cache0:wtreq:audio:32
+membus:cache0:rdreq:usb:32	----
+cpu0:cache0:rd:cpu0:28	----
+gfx:membus:upwt:gfx:47	----
+audio:membus:upwt:audio:47
+usb:membus:uprd:usb:47
+membus:cache0:wtreq:gfx:33	----
+membus:cache0:wtreq:audio:33	----
+membus:cache0:rdreq:usb:33	----
+cache0:cache1:wtres:cpu1:8
+gfx:membus:upwt:gfx:48	----
+audio:membus:upwt:audio:48
+usb:membus:uprd:usb:48
+cache0:cpu0:rd:cpu0:12	----
+cache1:membus:wt:cpu1:8
+cpu0:cache0:wt:cpu0:29	----
+cache1:cache0:wtres:gfx:3
+membus:cache0:wtreq:gfx:34	----
+gfx:membus:upwt:gfx:49	----
+audio:membus:upwt:audio:49
+usb:membus:uprd:usb:49
+membus:cache0:wtreq:audio:34
+membus:cache0:rdreq:usb:34	----
+cache0:membus:wtres:gfx:3
+cpu1:cache1:wt:cpu1:27	----
+gfx:membus:upwt:gfx:50	----
+audio:membus:upwt:audio:50
+usb:membus:uprd:usb:50
+membus:cache0:wtreq:gfx:35	----
+cpu0:cache0:rd:cpu0:30	----
+membus:cache0:wtreq:audio:35
+membus:cache0:rdreq:usb:35	----
+mem:membus:rd:cpu0:3	----
+gfx:membus:upwt:gfx:51	----
+audio:membus:upwt:audio:51
+usb:membus:uprd:usb:51
+cache1:cache0:rdreq:cpu1:9
+cache0:cache1:wtreq:cpu0:13
+cache0:cache1:wtreq:audio:3	----
+membus:cache0:wtreq:gfx:36	----
+membus:cache0:rd:cpu0:3	----
+membus:cache0:wtreq:audio:36
+gfx:membus:upwt:gfx:52	----
+audio:membus:upwt:audio:52
+usb:membus:uprd:usb:52
+membus:cache0:rdreq:usb:36
+cpu0:cache0:wt:cpu0:31	----
+gfx:membus:upwt:gfx:53	----
+audio:membus:upwt:audio:53
+usb:membus:uprd:usb:53
+membus:mem:rd:cpu1:3
+membus:cache0:wtreq:gfx:37
+membus:cache0:wtreq:audio:37	----
+membus:cache0:rdreq:usb:37	----
+gfx:membus:upwt:gfx:54	----
+audio:membus:upwt:audio:54
+usb:membus:uprd:usb:54
+cache1:cache0:wtres:cpu0:13
+cache0:cpu0:rd:cpu0:3	----
+membus:cache0:wtreq:gfx:38	----
+cache0:membus:wt:cpu0:13	----
+membus:cache0:wtreq:audio:38
+cache0:cache1:rdres:cpu1:9
+membus:cache0:rdreq:usb:38	----
+gfx:membus:upwt:gfx:55	----
+audio:membus:upwt:audio:55
+usb:membus:uprd:usb:55
+cache1:membus:rd:cpu1:9	----
+cpu0:cache0:wt:cpu0:32	----
+membus:cache0:wtreq:gfx:39	----
+cpu1:cache1:wt:cpu1:28	----
+gfx:membus:upwt:gfx:56
+audio:membus:upwt:audio:56
+usb:membus:uprd:usb:56
+membus:cache0:wtreq:audio:39
+membus:cache0:rdreq:usb:39	----
+cache1:cache0:wtres:audio:3	----
+gfx:membus:upwt:gfx:57	----
+audio:membus:upwt:audio:57
+usb:membus:uprd:usb:57
+membus:cache0:wtreq:gfx:40	----
+cache0:membus:wtres:audio:3
+cache1:cache0:rdreq:cpu1:10
+membus:cache0:wtreq:audio:40	----
+cache0:cache1:wtreq:cpu0:14
+membus:cache0:rdreq:usb:40	----
+gfx:membus:upwt:gfx:58	----
+audio:membus:upwt:audio:58
+usb:membus:uprd:usb:58
+membus:cache0:wtreq:gfx:41	----
+membus:cache0:wtreq:audio:41	----
+gfx:membus:upwt:gfx:59	----
+audio:membus:upwt:audio:59
+usb:membus:uprd:usb:59
+membus:cache0:rdreq:usb:41
+cache0:cache1:rdreq:usb:3	----
+mem:membus:rd:cpu1:3	----
+gfx:membus:upwt:gfx:60	----
+audio:membus:upwt:audio:60
+usb:membus:uprd:usb:60
+membus:cache0:wtreq:gfx:42
+membus:cache0:wtreq:audio:42	----
+membus:cache0:rdreq:usb:42	----
+cache0:cache1:rdres:cpu1:10
+cache1:cache0:wtres:cpu0:14
+gfx:membus:upwt:gfx:61	----
+audio:membus:upwt:audio:61
+usb:membus:uprd:usb:61
+cache0:membus:wt:cpu0:14
+cache1:membus:rd:cpu1:10
+membus:cache1:rd:cpu1:3
+membus:cache0:wtreq:gfx:43	----
+membus:cache0:wtreq:audio:43	----
+cpu0:cache0:rd:cpu0:33	----
+cpu1:cache1:rd:cpu1:29
+membus:cache0:rdreq:usb:43
+gfx:membus:upwt:gfx:62	----
+audio:membus:upwt:audio:62
+usb:membus:uprd:usb:62
+membus:mem:rd:cpu0:6	----
+cache1:cache0:rdres:usb:3	----
+cache0:cpu0:rd:cpu0:15	----
+membus:cache0:wtreq:gfx:44
+gfx:membus:upwt:gfx:63	----
+audio:membus:upwt:audio:63
+usb:membus:uprd:usb:63
+membus:cache0:wtreq:audio:44
+membus:cache0:rdreq:usb:44	----
+cache0:membus:rdres:usb:3
+cache1:cpu1:rd:cpu1:3	----
+cache1:cache0:wtreq:cpu1:11
+cpu0:cache0:wt:cpu0:34	----
+gfx:membus:upwt:gfx:64
+audio:membus:upwt:audio:64
+usb:membus:uprd:usb:64
+membus:cache0:wtreq:gfx:45	----
+membus:cache0:wtreq:audio:45	----
+membus:cache0:rdreq:usb:45	----
+gfx:membus:upwt:gfx:65	----
+audio:membus:upwt:audio:65
+usb:membus:uprd:usb:65
+membus:cache0:wtreq:gfx:46	----
+membus:cache0:wtreq:audio:46	----
+cache0:cache1:wtreq:cpu0:16
+gfx:membus:upwt:gfx:66	----
+audio:membus:upwt:audio:66
+usb:membus:uprd:usb:66
+membus:cache0:rdreq:usb:46
+cache0:cache1:wtreq:gfx:4
+cache0:cache1:wtres:cpu1:11	----
+cache1:membus:wt:cpu1:11	----
+gfx:membus:upwt:gfx:67	----
+audio:membus:upwt:audio:67
+usb:membus:uprd:usb:67
+membus:cache0:wtreq:gfx:47
+membus:cache0:wtreq:audio:47	----
+membus:cache0:rdreq:usb:47	----
+cpu1:cache1:wt:cpu1:30	----
+gfx:membus:upwt:gfx:68	----
+audio:membus:upwt:audio:68
+usb:membus:uprd:usb:68
+membus:cache0:wtreq:gfx:48	----
+membus:cache0:wtreq:audio:48	----
+membus:cache0:rdreq:usb:48	----
+cache1:cache0:wtres:cpu0:16
+gfx:membus:upwt:gfx:69	----
+audio:membus:upwt:audio:69
+usb:membus:uprd:usb:69
+mem:membus:rd:cpu0:6
+cache0:membus:wt:cpu0:16	----
+cache1:cache0:rdreq:cpu1:12	----
+membus:cache0:wtreq:gfx:49	----
+gfx:membus:upwt:gfx:70	----
+audio:membus:upwt:audio:70
+usb:membus:uprd:usb:70
+membus:cache0:wt:cpu0:6
+membus:cache0:wtreq:audio:49
+cpu0:cache0:rd:cpu0:35	----
+membus:cache0:rdreq:usb:49
+gfx:membus:upwt:gfx:71	----
+audio:membus:upwt:audio:71
+usb:membus:uprd:usb:71
+cache1:cache0:wtres:gfx:4
+membus:mem:rd:cpu1:4	----
+membus:cache0:wtreq:gfx:50
+cache0:cache1:rdreq:cpu0:17
+membus:cache0:wtreq:audio:50	----
+membus:cache0:rdreq:usb:50	----
+cache0:membus:wtres:gfx:4
+gfx:membus:upwt:gfx:72	----
+audio:membus:upwt:audio:72
+usb:membus:uprd:usb:72
+cache0:cpu0:wt:cpu0:6	----
+membus:cache0:wtreq:gfx:51	----
+cache0:cache1:rdres:cpu1:12
+membus:cache0:wtreq:audio:51	----
+gfx:membus:upwt:gfx:73	----
+audio:membus:upwt:audio:73
+usb:membus:uprd:usb:73
+membus:cache0:rdreq:usb:51
+cache1:membus:rd:cpu1:12	----
+gfx:membus:upwt:gfx:74	----
+audio:membus:upwt:audio:74
+usb:membus:uprd:usb:74
+membus:cache0:wtreq:gfx:52
+cache1:cache0:rdres:cpu0:17
+cpu1:cache1:wt:cpu1:31	----
+membus:cache0:wtreq:audio:52
+membus:cache0:rdreq:usb:52	----
+cache0:cache1:wtreq:audio:4
+cache0:membus:rd:cpu0:17	----
+gfx:membus:upwt:gfx:75	----
+audio:membus:upwt:audio:75
+usb:membus:uprd:usb:75
+membus:cache0:wtreq:gfx:53	----
+cpu0:cache0:rd:cpu0:36	----
+membus:cache0:wtreq:audio:53
+membus:cache0:rdreq:usb:53	----
+cache1:cache0:wtreq:cpu1:13
+gfx:membus:upwt:gfx:76	----
+audio:membus:upwt:audio:76
+usb:membus:uprd:usb:76
+cache0:cache1:wtreq:cpu0:18	----
+membus:cache0:wtreq:gfx:54	----
+gfx:membus:upwt:gfx:77	----
+audio:membus:upwt:audio:77
+usb:membus:uprd:usb:77
+membus:cache0:wtreq:audio:54
+membus:cache0:rdreq:usb:54	----
+cache1:cache0:wtres:audio:4	----
+gfx:membus:upwt:gfx:78	----
+audio:membus:upwt:audio:78
+usb:membus:uprd:usb:78
+mem:membus:rd:cpu1:4
+cache0:membus:wtres:audio:4
+membus:cache0:wtreq:gfx:55	----
+membus:cache0:wtreq:audio:55	----
+membus:cache0:rdreq:usb:55	----
+cache0:cache1:wtres:cpu1:13	----
+gfx:membus:upwt:gfx:79	----
+audio:membus:upwt:audio:79
+usb:membus:uprd:usb:79
+membus:cache1:rd:cpu1:4	----
+cache1:membus:wt:cpu1:13	----
+membus:cache0:wtreq:gfx:56	----
+membus:cache0:wtreq:audio:56	----
+cache0:cache1:rdreq:usb:4
+gfx:membus:upwt:gfx:80	----
+audio:membus:upwt:audio:80
+usb:membus:uprd:usb:80
+membus:cache0:rdreq:usb:56
+cache1:cache0:wtres:cpu0:18
+cpu1:cache1:wt:cpu1:32	----
+membus:mem:rd:cpu0:8
+cache0:membus:wt:cpu0:18	----
+gfx:membus:upwt:gfx:81	----
+audio:membus:upwt:audio:81
+usb:membus:uprd:usb:81
+membus:cache0:wtreq:gfx:57
+membus:cache0:wtreq:audio:57	----
+cpu0:cache0:wt:cpu0:37	----
+membus:cache0:rdreq:usb:57
+cache1:cpu1:rd:cpu1:4	----
+gfx:membus:upwt:gfx:82	----
+audio:membus:upwt:audio:82
+usb:membus:uprd:usb:82
+cache1:cache0:wtreq:cpu1:14
+cache0:cpu0:rd:cpu0:19	----
+membus:cache0:wtreq:gfx:58
+membus:cache0:wtreq:audio:58	----
+membus:cache0:rdreq:usb:58	----
+cache1:cache0:rdres:usb:4
+gfx:membus:upwt:gfx:83	----
+audio:membus:upwt:audio:83
+usb:membus:uprd:usb:83
+cache0:membus:rdres:usb:4	----
+cpu0:cache0:wt:cpu0:38	----
+membus:cache0:wtreq:gfx:59	----
+gfx:membus:upwt:gfx:84	----
+audio:membus:upwt:audio:84
+usb:membus:uprd:usb:84
+membus:cache0:wtreq:audio:59
+membus:cache0:rdreq:usb:59	----
+gfx:membus:upwt:gfx:85	----
+audio:membus:upwt:audio:85
+usb:membus:uprd:usb:85
+cache0:cache1:wtreq:cpu0:20
+membus:cache0:wtreq:gfx:60	----
+membus:cache0:wtreq:audio:60	----
+cache0:cache1:wtres:cpu1:14
+membus:cache0:rdreq:usb:60	----
+gfx:membus:upwt:gfx:86	----
+audio:membus:upwt:audio:86
+usb:membus:uprd:usb:86
+cache1:membus:wt:cpu1:14
+cache0:cache1:wtreq:gfx:5	----
+membus:cache0:wtreq:gfx:61	----
+membus:cache0:wtreq:audio:61	----
+cpu1:cache1:wt:cpu1:33	----
+gfx:membus:upwt:gfx:87
+audio:membus:upwt:audio:87
+usb:membus:uprd:usb:87
+membus:cache0:rdreq:usb:61
+mem:membus:rd:cpu0:8	----
+gfx:membus:upwt:gfx:88	----
+audio:membus:upwt:audio:88
+usb:membus:uprd:usb:88
+membus:cache0:wtreq:gfx:62
+membus:cache0:wt:cpu0:8	----
+membus:cache0:wtreq:audio:62
+cache1:cache0:rdreq:cpu1:15
+cache1:cache0:wtres:cpu0:20
+membus:cache0:rdreq:usb:62	----
+cache0:membus:wt:cpu0:20	----
+gfx:membus:upwt:gfx:89	----
+audio:membus:upwt:audio:89
+usb:membus:uprd:usb:89
+membus:mem:rd:cpu1:5	----
+membus:cache0:wtreq:gfx:63
+membus:cache0:wtreq:audio:63	----
+cpu0:cache0:wt:cpu0:39	----
+membus:cache0:rdreq:usb:63
+gfx:membus:upwt:gfx:90	----
+audio:membus:upwt:audio:90
+usb:membus:uprd:usb:90
+cache1:cache0:wtres:gfx:5	----
+cache0:cpu0:wt:cpu0:8	----
+cache0:cpu0:rd:cpu0:21	----
+membus:cache0:wtreq:gfx:64
+gfx:membus:upwt:gfx:91	----
+audio:membus:upwt:audio:91
+usb:membus:uprd:usb:91
+membus:cache0:wtreq:audio:64
+cache0:membus:wtres:gfx:5
+membus:cache0:rdreq:usb:64	----
+cache0:cache1:rdres:cpu1:15	----
+cpu0:cache0:rd:cpu0:40	----
+gfx:membus:upwt:gfx:92
+audio:membus:upwt:audio:92
+usb:membus:uprd:usb:92
+cache1:membus:rd:cpu1:15
+membus:cache0:wtreq:gfx:65	----
+membus:cache0:wtreq:audio:65	----
+membus:cache0:rdreq:usb:65	----
+cpu1:cache1:wt:cpu1:34	----
+cache0:cpu0:rd:cpu0:22	----
+gfx:membus:upwt:gfx:93
+audio:membus:upwt:audio:93
+usb:membus:uprd:usb:93
+cache0:cache1:wtreq:audio:5	----
+membus:cache0:wtreq:gfx:66	----
+membus:cache0:wtreq:audio:66	----
+gfx:membus:upwt:gfx:94	----
+audio:membus:upwt:audio:94
+usb:membus:uprd:usb:94
+membus:cache0:rdreq:usb:66
+cpu0:cache0:wt:cpu0:41	----
+cache1:cache0:wtreq:cpu1:16	----
+gfx:membus:upwt:gfx:95	----
+audio:membus:upwt:audio:95
+usb:membus:uprd:usb:95
+membus:cache0:wtreq:gfx:67
+membus:cache0:wtreq:audio:67	----
+membus:cache0:rdreq:usb:67	----
+cache0:cache1:wtreq:cpu0:23	----
+gfx:membus:upwt:gfx:96	----
+audio:membus:upwt:audio:96
+usb:membus:uprd:usb:96
+mem:membus:rd:cpu1:5	----
+membus:cache0:wtreq:gfx:68	----
+membus:cache0:wtreq:audio:68	----
+cache1:cache0:wtres:audio:5
+membus:cache0:rdreq:usb:68	----
+gfx:membus:upwt:gfx:97	----
+audio:membus:upwt:audio:97
+usb:membus:uprd:usb:97
+cache0:membus:wtres:audio:5	----
+membus:cache1:rd:cpu1:5	----
+cache0:cache1:wtres:cpu1:16	----
+membus:cache0:wtreq:gfx:69	----
+gfx:membus:upwt:gfx:98	----
+audio:membus:upwt:audio:98
+usb:membus:uprd:usb:98
+membus:cache0:wtreq:audio:69
+cache1:membus:wt:cpu1:16	----
+membus:cache0:rdreq:usb:69
+membus:mem:rd:cpu0:11	----
+cpu1:cache1:rd:cpu1:35	----
+gfx:membus:upwt:gfx:99
+audio:membus:upwt:audio:99
+usb:membus:uprd:usb:99
+membus:cache0:wtreq:gfx:70	----
+cache1:cache0:wtres:cpu0:23
+membus:cache0:wtreq:audio:70	----
+membus:cache0:rdreq:usb:70	----
+cache1:cpu1:rd:cpu1:5	----
+cache0:membus:wt:cpu0:23
+cache0:cache1:rdreq:usb:5
+gfx:membus:upwt:gfx:100	----
+audio:membus:upwt:audio:100
+usb:membus:uprd:usb:100
+membus:cache0:wtreq:gfx:71	----
+cache1:cache0:rdreq:cpu1:17
+cpu0:cache0:wt:cpu0:42	----
+membus:cache0:wtreq:audio:71
+membus:cache0:rdreq:usb:71	----
+cache0:cpu0:rd:cpu0:24	----
+membus:cache0:wtreq:gfx:72
+membus:cache0:wtreq:audio:72	----
+membus:cache0:rdreq:usb:72	----
+cache1:cache0:rdres:usb:5	----
+cpu0:cache0:wt:cpu0:43	----
+membus:cache0:wtreq:gfx:73	----
+cache0:membus:rdres:usb:5
+membus:cache0:wtreq:audio:73	----
+membus:cache0:rdreq:usb:73	----
+cache0:cache1:rdres:cpu1:17
+cache0:cpu0:rd:cpu0:25	----
+cache1:membus:rd:cpu1:17	----
+membus:cache0:wtreq:gfx:74	----
+membus:cache0:wtreq:audio:74	----
+cpu0:cache0:wt:cpu0:44	----
+cpu1:cache1:rd:cpu1:36
+membus:cache0:rdreq:usb:74
+mem:membus:rd:cpu0:11	----
+cache0:cache1:wtreq:gfx:6	----
+membus:cache0:wtreq:gfx:75	----
+cache0:cache1:wtreq:cpu0:26
+membus:cache0:wt:cpu0:11	----
+membus:cache0:wtreq:audio:75
+membus:cache0:rdreq:usb:75	----
+cache1:cache0:wtreq:cpu1:18	----
+membus:mem:rd:cpu1:6	----
+membus:cache0:wtreq:gfx:76
+membus:cache0:wtreq:audio:76	----
+membus:cache0:rdreq:usb:76	----
+cache0:cpu0:wt:cpu0:11	----
+membus:cache0:wtreq:gfx:77	----
+cache1:cache0:wtres:gfx:6
+membus:cache0:wtreq:audio:77	----
+membus:cache0:rdreq:usb:77	----
+cache0:membus:wtres:gfx:6	----
+cache0:cache1:wtres:cpu1:18	----
+cache1:membus:wt:cpu1:18	----
+membus:cache0:wtreq:gfx:78
+membus:cache0:wtreq:audio:78	----
+membus:cache0:rdreq:usb:78	----
+cache1:cache0:wtres:cpu0:26	----
+cpu1:cache1:wt:cpu1:37	----
+cache0:cache1:wtreq:audio:6
+cache0:membus:wt:cpu0:26	----
+membus:cache0:wtreq:gfx:79
+membus:cache0:wtreq:audio:79	----
+membus:cache0:rdreq:usb:79	----
+cpu0:cache0:wt:cpu0:45	----
+cache1:cache0:rdreq:cpu1:19	----
+membus:cache0:wtreq:gfx:80	----
+membus:cache0:wtreq:audio:80	----
+membus:cache0:rdreq:usb:80	----
+cache0:cache1:wtreq:cpu0:27
+mem:membus:rd:cpu1:6	----
+membus:cache0:wtreq:gfx:81	----
+cache1:cache0:wtres:audio:6
+membus:cache0:wtreq:audio:81	----
+membus:cache0:rdreq:usb:81	----
+cache0:membus:wtres:audio:6	----
+membus:cache1:wt:cpu1:6	----
+membus:cache0:wtreq:gfx:82	----
+cache0:cache1:rdres:cpu1:19
+membus:cache0:wtreq:audio:82	----
+membus:cache0:rdreq:usb:82	----
+cache1:membus:rd:cpu1:19	----
+membus:mem:rd:cpu0:13	----
+cache1:cache0:wtres:cpu0:27	----
+membus:cache0:wtreq:gfx:83	----
+cpu1:cache1:rd:cpu1:38	----
+membus:cache0:wtreq:audio:83
+cache0:membus:wt:cpu0:27	----
+membus:cache0:rdreq:usb:83
+cache0:cache1:rdreq:usb:6
+cache1:cpu1:wt:cpu1:6	----
+cpu0:cache0:wt:cpu0:46	----
+membus:cache0:wtreq:gfx:84
+membus:cache0:wtreq:audio:84	----
+membus:cache0:rdreq:usb:84	----
+cache1:cache0:wtreq:cpu1:20
+cache0:cpu0:rd:cpu0:28	----
+membus:cache0:wtreq:gfx:85	----
+membus:cache0:wtreq:audio:85	----
+membus:cache0:rdreq:usb:85	----
+cache1:cache0:rdres:usb:6
+cpu0:cache0:wt:cpu0:47	----
+cache0:membus:rdres:usb:6	----
+membus:cache0:wtreq:gfx:86	----
+membus:cache0:wtreq:audio:86	----
+membus:cache0:rdreq:usb:86	----
+cache0:cache1:wtreq:cpu0:29
+cache0:cache1:wtres:cpu1:20	----
+cache1:membus:wt:cpu1:20	----
+membus:cache0:wtreq:gfx:87	----
+membus:cache0:wtreq:audio:87	----
+cache0:cache1:wtreq:gfx:7
+membus:cache0:rdreq:usb:87	----
+mem:membus:rd:cpu0:13	----
+cpu1:cache1:wt:cpu1:39	----
+membus:cache0:wtreq:gfx:88	----
+cache1:cpu1:rd:cpu1:21	----
+membus:cache0:wt:cpu0:13
+membus:cache0:wtreq:audio:88
+membus:cache0:rdreq:usb:88	----
+cache1:cache0:wtres:cpu0:29
+cache0:membus:wt:cpu0:29	----
+cpu1:cache1:rd:cpu1:40	----
+membus:mem:rd:cpu1:7	----
+membus:cache0:wtreq:gfx:89
+membus:cache0:wtreq:audio:89	----
+membus:cache0:rdreq:usb:89	----
+cpu0:cache0:rd:cpu0:48	----
+cache1:cpu1:rd:cpu1:22	----
+cache0:cpu0:wt:cpu0:13	----
+membus:cache0:wtreq:gfx:90
+cache0:cpu0:rd:cpu0:30	----
+membus:cache0:wtreq:audio:90
+cache1:cache0:wtres:gfx:7
+membus:cache0:rdreq:usb:90	----
+cpu1:cache1:wt:cpu1:41	----
+cache0:membus:wtres:gfx:7	----
+cpu0:cache0:wt:cpu0:49	----
+membus:cache0:wtreq:gfx:91
+membus:cache0:wtreq:audio:91	----
+membus:cache0:rdreq:usb:91	----
+cache1:cache0:wtreq:cpu1:23	----
+membus:cache0:wtreq:gfx:92	----
+membus:cache0:wtreq:audio:92	----
+membus:cache0:rdreq:usb:92	----
+cache0:cache1:wtreq:cpu0:31
+cache0:cache1:wtreq:audio:7	----
+membus:cache0:wtreq:gfx:93	----
+membus:cache0:wtreq:audio:93	----
+membus:cache0:rdreq:usb:93	----
+mem:membus:rd:cpu1:7	----
+cache0:cache1:wtres:cpu1:23
+membus:cache0:wtreq:gfx:94	----
+membus:cache0:wtreq:audio:94	----
+cache1:membus:wt:cpu1:23	----
+membus:cache0:rdreq:usb:94
+cache1:cache0:wtres:cpu0:31	----
+membus:cache1:rd:cpu1:7	----
+cpu1:cache1:rd:cpu1:42	----
+cache0:membus:wt:cpu0:31	----
+membus:cache0:wtreq:gfx:95
+membus:cache0:wtreq:audio:95	----
+membus:cache0:rdreq:usb:95	----
+membus:mem:rd:cpu0:14	----
+cpu0:cache0:wt:cpu0:50	----
+cache1:cpu1:rd:cpu1:24	----
+membus:cache0:wtreq:gfx:96	----
+membus:cache0:wtreq:audio:96	----
+cache1:cpu1:rd:cpu1:7	----
+membus:cache0:rdreq:usb:96
+cache1:cache0:wtres:audio:7	----
+cpu1:cache1:wt:cpu1:43	----
+cache0:cache1:wtreq:cpu0:32	----
+membus:cache0:wtreq:gfx:97	----
+cache0:membus:wtres:audio:7
+membus:cache0:wtreq:audio:97	----
+membus:cache0:rdreq:usb:97	----
+cache1:cache0:rdreq:cpu1:25	----
+membus:cache0:wtreq:gfx:98	----
+membus:cache0:wtreq:audio:98	----
+membus:cache0:rdreq:usb:98	----
+cache0:cache1:rdreq:usb:7	----
+membus:cache0:wtreq:gfx:99	----
+cache1:cache0:wtres:cpu0:32
+membus:cache0:wtreq:audio:99	----
+membus:cache0:rdreq:usb:99	----
+cache0:membus:wt:cpu0:32	----
+cache0:cache1:rdres:cpu1:25	----
+membus:cache0:wtreq:gfx:100	----
+cpu0:cache0:rd:cpu0:51	----
+cache1:membus:rd:cpu1:25
+membus:cache0:wtreq:audio:100
+membus:cache0:rdreq:usb:100	----
+mem:membus:rd:cpu0:14	----
+cache1:cache0:rdres:usb:7	----
+cpu1:cache1:rd:cpu1:44	----
+cache0:membus:rdres:usb:7	----
+membus:cache0:wt:cpu0:14	----
+cache0:cache1:rdreq:cpu0:33	----
+cache1:cache0:wtreq:cpu1:26	----
+membus:mem:rd:cpu1:8	----
+cache0:cpu0:wt:cpu0:14	----
+cache0:cache1:wtreq:gfx:8	----
+cache1:cache0:rdres:cpu0:33	----
+cache0:membus:rd:cpu0:33	----
+cache0:cache1:wtres:cpu1:26
+cache1:membus:wt:cpu1:26	----
+cpu0:cache0:rd:cpu0:52	----
+cpu1:cache1:rd:cpu1:45	----
+cache0:cache1:wtreq:cpu0:34	----
+cache1:cache0:wtres:gfx:8	----
+cache0:membus:wtres:gfx:8	----
+cache1:cache0:wtreq:cpu1:27	----
+mem:membus:rd:cpu1:8	----
+cache1:cache0:wtres:cpu0:34	----
+cache0:cache1:wtreq:audio:8	----
+cache0:membus:wt:cpu0:34	----
+membus:cache1:wt:cpu1:8
+cpu0:cache0:rd:cpu0:53	----
+cache0:cache1:wtres:cpu1:27
+membus:mem:rd:cpu0:16	----
+cache1:membus:wt:cpu1:27	----
+cache0:cache1:rdreq:cpu0:35	----
+cache1:cpu1:wt:cpu1:8	----
+cpu1:cache1:wt:cpu1:46	----
+cache1:cache0:wtres:audio:8	----
+cache0:membus:wtres:audio:8	----
+cache1:cache0:wtreq:cpu1:28	----
+cache1:cache0:rdres:cpu0:35	----
+cache0:membus:rd:cpu0:35	----
+cache0:cache1:rdreq:usb:8	----
+cpu0:cache0:wt:cpu0:54	----
+cache0:cache1:wtres:cpu1:28	----
+cache1:membus:wt:cpu1:28	----
+mem:membus:rd:cpu0:16	----
+cache0:cache1:rdreq:cpu0:36	----
+cpu1:cache1:wt:cpu1:47	----
+membus:cache0:wt:cpu0:16	----
+cache1:cache0:rdres:usb:8
+cache1:cpu1:rd:cpu1:29	----
+cache0:membus:rdres:usb:8
+membus:mem:rd:cpu1:9	----
+cpu1:cache1:wt:cpu1:48	----
+cache0:cpu0:wt:cpu0:16	----
+cache0:cache1:wtreq:gfx:9	----
+cache1:cache0:rdres:cpu0:36
+cache0:membus:rd:cpu0:36	----
+cache1:cache0:wtreq:cpu1:30	----
+cpu0:cache0:wt:cpu0:55	----
+cache1:cache0:wtres:gfx:9	----
+cache0:cache1:wtreq:cpu0:37	----
+cache0:membus:wtres:gfx:9	----
+cache0:cache1:wtres:cpu1:30
+cache1:membus:wt:cpu1:30	----
+cpu1:cache1:rd:cpu1:49	----
+mem:membus:rd:cpu1:9	----
+cache0:cache1:wtreq:audio:9
+cache1:cache0:wtres:cpu0:37	----
+cache0:membus:wt:cpu0:37	----
+membus:cache1:rd:cpu1:9
+cache1:cache0:wtreq:cpu1:31	----
+cpu0:cache0:wt:cpu0:56	----
+membus:mem:rd:cpu0:17	----
+cache0:cache1:wtreq:cpu0:38	----
+cache1:cpu1:rd:cpu1:9	----
+cache1:cache0:wtres:audio:9	----
+cache0:membus:wtres:audio:9	----
+cache0:cache1:wtres:cpu1:31
+cache1:membus:wt:cpu1:31	----
+cpu1:cache1:rd:cpu1:50	----
+cache1:cache0:wtres:cpu0:38	----
+cache0:cache1:rdreq:usb:9	----
+cache0:membus:wt:cpu0:38	----
+cpu0:cache0:wt:cpu0:57	----
+cache1:cache0:wtreq:cpu1:32	----
+cache0:cache1:wtreq:cpu0:39	----
+mem:membus:rd:cpu0:17	----
+cache1:cache0:rdres:usb:9	----
+cache0:membus:rdres:usb:9	----
+membus:cache0:rd:cpu0:17	----
+cache0:cache1:wtres:cpu1:32	----
+cache1:membus:wt:cpu1:32	----
+membus:mem:rd:cpu1:10	----
+cpu1:cache1:rd:cpu1:51	----
+cache1:cache0:wtres:cpu0:39
+cache0:cpu0:rd:cpu0:17	----
+cache0:membus:wt:cpu0:39
+cache0:cache1:wtreq:gfx:10	----
+cpu0:cache0:wt:cpu0:58	----
+cache1:cache0:wtreq:cpu1:33	----
+cache0:cache1:rdreq:cpu0:40	----
+cache1:cache0:wtres:gfx:10	----
+cache0:membus:wtres:gfx:10	----
+cache0:cache1:wtres:cpu1:33	----
+cache1:membus:wt:cpu1:33	----
+cache1:cache0:rdres:cpu0:40	----
+mem:membus:rd:cpu1:10	----
+cache0:cache1:wtreq:audio:10
+cpu1:cache1:rd:cpu1:52	----
+cache0:membus:rd:cpu0:40
+membus:cache1:rd:cpu1:10	----
+cpu0:cache0:wt:cpu0:59	----
+cache1:cache0:wtreq:cpu1:34	----
+cache0:cache1:wtreq:cpu0:41	----
+membus:mem:rd:cpu0:18	----
+cache1:cpu1:rd:cpu1:10	----
+cache1:cache0:wtres:audio:10	----
+cache0:membus:wtres:audio:10	----
+cache0:cache1:wtres:cpu1:34	----
+cache1:membus:wt:cpu1:34	----
+cache1:cache0:wtres:cpu0:41	----
+cache0:cache1:rdreq:usb:10	----
+cpu1:cache1:rd:cpu1:53	----
+cache0:membus:wt:cpu0:41
+cache1:cpu1:rd:cpu1:35	----
+cpu0:cache0:rd:cpu0:60	----
+cpu1:cache1:wt:cpu1:54	----
+cache0:cache1:wtreq:cpu0:42	----
+mem:membus:rd:cpu0:18	----
+cache1:cache0:rdres:usb:10	----
+cache1:cpu1:rd:cpu1:36	----
+cache0:membus:rdres:usb:10	----
+membus:cache0:wt:cpu0:18	----
+cpu1:cache1:rd:cpu1:55	----
+membus:mem:rd:cpu1:11	----
+cache1:cache0:wtres:cpu0:42	----
+cache0:cache1:wtreq:gfx:11	----
+cache0:membus:wt:cpu0:42	----
+cache1:cache0:wtreq:cpu1:37
+cache0:cpu0:wt:cpu0:18	----
+cpu0:cache0:wt:cpu0:61	----
+cache0:cache1:wtreq:cpu0:43	----
+cache0:cache1:wtres:cpu1:37	----
+cache1:cache0:wtres:gfx:11
+cache1:membus:wt:cpu1:37	----
+cache0:membus:wtres:gfx:11
+cpu1:cache1:rd:cpu1:56	----
+cache1:cache0:wtres:cpu0:43	----
+cache0:membus:wt:cpu0:43	----
+mem:membus:rd:cpu1:11
+cache0:cache1:wtreq:audio:11
+cache1:cache0:rdreq:cpu1:38	----
+cpu0:cache0:wt:cpu0:62	----
+membus:cache1:wt:cpu1:11	----
+cache0:cache1:wtreq:cpu0:44	----
+membus:mem:rd:cpu0:20	----
+cache1:cache0:wtres:audio:11	----
+cache0:cache1:rdres:cpu1:38	----
+cache0:membus:wtres:audio:11	----
+cache1:cpu1:wt:cpu1:11	----
+cache1:membus:rd:cpu1:38
+cpu1:cache1:wt:cpu1:57	----
+cache1:cache0:wtres:cpu0:44	----
+cache0:cache1:rdreq:usb:11	----
+cache0:membus:wt:cpu0:44	----
+cpu0:cache0:rd:cpu0:63	----
+cache1:cache0:wtreq:cpu1:39
+cache0:cache1:wtreq:cpu0:45	----
+cache1:cache0:rdres:usb:11	----
+cache0:membus:rdres:usb:11	----
+mem:membus:rd:cpu0:20	----
+cache0:cache1:wtres:cpu1:39
+cache1:membus:wt:cpu1:39	----
+membus:cache0:wt:cpu0:20	----
+cpu1:cache1:rd:cpu1:58	----
+cache1:cache0:wtres:cpu0:45	----
+membus:mem:rd:cpu1:12	----
+cache0:membus:wt:cpu0:45	----
+cache0:cache1:wtreq:gfx:12	----
+cpu0:cache0:wt:cpu0:64	----
+cache0:cpu0:wt:cpu0:20
+cache1:cache0:rdreq:cpu1:40
+cache0:cache1:wtreq:cpu0:46	----
+cache1:cache0:wtres:gfx:12	----
+cache0:membus:wtres:gfx:12	----
+cache0:cache1:rdres:cpu1:40	----
+cache1:membus:rd:cpu1:40	----
+cache1:cache0:wtres:cpu0:46	----
+cpu1:cache1:rd:cpu1:59	----
+cache0:cache1:wtreq:audio:12
+cache0:membus:wt:cpu0:46	----
+mem:membus:rd:cpu1:12	----
+cpu0:cache0:rd:cpu0:65	----
+cache1:cache0:wtreq:cpu1:41	----
+membus:cache1:rd:cpu1:12	----
+cache0:cache1:wtreq:cpu0:47
+cache1:cache0:wtres:audio:12	----
+membus:mem:rd:cpu0:23	----
+cache0:membus:wtres:audio:12	----
+cache1:cpu1:rd:cpu1:12	----
+cache0:cache1:wtres:cpu1:41
+cache1:membus:wt:cpu1:41	----
+cache1:cache0:wtres:cpu0:47	----
+cpu1:cache1:wt:cpu1:60	----
+cache0:membus:wt:cpu0:47
+cache0:cache1:rdreq:usb:12	----
+cpu0:cache0:wt:cpu0:66	----
+cache1:cache0:rdreq:cpu1:42	----
+cache0:cache1:rdreq:cpu0:48	----
+cache1:cache0:rdres:usb:12	----
+cache0:membus:rdres:usb:12	----
+mem:membus:rd:cpu0:23	----
+cache0:cache1:rdres:cpu1:42	----
+membus:cache0:wt:cpu0:23	----
+cache1:membus:rd:cpu1:42	----
+cache1:cache0:rdres:cpu0:48	----
+cpu1:cache1:rd:cpu1:61	----
+membus:mem:rd:cpu1:13
+cache0:membus:rd:cpu0:48	----
+cache0:cache1:wtreq:gfx:13	----
+cpu0:cache0:rd:cpu0:67	----
+cache0:cpu0:wt:cpu0:23
+cache1:cache0:wtreq:cpu1:43	----
+cache0:cache1:wtreq:cpu0:49	----
+cache1:cache0:wtres:gfx:13	----
+cache0:membus:wtres:gfx:13	----
+cache0:cache1:wtres:cpu1:43	----
+cache1:membus:wt:cpu1:43	----
+cache1:cache0:wtres:cpu0:49	----
+cpu1:cache1:rd:cpu1:62	----
+cache0:cache1:wtreq:audio:13
+cache0:membus:wt:cpu0:49	----
+mem:membus:rd:cpu1:13	----
+cpu0:cache0:wt:cpu0:68	----
+cache1:cache0:rdreq:cpu1:44	----
+membus:cache1:wt:cpu1:13	----
+cache0:cache1:wtreq:cpu0:50
+cache1:cache0:wtres:audio:13	----
+membus:mem:rd:cpu0:26	----
+cache0:membus:wtres:audio:13	----
+cache1:cpu1:wt:cpu1:13	----
+cache0:cache1:rdres:cpu1:44	----
+cache1:membus:rd:cpu1:44	----
+cache1:cache0:wtres:cpu0:50	----
+cpu1:cache1:rd:cpu1:63	----
+cache0:membus:wt:cpu0:50
+cache0:cache1:rdreq:usb:13	----
+cpu0:cache0:wt:cpu0:69	----
+cache1:cache0:rdreq:cpu1:45	----
+cache0:cache1:rdreq:cpu0:51	----
+cache1:cache0:rdres:usb:13	----
+cache0:membus:rdres:usb:13	----
+mem:membus:rd:cpu0:26	----
+cache0:cache1:rdres:cpu1:45	----
+membus:cache0:wt:cpu0:26	----
+cache1:membus:rd:cpu1:45	----
+cache1:cache0:rdres:cpu0:51	----
+cpu1:cache1:wt:cpu1:64	----
+membus:mem:rd:cpu1:14
+cache0:membus:rd:cpu0:51	----
+cache0:cache1:wtreq:gfx:14	----
+cpu0:cache0:wt:cpu0:70	----
+cache0:cpu0:wt:cpu0:26
+cache1:cache0:wtreq:cpu1:46	----
+cache0:cache1:rdreq:cpu0:52	----
+cache1:cache0:wtres:gfx:14	----
+cache0:membus:wtres:gfx:14	----
+cache0:cache1:wtres:cpu1:46	----
+cache1:membus:wt:cpu1:46	----
+cache1:cache0:rdres:cpu0:52
+cache0:cache1:wtreq:audio:14	----
+cache0:membus:rd:cpu0:52	----
+cpu1:cache1:wt:cpu1:65	----
+mem:membus:rd:cpu1:14	----
+cpu0:cache0:rd:cpu0:71	----
+membus:cache1:wt:cpu1:14	----
+cache0:cache1:rdreq:cpu0:53
+cache1:cache0:wtreq:cpu1:47	----
+cache1:cache0:wtres:audio:14	----
+membus:mem:rd:cpu0:27	----
+cache0:membus:wtres:audio:14	----
+cache1:cpu1:wt:cpu1:14	----
+cache0:cache1:wtres:cpu1:47	----
+cache0:membus:rdres:usb:14	----
+cache1:cache0:rdres:cpu0:53
+cache1:membus:wt:cpu1:47	----
+cache0:membus:rd:cpu0:53	----
+cpu0:cache0:wt:cpu0:72	----
+cpu1:cache1:rd:cpu1:66
+cache0:cache1:wtreq:cpu0:54	----
+cache1:cache0:wtreq:cpu1:48	----
+cache0:cache1:wtreq:gfx:15
+mem:membus:rd:cpu0:27	----
+membus:cache0:wt:cpu0:27	----
+cache1:cache0:wtres:cpu0:54	----
+cache0:cache1:wtres:cpu1:48	----
+cache0:membus:wt:cpu0:54	----
+cache1:membus:wt:cpu1:48	----
+membus:mem:rd:cpu1:15	----
+cpu0:cache0:wt:cpu0:73	----
+cpu1:cache1:wt:cpu1:67	----
+cache0:cpu0:wt:cpu0:27	----
+cache0:cache1:wtreq:cpu0:55	----
+cache1:cache0:wtres:gfx:15	----
+cache0:membus:wtres:gfx:15	----
+cache1:cache0:rdreq:cpu1:49	----
+cache1:cache0:wtres:cpu0:55	----
+cache0:cache1:wtreq:audio:15	----
+cache0:membus:wt:cpu0:55	----
+cache0:cache1:rdres:cpu1:49	----
+cpu0:cache0:wt:cpu0:74	----
+cache1:membus:rd:cpu1:49	----
+mem:membus:rd:cpu1:15	----
+cache0:cache1:wtreq:cpu0:56
+cpu1:cache1:wt:cpu1:68	----
+cache1:cache0:wtres:audio:15	----
+membus:cache1:rd:cpu1:15	----
+cache0:membus:wtres:audio:15	----
+cache1:cache0:rdreq:cpu1:50	----
+membus:mem:rd:cpu0:29	----
+cache0:membus:rdres:usb:15	----
+cache1:cpu1:rd:cpu1:15	----
+cache1:cache0:wtres:cpu0:56	----
+cache0:membus:wt:cpu0:56	----
+cache0:cache1:rdres:cpu1:50	----
+cache0:cache1:wtreq:gfx:16	----
+cpu0:cache0:wt:cpu0:75	----
+cache1:membus:rd:cpu1:50
+cpu1:cache1:rd:cpu1:69	----
+cache0:cache1:wtreq:cpu0:57
+cache1:cache0:rdreq:cpu1:51	----
+cache1:cache0:wtres:gfx:16	----
+cache0:membus:wtres:gfx:16	----
+mem:membus:rd:cpu0:29	----
+membus:cache0:wt:cpu0:29	----
+cache1:cache0:wtres:cpu0:57	----
+cache0:cache1:rdres:cpu1:51	----
+cache0:membus:wt:cpu0:57	----
+membus:mem:rd:cpu1:16
+cache0:cache1:wtreq:audio:16	----
+cache1:membus:rd:cpu1:51	----
+cpu0:cache0:rd:cpu0:76	----
+cache0:cpu0:wt:cpu0:29	----
+cpu1:cache1:rd:cpu1:70
+cache0:cache1:wtreq:cpu0:58	----
+cache1:cache0:rdreq:cpu1:52	----
+cache1:cache0:wtres:audio:16	----
+cache0:membus:wtres:audio:16	----
+cache1:cache0:wtres:cpu0:58	----
+cache0:cache1:rdreq:usb:16	----
+cache0:cache1:rdres:cpu1:52	----
+cache0:membus:wt:cpu0:58	----
+cache1:membus:rd:cpu1:52	----
+mem:membus:rd:cpu1:16	----
+cpu0:cache0:rd:cpu0:77	----
+cpu1:cache1:rd:cpu1:71	----
+cache0:cache1:wtreq:cpu0:59	----
+membus:cache1:wt:cpu1:16	----
+cache1:cache0:rdres:usb:16	----
+cache0:membus:rdres:usb:16	----
+cache1:cache0:rdreq:cpu1:53
+membus:mem:rd:cpu0:31	----
+cache1:cpu1:wt:cpu1:16	----
+cache1:cache0:wtres:cpu0:59	----
+cache0:cache1:wtreq:gfx:17	----
+cache0:membus:wt:cpu0:59	----
+cache0:cache1:rdres:cpu1:53	----
+cpu0:cache0:wt:cpu0:78	----
+cache1:membus:rd:cpu1:53	----
+cache0:cache1:rdreq:cpu0:60	----
+cpu1:cache1:wt:cpu1:72	----
+cache1:cache0:wtres:gfx:17	----
+cache0:membus:wtres:gfx:17	----
+cache1:cache0:wtreq:cpu1:54	----
+mem:membus:rd:cpu0:31	----
+cache0:cache1:wtreq:audio:17	----
+cache1:cache0:rdres:cpu0:60
+cache0:membus:rd:cpu0:60	----
+membus:cache0:wt:cpu0:31
+cpu0:cache0:rd:cpu0:79	----
+membus:mem:rd:cpu1:17	----
+cache0:cache1:wtres:cpu1:54
+cache1:membus:wt:cpu1:54	----
+cache0:cpu0:wt:cpu0:31	----
+cache1:cache0:wtres:audio:17
+cache0:cache1:wtreq:cpu0:61	----
+cpu1:cache1:wt:cpu1:73	----
+cache0:membus:wtres:audio:17	----
+cache1:cache0:rdreq:cpu1:55	----
+cache1:cache0:wtres:cpu0:61	----
+cache0:cache1:rdreq:usb:17	----
+cache0:membus:wt:cpu0:61	----
+cpu0:cache0:rd:cpu0:80	----
+cache0:cache1:rdres:cpu1:55	----
+cache1:membus:rd:cpu1:55	----
+mem:membus:rd:cpu1:17	----
+cache0:cache1:wtreq:cpu0:62
+cpu1:cache1:wt:cpu1:74	----
+cache1:cache0:rdres:usb:17	----
+membus:cache1:rd:cpu1:17	----
+cache0:membus:rdres:usb:17	----
+membus:mem:rd:cpu0:32	----
+cache1:cache0:rdreq:cpu1:56	----
+cache0:cache1:wtreq:gfx:18	----
+cache1:cpu1:rd:cpu1:17	----
+cache1:cache0:wtres:cpu0:62	----
+cache0:membus:wt:cpu0:62	----
+cache0:cache1:rdres:cpu1:56	----
+cpu0:cache0:rd:cpu0:81	----
+cache1:membus:rd:cpu1:56	----
+cache1:cache0:wtres:gfx:18	----
+cache0:cache1:rdreq:cpu0:63	----
+cpu1:cache1:rd:cpu1:75	----
+cache0:membus:wtres:gfx:18
+cache0:cache1:wtreq:audio:18	----
+cache1:cache0:wtreq:cpu1:57	----
+mem:membus:rd:cpu0:32	----
+cache1:cache0:rdres:cpu0:63	----
+cache0:membus:rd:cpu0:63	----
+membus:cache0:wt:cpu0:32
+cpu0:cache0:wt:cpu0:82	----
+membus:mem:rd:cpu1:18	----
+cache0:cache1:wtres:cpu1:57	----
+cache1:membus:wt:cpu1:57	----
+cache1:cache0:wtres:audio:18
+cache0:cpu0:wt:cpu0:32	----
+cache0:membus:wtres:audio:18	----
+cache0:cache1:wtreq:cpu0:64
+cpu1:cache1:rd:cpu1:76	----
+cache1:cache0:rdreq:cpu1:58	----
+cache0:cache1:rdreq:usb:18
+cache1:cache0:wtres:cpu0:64	----
+cache0:membus:wt:cpu0:64	----
+cpu0:cache0:wt:cpu0:83	----
+cache1:cache0:rdres:usb:18	----
+cache0:cache1:rdres:cpu1:58	----
+mem:membus:rd:cpu1:18	----
+cache0:cache1:rdreq:cpu0:65
+cache0:membus:rdres:usb:18	----
+cache1:membus:rd:cpu1:58	----
+membus:cache1:wt:cpu1:18	----
+cpu1:cache1:wt:cpu1:77	----
+cache0:cache1:wtreq:gfx:19	----
+membus:mem:rd:cpu0:33	----
+cache1:cache0:rdreq:cpu1:59	----
+cache1:cache0:rdres:cpu0:65
+cache1:cpu1:wt:cpu1:18	----
+cache0:membus:rd:cpu0:65
+cpu0:cache0:rd:cpu0:84	----
+cache0:cache1:wtreq:cpu0:66	----
+cache1:cache0:wtres:gfx:19
+cache0:membus:wtres:gfx:19	----
+cache0:cache1:rdres:cpu1:59
+cache1:membus:rd:cpu1:59	----
+cpu1:cache1:rd:cpu1:78	----
+cache1:cache0:wtres:cpu0:66	----
+cache0:cache1:wtreq:audio:19	----
+cache0:membus:wt:cpu0:66	----
+mem:membus:rd:cpu0:33	----
+cache1:cache0:wtreq:cpu1:60
+cpu0:cache0:wt:cpu0:85	----
+membus:cache0:rd:cpu0:33	----
+cache0:cache1:rdreq:cpu0:67	----
+membus:mem:rd:cpu1:19	----
+cache1:cache0:wtres:audio:19	----
+cache0:membus:wtres:audio:19	----
+cache0:cpu0:rd:cpu0:33	----
+cache0:cache1:wtres:cpu1:60	----
+cache1:membus:wt:cpu1:60	----
+cpu1:cache1:rd:cpu1:79	----
+cache1:cache0:rdres:cpu0:67	----
+cache0:membus:rd:cpu0:67	----
+cache0:cache1:rdreq:usb:19
+cache1:cache0:rdreq:cpu1:61	----
+cpu0:cache0:rd:cpu0:86	----
+cache0:cache1:wtreq:cpu0:68	----
+cache1:cache0:rdres:usb:19	----
+mem:membus:rd:cpu1:19	----
+cache0:membus:rdres:usb:19	----
+cache0:cache1:rdres:cpu1:61	----
+cache1:membus:rd:cpu1:61	----
+membus:cache1:rd:cpu1:19	----
+cpu1:cache1:wt:cpu1:80	----
+cache1:cache0:wtres:cpu0:68
+cache0:cache1:wtreq:gfx:20	----
+cache0:membus:wt:cpu0:68	----
+membus:mem:rd:cpu0:34
+cpu0:cache0:rd:cpu0:87	----
+cache1:cache0:rdreq:cpu1:62	----
+cache1:cpu1:rd:cpu1:19	----
+cache0:cache1:wtreq:cpu0:69	----
+cache1:cache0:wtres:gfx:20	----
+cache0:membus:wtres:gfx:20	----
+cache0:cache1:rdres:cpu1:62	----
+cache1:membus:rd:cpu1:62	----
+cache1:cache0:wtres:cpu0:69
+cache0:cache1:wtreq:audio:20	----
+cache0:membus:wt:cpu0:69	----
+cpu1:cache1:wt:cpu1:81	----
+cpu0:cache0:rd:cpu0:88	----
+mem:membus:rd:cpu0:34	----
+cache1:cache0:rdreq:cpu1:63	----
+cache0:cache1:wtreq:cpu0:70	----
+membus:cache0:wt:cpu0:34	----
+cache1:cache0:wtres:audio:20	----
+cache0:membus:wtres:audio:20	----
+membus:mem:rd:cpu1:20	----
+cache0:cpu0:wt:cpu0:34	----
+cache0:cache1:rdres:cpu1:63	----
+cache1:cache0:wtres:cpu0:70	----
+cache1:membus:rd:cpu1:63	----
+cache0:membus:wt:cpu0:70	----
+cache0:cache1:rdreq:usb:20	----
+cpu1:cache1:rd:cpu1:82	----
+cpu0:cache0:rd:cpu0:89	----
+cache1:cache0:wtreq:cpu1:64	----
+cache0:cache1:rdreq:cpu0:71	----
+cache1:cache0:rdres:usb:20	----
+cache0:membus:rdres:usb:20	----
+mem:membus:rd:cpu1:20	----
+cache0:cache1:wtres:cpu1:64	----
+cache1:cache0:rdres:cpu0:71	----
+cache1:membus:wt:cpu1:64	----
+membus:cache1:wt:cpu1:20
+cache0:cache1:wtreq:gfx:21
+cache0:membus:rd:cpu0:71	----
+cpu1:cache1:wt:cpu1:83	----
+cpu0:cache0:rd:cpu0:90	----
+membus:mem:rd:cpu0:35
+cache0:cache1:wtreq:cpu0:72	----
+cache1:cpu1:wt:cpu1:20	----
+cache1:cache0:wtreq:cpu1:65	----
+cache1:cache0:wtres:gfx:21	----
+cache0:membus:wtres:gfx:21	----
+cache1:cache0:wtres:cpu0:72	----
+cache0:cache1:wtreq:audio:21	----
+cache0:cache1:wtres:cpu1:65	----
+cache0:membus:wt:cpu0:72	----
+cache1:membus:wt:cpu1:65	----
+cpu0:cache0:wt:cpu0:91	----
+cpu1:cache1:rd:cpu1:84	----
+cache0:cache1:wtreq:cpu0:73	----
+mem:membus:rd:cpu0:35	----
+cache1:cache0:wtres:audio:21	----
+cache0:membus:wtres:audio:21	----
+cache1:cache0:rdreq:cpu1:66
+membus:cache0:rd:cpu0:35	----
+membus:mem:rd:cpu1:23	----
+cache0:cache1:rdreq:usb:21	----
+cache1:cache0:wtres:cpu0:73
+cache0:cpu0:rd:cpu0:35	----
+cache0:membus:wt:cpu0:73
+cache0:cache1:rdres:cpu1:66	----
+cache1:membus:rd:cpu1:66	----
+cpu0:cache0:rd:cpu0:92	----
+cpu1:cache1:wt:cpu1:85	----
+cache1:cache0:rdres:usb:21	----
+cache0:cache1:wtreq:cpu0:74	----
+cache0:membus:rdres:usb:21	----
+cache1:cache0:wtreq:cpu1:67	----
+cache1:cache0:wtres:cpu0:74	----
+mem:membus:rd:cpu1:23	----
+cache0:cache1:wtreq:gfx:22	----
+cache0:membus:wt:cpu0:74	----
+cache0:cache1:wtres:cpu1:67	----
+cpu0:cache0:rd:cpu0:93	----
+membus:cache1:wt:cpu1:23
+cache1:membus:wt:cpu1:67	----
+cpu1:cache1:wt:cpu1:86	----
+membus:mem:rd:cpu0:36	----
+cache0:cache1:wtreq:cpu0:75
+cache1:cpu1:wt:cpu1:23	----
+cache1:cache0:wtres:gfx:22	----
+cache1:cache0:wtreq:cpu1:68	----
+cache0:membus:wtres:gfx:22	----
+cache1:cache0:wtres:cpu0:75	----
+cache0:membus:wt:cpu0:75	----
+cache0:cache1:wtreq:audio:22
+cache0:cache1:wtres:cpu1:68	----
+cpu0:cache0:rd:cpu0:94	----
+cache1:membus:wt:cpu1:68	----
+cpu1:cache1:rd:cpu1:87	----
+cache0:cache1:rdreq:cpu0:76	----
+mem:membus:rd:cpu0:36	----
+cache1:cache0:wtres:audio:22	----
+cache0:membus:wtres:audio:22	----
+membus:cache0:rd:cpu0:36	----
+cache1:cache0:rdreq:cpu1:69	----
+membus:mem:rd:cpu1:25	----
+cache0:cache1:rdreq:usb:22	----
+cache1:cache0:rdres:cpu0:76
+cache0:cpu0:rd:cpu0:36	----
+cache0:membus:rd:cpu0:76
+cache0:cache1:rdres:cpu1:69	----
+cpu0:cache0:wt:cpu0:95	----
+cache1:membus:rd:cpu1:69	----
+cpu1:cache1:rd:cpu1:88	----
+cache1:cache0:rdres:usb:22
+cache0:cache1:rdreq:cpu0:77	----
+cache0:membus:rdres:usb:22	----
+cache1:cache0:rdreq:cpu1:70	----
+cache1:cache0:rdres:cpu0:77	----
+mem:membus:rd:cpu1:25	----
+cache0:cache1:wtreq:gfx:23	----
+cache0:membus:rd:cpu0:77	----
+cpu0:cache0:rd:cpu0:96	----
+membus:cache1:rd:cpu1:25
+cache0:cache1:rdres:cpu1:70	----
+cache1:membus:rd:cpu1:70	----
+membus:mem:rd:cpu0:37	----
+cache0:cache1:wtreq:cpu0:78
+cpu1:cache1:wt:cpu1:89	----
+cache1:cpu1:rd:cpu1:25	----
+cache1:cache0:wtres:gfx:23	----
+cache0:membus:wtres:gfx:23	----
+cache1:cache0:rdreq:cpu1:71	----
+cache1:cache0:wtres:cpu0:78	----
+cache0:membus:wt:cpu0:78	----
+cache0:cache1:wtreq:audio:23
+cpu0:cache0:rd:cpu0:97	----
+cache0:cache1:rdres:cpu1:71	----
+cache1:membus:rd:cpu1:71	----
+cache0:cache1:rdreq:cpu0:79	----
+cpu1:cache1:wt:cpu1:90	----
+mem:membus:rd:cpu0:37
+cache1:cache0:wtres:audio:23	----
+cache0:membus:wtres:audio:23	----
+membus:cache0:wt:cpu0:37	----
+cache1:cache0:wtreq:cpu1:72	----
+membus:mem:rd:cpu1:26	----
+cache0:cache1:rdreq:usb:23	----
+cache1:cache0:rdres:cpu0:79
+cache0:cpu0:wt:cpu0:37	----
+cache0:membus:rd:cpu0:79
+cpu0:cache0:rd:cpu0:98	----
+cache0:cache1:wtres:cpu1:72
+cache1:membus:wt:cpu1:72	----
+cache0:cpu0:rd:cpu0:80	----
+cpu1:cache1:wt:cpu1:91	----
+cache1:cache0:rdres:usb:23
+cache0:membus:rdres:usb:23	----
+cpu0:cache0:rd:cpu0:99	----
+cache1:cache0:wtreq:cpu1:73	----
+cache0:cache1:rdreq:cpu0:81	----
+cache0:cache1:wtreq:gfx:24	----
+mem:membus:rd:cpu1:26	----
+membus:cache1:wt:cpu1:26	----
+cache1:cache0:rdres:cpu0:81	----
+cache0:cache1:wtres:cpu1:73	----
+cache0:membus:rd:cpu0:81	----
+membus:mem:rd:cpu0:38
+cache1:membus:wt:cpu1:73	----
+cpu0:cache0:wt:cpu0:100	----
+cpu1:cache1:rd:cpu1:92
+cache1:cpu1:wt:cpu1:26	----
+cache1:cache0:wtres:gfx:24	----
+cache0:cache1:wtreq:cpu0:82	----
+cache0:membus:wtres:gfx:24	----
+cache1:cache0:wtreq:cpu1:74	----
+cache0:cache1:wtreq:audio:24	----
+cache1:cache0:wtres:cpu0:82	----
+cache0:membus:wt:cpu0:82	----
+cache0:cache1:wtres:cpu1:74	----
+cache1:membus:wt:cpu1:74	----
+mem:membus:rd:cpu0:38	----
+cache1:cache0:wtres:audio:24	----
+cpu1:cache1:rd:cpu1:93	----
+cache0:cache1:wtreq:cpu0:83	----
+cache0:membus:wtres:audio:24	----
+membus:cache0:wt:cpu0:38	----
+cache1:cache0:rdreq:cpu1:75	----
+membus:mem:rd:cpu1:27	----
+cache0:cache1:rdreq:usb:24	----
+cache0:cpu0:wt:cpu0:38	----
+cache1:cache0:wtres:cpu0:83
+cache0:membus:wt:cpu0:83	----
+cache0:cache1:rdres:cpu1:75	----
+cache1:membus:rd:cpu1:75	----
+cache0:cpu0:rd:cpu0:84	----
+cache1:cache0:rdres:usb:24
+cpu1:cache1:rd:cpu1:94	----
+cache0:membus:rdres:usb:24	----
+cache1:cache0:rdreq:cpu1:76	----
+mem:membus:rd:cpu1:27	----
+cache0:cache1:wtreq:cpu0:85
+cache0:cache1:wtreq:gfx:25	----
+membus:cache1:wt:cpu1:27	----
+cache0:cache1:rdres:cpu1:76	----
+membus:mem:rd:cpu0:39	----
+cache1:membus:rd:cpu1:76	----
+cache1:cache0:wtres:cpu0:85	----
+cache1:cpu1:wt:cpu1:27	----
+cache0:membus:wt:cpu0:85
+cpu1:cache1:wt:cpu1:95	----
+cache0:cpu0:rd:cpu0:86	----
+cache1:cache0:wtreq:cpu1:77
+cache1:cache0:wtres:gfx:25
+cache0:membus:wtres:gfx:25	----
+cache0:cpu0:rd:cpu0:87	----
+cache0:cache1:wtreq:audio:25	----
+cache0:cache1:wtres:cpu1:77
+cache1:membus:wt:cpu1:77	----
+mem:membus:rd:cpu0:39	----
+cache0:cpu0:rd:cpu0:88	----
+cpu1:cache1:wt:cpu1:96	----
+membus:cache0:wt:cpu0:39	----
+membus:mem:rd:cpu1:28	----
+cache1:cache0:rdreq:cpu1:78	----
+cache1:cache0:wtres:audio:25
+cache0:cpu0:rd:cpu0:89	----
+cache0:membus:wtres:audio:25	----
+cache0:cpu0:wt:cpu0:39	----
+cache0:cpu0:rd:cpu0:90	----
+cache0:cache1:rdreq:usb:25	----
+cache0:cache1:rdres:cpu1:78	----
+cache1:membus:rd:cpu1:78	----
+cpu1:cache1:rd:cpu1:97	----
+cache0:cache1:wtreq:cpu0:91	----
+cache1:cache0:rdreq:cpu1:79	----
+cache1:cache0:rdres:usb:25
+mem:membus:rd:cpu1:28	----
+cache0:membus:rdres:usb:25	----
+membus:cache1:wt:cpu1:28	----
+cache1:cache0:wtres:cpu0:91	----
+cache0:membus:wt:cpu0:91	----
+membus:mem:rd:cpu0:40
+cache0:cache1:rdres:cpu1:79
+cache0:cache1:wtreq:gfx:26	----
+cache1:membus:rd:cpu1:79	----
+cache1:cpu1:wt:cpu1:28	----
+cpu1:cache1:rd:cpu1:98	----
+cache0:cpu0:rd:cpu0:92	----
+cache1:cache0:wtreq:cpu1:80	----
+cache1:cache0:wtres:gfx:26	----
+cache0:membus:wtres:gfx:26	----
+cache0:cpu0:rd:cpu0:93	----
+cache0:cache1:wtres:cpu1:80	----
+cache1:membus:wt:cpu1:80	----
+cache0:cpu0:rd:cpu0:94	----
+cache0:cache1:wtreq:audio:26	----
+cpu1:cache1:wt:cpu1:99	----
+mem:membus:rd:cpu0:40
+membus:cache0:rd:cpu0:40	----
+cache1:cache0:wtreq:cpu1:81	----
+cache0:cache1:wtreq:cpu0:95	----
+membus:mem:rd:cpu1:30	----
+cache1:cache0:wtres:audio:26	----
+cache0:cpu0:rd:cpu0:40	----
+cache0:membus:wtres:audio:26
+cache0:cache1:wtres:cpu1:81	----
+cache1:cache0:wtres:cpu0:95	----
+cache1:membus:wt:cpu1:81	----
+cache0:membus:wt:cpu0:95	----
+cache0:cache1:rdreq:usb:26	----
+cpu1:cache1:wt:cpu1:100	----
+cache0:cpu0:rd:cpu0:96	----
+cache1:cache0:rdreq:cpu1:82
+mem:membus:rd:cpu1:30	----
+cache1:cache0:rdres:usb:26	----
+cache0:membus:rdres:usb:26	----
+membus:cache1:wt:cpu1:30	----
+cache0:cache1:rdreq:cpu0:97	----
+cache0:cache1:rdres:cpu1:82	----
+cache1:membus:rd:cpu1:82	----
+membus:mem:rd:cpu0:41
+cache1:cpu1:wt:cpu1:30	----
+cache0:cache1:wtreq:gfx:27
+cache1:cache0:wtreq:cpu1:83	----
+cache1:cache0:rdres:cpu0:97	----
+cache0:membus:rd:cpu0:97	----
+cache1:cache0:wtres:gfx:27	----
+cache0:cpu0:rd:cpu0:98	----
+cache0:cache1:wtres:cpu1:83
+cache0:membus:wtres:gfx:27	----
+cache1:membus:wt:cpu1:83	----
+mem:membus:rd:cpu0:41	----
+cache0:cpu0:rd:cpu0:99	----
+cache0:cache1:wtreq:audio:27	----
+membus:cache0:wt:cpu0:41	----
+cache1:cache0:rdreq:cpu1:84	----
+membus:mem:rd:cpu1:31	----
+cache0:cache1:wtreq:cpu0:100	----
+cache0:cpu0:wt:cpu0:41	----
+cache1:cache0:wtres:audio:27	----
+cache0:cache1:rdres:cpu1:84	----
+cache0:membus:wtres:audio:27	----
+cache1:membus:rd:cpu1:84	----
+cache1:cache0:wtreq:cpu1:85	----
+cache1:cache0:wtres:cpu0:100
+cache0:membus:wt:cpu0:100	----
+cache0:cache1:rdreq:usb:27
+mem:membus:rd:cpu1:31	----
+cache0:cache1:wtres:cpu1:85	----
+cache1:cache0:rdres:usb:27	----
+cache1:membus:wt:cpu1:85	----
+membus:cache1:wt:cpu1:31	----
+cache0:membus:rdres:usb:27	----
+membus:mem:rd:cpu0:42	----
+cache0:cache1:wtreq:gfx:28	----
+cache1:cpu1:wt:cpu1:31	----
+cache1:cache0:wtreq:cpu1:86
+cache1:cache0:wtres:gfx:28	----
+cache0:membus:wtres:gfx:28	----
+cache0:cache1:wtres:cpu1:86
+cache1:membus:wt:cpu1:86	----
+cache0:cache1:wtreq:audio:28	----
+mem:membus:rd:cpu0:42	----
+cache1:cache0:rdreq:cpu1:87	----
+membus:cache0:wt:cpu0:42	----
+membus:mem:rd:cpu1:32	----
+cache1:cache0:wtres:audio:28
+cache0:membus:wtres:audio:28	----
+cache0:cpu0:wt:cpu0:42	----
+cache0:cache1:rdres:cpu1:87	----
+cache1:membus:rd:cpu1:87	----
+cache0:cache1:rdreq:usb:28	----
+cache1:cache0:rdreq:cpu1:88	----
+cache1:cache0:rdres:usb:28	----
+mem:membus:rd:cpu1:32	----
+cache0:membus:rdres:usb:28
+cache0:cache1:rdres:cpu1:88	----
+membus:cache1:wt:cpu1:32	----
+cache1:membus:rd:cpu1:88	----
+membus:mem:rd:cpu0:43	----
+cache0:cache1:wtreq:gfx:29	----
+cache1:cpu1:wt:cpu1:32	----
+cache1:cache0:wtreq:cpu1:89	----
+cache1:cache0:wtres:gfx:29	----
+cache0:membus:wtres:gfx:29	----
+cache0:cache1:wtres:cpu1:89	----
+cache1:membus:wt:cpu1:89	----
+cache0:cache1:wtreq:audio:29	----
+mem:membus:rd:cpu0:43	----
+cache1:cache0:wtreq:cpu1:90
+membus:cache0:wt:cpu0:43	----
+cache1:cache0:wtres:audio:29	----
+membus:mem:rd:cpu1:33	----
+cache0:membus:wtres:audio:29
+cache0:cpu0:wt:cpu0:43	----
+cache0:cache1:wtres:cpu1:90	----
+cache1:membus:wt:cpu1:90	----
+cache0:cache1:rdreq:usb:29	----
+cache1:cache0:wtreq:cpu1:91	----
+cache1:cache0:rdres:usb:29	----
+cache0:membus:rdres:usb:29	----
+mem:membus:rd:cpu1:33	----
+cache0:cache1:wtres:cpu1:91	----
+cache1:membus:wt:cpu1:91	----
+membus:cache1:wt:cpu1:33	----
+cache0:cache1:wtreq:gfx:30	----
+membus:mem:rd:cpu0:44	----
+cache1:cache0:rdreq:cpu1:92	----
+cache1:cpu1:wt:cpu1:33	----
+cache1:cache0:wtres:gfx:30	----
+cache0:membus:wtres:gfx:30	----
+cache0:cache1:rdres:cpu1:92	----
+cache1:membus:rd:cpu1:92	----
+cache0:cache1:wtreq:audio:30	----
+cache1:cache0:rdreq:cpu1:93	----
+mem:membus:rd:cpu0:44	----
+membus:cache0:wt:cpu0:44	----
+cache1:cache0:wtres:audio:30
+cache0:membus:wtres:audio:30	----
+membus:mem:rd:cpu1:34	----
+cache0:cache1:rdres:cpu1:93	----
+cache1:membus:rd:cpu1:93	----
+cache0:cpu0:wt:cpu0:44	----
+cache0:cache1:rdreq:usb:30	----
+cache1:cache0:rdreq:cpu1:94	----
+cache1:cache0:rdres:usb:30	----
+cache0:membus:rdres:usb:30	----
+cache0:cache1:rdres:cpu1:94	----
+mem:membus:rd:cpu1:34	----
+cache1:membus:rd:cpu1:94	----
+membus:cache1:wt:cpu1:34	----
+cache0:cache1:wtreq:gfx:31	----
+membus:mem:rd:cpu0:45	----
+cache1:cache0:wtreq:cpu1:95	----
+cache1:cpu1:wt:cpu1:34	----
+cache1:cache0:wtres:gfx:31	----
+cache0:membus:wtres:gfx:31	----
+cache0:cache1:wtres:cpu1:95	----
+cache1:membus:wt:cpu1:95	----
+cache0:cache1:wtreq:audio:31	----
+cache1:cache0:wtreq:cpu1:96	----
+mem:membus:rd:cpu0:45	----
+cache1:cache0:wtres:audio:31	----
+membus:cache0:wt:cpu0:45	----
+cache0:membus:wtres:audio:31
+cache0:cache1:wtres:cpu1:96	----
+membus:mem:rd:cpu1:37	----
+cache1:membus:wt:cpu1:96	----
+cache0:cpu0:wt:cpu0:45	----
+cache0:cache1:rdreq:usb:31
+cache1:cache0:rdreq:cpu1:97	----
+cache1:cache0:rdres:usb:31	----
+cache0:membus:rdres:usb:31	----
+cache0:cache1:rdres:cpu1:97	----
+cache1:membus:rd:cpu1:97	----
+mem:membus:rd:cpu1:37	----
+cache0:cache1:wtreq:gfx:32	----
+membus:cache1:wt:cpu1:37	----
+cache1:cache0:rdreq:cpu1:98	----
+membus:mem:rd:cpu0:46	----
+cache1:cpu1:wt:cpu1:37	----
+cache1:cache0:wtres:gfx:32	----
+cache0:membus:wtres:gfx:32	----
+cache0:cache1:rdres:cpu1:98	----
+cache1:membus:rd:cpu1:98	----
+cache0:cache1:wtreq:audio:32	----
+cache1:cache0:wtreq:cpu1:99	----
+mem:membus:rd:cpu0:46	----
+membus:cache0:wt:cpu0:46	----
+cache1:cache0:wtres:audio:32
+cache0:cache1:wtres:cpu1:99	----
+cache0:membus:wtres:audio:32	----
+cache1:membus:wt:cpu1:99	----
+membus:mem:rd:cpu1:38	----
+cache0:cpu0:wt:cpu0:46	----
+cache0:cache1:rdreq:usb:32	----
+cache1:cache0:wtreq:cpu1:100	----
+cache1:cache0:rdres:usb:32	----
+cache0:membus:rdres:usb:32	----
+cache0:cache1:wtres:cpu1:100	----
+cache1:membus:wt:cpu1:100	----
+mem:membus:rd:cpu1:38	----
+cache0:cache1:wtreq:gfx:33	----
+membus:cache1:rd:cpu1:38	----
+membus:mem:rd:cpu0:47	----
+cache1:cpu1:rd:cpu1:38	----
+cache1:cache0:wtres:gfx:33	----
+cache0:membus:wtres:gfx:33	----
+cache0:cache1:wtreq:audio:33	----
+mem:membus:rd:cpu0:47	----
+cache1:cache0:wtres:audio:33	----
+membus:cache0:wt:cpu0:47	----
+cache0:membus:wtres:audio:33
+membus:mem:rd:cpu1:39	----
+cache0:cache1:rdreq:usb:33	----
+cache0:cpu0:wt:cpu0:47	----
+cache1:cache0:rdres:usb:33	----
+cache0:membus:rdres:usb:33	----
+mem:membus:rd:cpu1:39	----
+cache0:cache1:wtreq:gfx:34	----
+membus:cache1:wt:cpu1:39	----
+membus:mem:rd:cpu0:48	----
+cache1:cpu1:wt:cpu1:39	----
+cache1:cache0:wtres:gfx:34	----
+cache0:membus:wtres:gfx:34	----
+cache0:cache1:wtreq:audio:34	----
+mem:membus:rd:cpu0:48	----
+cache1:cache0:wtres:audio:34	----
+membus:cache0:rd:cpu0:48	----
+cache0:membus:wtres:audio:34	----
+membus:mem:rd:cpu1:40	----
+cache0:cpu0:rd:cpu0:48	----
+cache0:cache1:rdreq:usb:34	----
+cache1:cache0:rdres:usb:34	----
+cache0:membus:rdres:usb:34	----
+mem:membus:rd:cpu1:40	----
+cache0:cache1:wtreq:gfx:35	----
+membus:cache1:rd:cpu1:40	----
+membus:mem:rd:cpu0:49	----
+cache1:cpu1:rd:cpu1:40	----
+cache1:cache0:wtres:gfx:35	----
+cache0:membus:wtres:gfx:35	----
+cache0:cache1:wtreq:audio:35	----
+mem:membus:rd:cpu0:49	----
+membus:cache0:wt:cpu0:49	----
+cache1:cache0:wtres:audio:35	----
+cache0:membus:wtres:audio:35	----
+membus:mem:rd:cpu1:41	----
+cache0:cpu0:wt:cpu0:49	----
+cache0:cache1:rdreq:usb:35	----
+cache1:cache0:rdres:usb:35	----
+cache0:membus:rdres:usb:35	----
+mem:membus:rd:cpu1:41	----
+membus:cache1:wt:cpu1:41	----
+cache0:cache1:wtreq:gfx:36	----
+membus:mem:rd:cpu0:50	----
+cache1:cpu1:wt:cpu1:41	----
+cache1:cache0:wtres:gfx:36	----
+cache0:membus:wtres:gfx:36	----
+cache0:cache1:wtreq:audio:36	----
+mem:membus:rd:cpu0:50	----
+membus:cache0:wt:cpu0:50	----
+cache1:cache0:wtres:audio:36	----
+cache0:membus:wtres:audio:36	----
+membus:mem:rd:cpu1:42	----
+cache0:cpu0:wt:cpu0:50	----
+cache0:cache1:rdreq:usb:36	----
+cache1:cache0:rdres:usb:36	----
+cache0:membus:rdres:usb:36	----
+mem:membus:rd:cpu1:42	----
+membus:cache1:rd:cpu1:42	----
+cache0:cache1:wtreq:gfx:37	----
+membus:mem:rd:cpu0:51	----
+cache1:cpu1:rd:cpu1:42	----
+cache1:cache0:wtres:gfx:37	----
+cache0:membus:wtres:gfx:37	----
+cache0:cache1:wtreq:audio:37	----
+mem:membus:rd:cpu0:51	----
+membus:cache0:rd:cpu0:51	----
+cache1:cache0:wtres:audio:37	----
+membus:mem:rd:cpu1:43	----
+cache0:membus:wtres:audio:37	----
+cache0:cpu0:rd:cpu0:51	----
+cache0:cache1:rdreq:usb:37	----
+cache1:cache0:rdres:usb:37	----
+cache0:membus:rdres:usb:37	----
+mem:membus:rd:cpu1:43	----
+membus:cache1:wt:cpu1:43	----
+cache0:cache1:wtreq:gfx:38	----
+membus:mem:rd:cpu0:52	----
+cache1:cpu1:wt:cpu1:43	----
+cache1:cache0:wtres:gfx:38	----
+cache0:membus:wtres:gfx:38	----
+cache0:cache1:wtreq:audio:38	----
+mem:membus:rd:cpu0:52	----
+membus:cache0:rd:cpu0:52	----
+membus:mem:rd:cpu1:44	----
+cache1:cache0:wtres:audio:38
+cache0:membus:wtres:audio:38	----
+cache0:cpu0:rd:cpu0:52	----
+cache0:cache1:rdreq:usb:38	----
+cache1:cache0:rdres:usb:38	----
+mem:membus:rd:cpu1:44	----
+cache0:membus:rdres:usb:38
+membus:cache1:rd:cpu1:44	----
+membus:mem:rd:cpu0:53	----
+cache0:cache1:wtreq:gfx:39	----
+cache1:cpu1:rd:cpu1:44	----
+cache1:cache0:wtres:gfx:39	----
+cache0:membus:wtres:gfx:39	----
+cache0:cache1:wtreq:audio:39	----
+mem:membus:rd:cpu0:53	----
+membus:cache0:rd:cpu0:53	----
+membus:mem:rd:cpu1:45	----
+cache1:cache0:wtres:audio:39	----
+cache0:membus:wtres:audio:39	----
+cache0:cpu0:rd:cpu0:53	----
+cache0:cache1:rdreq:usb:39	----
+mem:membus:rd:cpu1:45	----
+cache1:cache0:rdres:usb:39
+cache0:membus:rdres:usb:39	----
+membus:cache1:rd:cpu1:45	----
+membus:mem:rd:cpu0:54	----
+cache0:cache1:wtreq:gfx:40	----
+cache1:cpu1:rd:cpu1:45	----
+cache1:cache0:wtres:gfx:40	----
+cache0:membus:wtres:gfx:40	----
+mem:membus:rd:cpu0:54	----
+cache0:cache1:wtreq:audio:40
+membus:cache0:wt:cpu0:54	----
+membus:mem:rd:cpu1:46	----
+cache1:cache0:wtres:audio:40	----
+cache0:cpu0:wt:cpu0:54	----
+cache0:membus:wtres:audio:40
+cache0:cache1:rdreq:usb:40	----
+mem:membus:rd:cpu1:46	----
+cache1:cache0:rdres:usb:40	----
+cache0:membus:rdres:usb:40	----
+membus:cache1:wt:cpu1:46	----
+membus:mem:rd:cpu0:55	----
+cache0:cache1:wtreq:gfx:41	----
+cache1:cpu1:wt:cpu1:46	----
+cache1:cache0:wtres:gfx:41	----
+cache0:membus:wtres:gfx:41	----
+mem:membus:rd:cpu0:55	----
+cache0:cache1:wtreq:audio:41	----
+membus:cache0:wt:cpu0:55	----
+membus:mem:rd:cpu1:47	----
+cache0:cpu0:wt:cpu0:55	----
+cache1:cache0:wtres:audio:41
+cache0:membus:wtres:audio:41	----
+cache0:cache1:rdreq:usb:41	----
+mem:membus:rd:cpu1:47	----
+cache1:cache0:rdres:usb:41	----
+membus:cache1:wt:cpu1:47	----
+cache0:membus:rdres:usb:41	----
+membus:mem:rd:cpu0:56	----
+cache1:cpu1:wt:cpu1:47	----
+cache0:cache1:wtreq:gfx:42	----
+cache1:cache0:wtres:gfx:42	----
+cache0:membus:wtres:gfx:42	----
+mem:membus:rd:cpu0:56	----
+cache0:cache1:wtreq:audio:42	----
+membus:cache0:wt:cpu0:56	----
+membus:mem:rd:cpu1:48	----
+cache0:cpu0:wt:cpu0:56	----
+cache1:cache0:wtres:audio:42	----
+cache0:membus:wtres:audio:42	----
+cache0:cache1:rdreq:usb:42	----
+mem:membus:rd:cpu1:48	----
+cache1:cache0:rdres:usb:42	----
+membus:cache1:wt:cpu1:48	----
+cache0:membus:rdres:usb:42	----
+membus:mem:rd:cpu0:57	----
+cache1:cpu1:wt:cpu1:48	----
+cache0:cache1:wtreq:gfx:43	----
+cache1:cache0:wtres:gfx:43	----
+cache0:membus:wtres:gfx:43	----
+mem:membus:rd:cpu0:57	----
+membus:cache0:wt:cpu0:57	----
+cache0:cache1:wtreq:audio:43	----
+membus:mem:rd:cpu1:49	----
+cache0:cpu0:wt:cpu0:57	----
+cache1:cache0:wtres:audio:43	----
+cache0:membus:wtres:audio:43	----
+cache0:cache1:rdreq:usb:43	----
+mem:membus:rd:cpu1:49	----
+membus:cache1:rd:cpu1:49	----
+cache1:cache0:rdres:usb:43	----
+cache0:membus:rdres:usb:43	----
+membus:mem:rd:cpu0:58	----
+cache1:cpu1:rd:cpu1:49	----
+cache0:cache1:wtreq:gfx:44	----
+cache1:cache0:wtres:gfx:44	----
+mem:membus:rd:cpu0:58	----
+membus:cache0:wt:cpu0:58	----
+membus:mem:rd:cpu1:50	----
+cache0:cpu0:wt:cpu0:58	----
+mem:membus:rd:cpu1:50	----
+membus:cache1:rd:cpu1:50	----
+membus:mem:rd:cpu0:59	----
+cache1:cpu1:rd:cpu1:50	----
+mem:membus:rd:cpu0:59	----
+membus:cache0:wt:cpu0:59	----
+membus:mem:rd:cpu1:51	----
+cache0:cpu0:wt:cpu0:59	----
+mem:membus:rd:cpu1:51	----
+membus:cache1:rd:cpu1:51	----
+membus:mem:rd:cpu0:60	----
+cache1:cpu1:rd:cpu1:51	----
+mem:membus:rd:cpu0:60	----
+membus:cache0:rd:cpu0:60	----
+membus:mem:rd:cpu1:52	----
+cache0:cpu0:rd:cpu0:60	----
+mem:membus:rd:cpu1:52	----
+membus:cache1:rd:cpu1:52	----
+membus:mem:rd:cpu0:61	----
+cache1:cpu1:rd:cpu1:52	----
+mem:membus:rd:cpu0:61	----
+membus:cache0:wt:cpu0:61	----
+membus:mem:rd:cpu1:53	----
+cache0:cpu0:wt:cpu0:61	----
+mem:membus:rd:cpu1:53	----
+membus:cache1:rd:cpu1:53	----
+membus:mem:rd:cpu0:62	----
+cache1:cpu1:rd:cpu1:53	----
+mem:membus:rd:cpu0:62	----
+membus:cache0:wt:cpu0:62	----
+membus:mem:rd:cpu1:54	----
+cache0:cpu0:wt:cpu0:62	----
+mem:membus:rd:cpu1:54	----
+membus:cache1:wt:cpu1:54	----
+membus:mem:rd:cpu0:63	----
+cache1:cpu1:wt:cpu1:54	----
+mem:membus:rd:cpu0:63	----
+membus:cache0:rd:cpu0:63	----
+membus:mem:rd:cpu1:55	----
+cache0:cpu0:rd:cpu0:63	----
+mem:membus:rd:cpu1:55	----
+membus:cache1:rd:cpu1:55	----
+membus:mem:rd:cpu0:64	----
+cache1:cpu1:rd:cpu1:55	----
+mem:membus:rd:cpu0:64	----
+membus:cache0:wt:cpu0:64	----
+membus:mem:rd:cpu1:56	----
+cache0:cpu0:wt:cpu0:64	----
+mem:membus:rd:cpu1:56	----
+membus:cache1:rd:cpu1:56	----
+membus:mem:rd:cpu0:65	----
+cache1:cpu1:rd:cpu1:56	----
+mem:membus:rd:cpu0:65	----
+membus:cache0:rd:cpu0:65	----
+membus:mem:rd:cpu1:57	----
+cache0:cpu0:rd:cpu0:65	----
+mem:membus:rd:cpu1:57	----
+membus:cache1:wt:cpu1:57	----
+membus:mem:rd:cpu0:66	----
+cache1:cpu1:wt:cpu1:57	----
+mem:membus:rd:cpu0:66	----
+membus:cache0:wt:cpu0:66	----
+membus:mem:rd:cpu1:58	----
+cache0:cpu0:wt:cpu0:66	----
+mem:membus:rd:cpu1:58	----
+membus:cache1:rd:cpu1:58	----
+membus:mem:rd:cpu0:67	----
+cache1:cpu1:rd:cpu1:58	----
+mem:membus:rd:cpu0:67	----
+membus:cache0:rd:cpu0:67	----
+membus:mem:rd:cpu1:59	----
+cache0:cpu0:rd:cpu0:67	----
+mem:membus:rd:cpu1:59	----
+membus:cache1:rd:cpu1:59	----
+membus:mem:rd:cpu0:68	----
+cache1:cpu1:rd:cpu1:59	----
+mem:membus:rd:cpu0:68	----
+membus:cache0:wt:cpu0:68	----
+membus:mem:rd:cpu1:60	----
+cache0:cpu0:wt:cpu0:68	----
+mem:membus:rd:cpu1:60	----
+membus:cache1:wt:cpu1:60	----
+membus:mem:rd:cpu0:69	----
+cache1:cpu1:wt:cpu1:60	----
+mem:membus:rd:cpu0:69	----
+membus:cache0:wt:cpu0:69	----
+membus:mem:rd:cpu1:61	----
+cache0:cpu0:wt:cpu0:69	----
+mem:membus:rd:cpu1:61	----
+membus:cache1:rd:cpu1:61	----
+membus:mem:rd:cpu0:70	----
+cache1:cpu1:rd:cpu1:61	----
+mem:membus:rd:cpu0:70	----
+membus:cache0:wt:cpu0:70	----
+membus:mem:rd:cpu1:62	----
+cache0:cpu0:wt:cpu0:70	----
+mem:membus:rd:cpu1:62	----
+membus:cache1:rd:cpu1:62	----
+membus:mem:rd:cpu0:71	----
+cache1:cpu1:rd:cpu1:62	----
+mem:membus:rd:cpu0:71	----
+membus:cache0:rd:cpu0:71	----
+membus:mem:rd:cpu1:63	----
+cache0:cpu0:rd:cpu0:71	----
+mem:membus:rd:cpu1:63	----
+membus:cache1:rd:cpu1:63	----
+membus:mem:rd:cpu0:72	----
+cache1:cpu1:rd:cpu1:63	----
+mem:membus:rd:cpu0:72	----
+membus:cache0:wt:cpu0:72	----
+membus:mem:rd:cpu1:64	----
+cache0:cpu0:wt:cpu0:72	----
+mem:membus:rd:cpu1:64	----
+membus:cache1:wt:cpu1:64	----
+membus:mem:rd:cpu0:73	----
+cache1:cpu1:wt:cpu1:64	----
+mem:membus:rd:cpu0:73	----
+membus:cache0:wt:cpu0:73	----
+membus:mem:rd:cpu1:65	----
+cache0:cpu0:wt:cpu0:73	----
+mem:membus:rd:cpu1:65	----
+membus:cache1:wt:cpu1:65	----
+membus:mem:rd:cpu0:74	----
+cache1:cpu1:wt:cpu1:65	----
+mem:membus:rd:cpu0:74	----
+membus:cache0:wt:cpu0:74	----
+membus:mem:rd:cpu1:66	----
+cache0:cpu0:wt:cpu0:74	----
+mem:membus:rd:cpu1:66	----
+membus:cache1:rd:cpu1:66	----
+membus:mem:rd:cpu0:75	----
+cache1:cpu1:rd:cpu1:66	----
+mem:membus:rd:cpu0:75	----
+membus:cache0:wt:cpu0:75	----
+membus:mem:rd:cpu1:67	----
+cache0:cpu0:wt:cpu0:75	----
+mem:membus:rd:cpu1:67	----
+membus:cache1:wt:cpu1:67	----
+membus:mem:rd:cpu0:76	----
+cache1:cpu1:wt:cpu1:67	----
+mem:membus:rd:cpu0:76	----
+membus:cache0:rd:cpu0:76	----
+membus:mem:rd:cpu1:68	----
+cache0:cpu0:rd:cpu0:76	----
+mem:membus:rd:cpu1:68	----
+membus:cache1:wt:cpu1:68	----
+membus:mem:rd:cpu0:77	----
+cache1:cpu1:wt:cpu1:68	----
+mem:membus:rd:cpu0:77	----
+membus:cache0:rd:cpu0:77	----
+membus:mem:rd:cpu1:69	----
+cache0:cpu0:rd:cpu0:77	----
+mem:membus:rd:cpu1:69	----
+membus:cache1:rd:cpu1:69	----
+membus:mem:rd:cpu0:78	----
+cache1:cpu1:rd:cpu1:69	----
+mem:membus:rd:cpu0:78	----
+membus:cache0:wt:cpu0:78	----
+membus:mem:rd:cpu1:70	----
+cache0:cpu0:wt:cpu0:78	----
+mem:membus:rd:cpu1:70	----
+membus:cache1:rd:cpu1:70	----
+membus:mem:rd:cpu0:79	----
+cache1:cpu1:rd:cpu1:70	----
+mem:membus:rd:cpu0:79	----
+membus:cache0:rd:cpu0:79	----
+membus:mem:rd:cpu1:71	----
+cache0:cpu0:rd:cpu0:79	----
+mem:membus:rd:cpu1:71	----
+membus:cache1:rd:cpu1:71	----
+membus:mem:rd:cpu0:81	----
+cache1:cpu1:rd:cpu1:71	----
+mem:membus:rd:cpu0:81	----
+membus:cache0:rd:cpu0:81	----
+membus:mem:rd:cpu1:72	----
+cache0:cpu0:rd:cpu0:81	----
+mem:membus:rd:cpu1:72	----
+membus:cache1:wt:cpu1:72	----
+membus:mem:rd:cpu0:82	----
+cache1:cpu1:wt:cpu1:72	----
+mem:membus:rd:cpu0:82	----
+membus:cache0:wt:cpu0:82	----
+membus:mem:rd:cpu1:73	----
+cache0:cpu0:wt:cpu0:82	----
+mem:membus:rd:cpu1:73	----
+membus:cache1:wt:cpu1:73	----
+membus:mem:rd:cpu0:83	----
+cache1:cpu1:wt:cpu1:73	----
+mem:membus:rd:cpu0:83	----
+membus:cache0:wt:cpu0:83	----
+membus:mem:rd:cpu1:74	----
+cache0:cpu0:wt:cpu0:83	----
+mem:membus:rd:cpu1:74	----
+membus:cache1:wt:cpu1:74	----
+membus:mem:rd:cpu0:85	----
+cache1:cpu1:wt:cpu1:74	----
+mem:membus:rd:cpu0:85	----
+membus:cache0:wt:cpu0:85	----
+membus:mem:rd:cpu1:75	----
+cache0:cpu0:wt:cpu0:85	----
+mem:membus:rd:cpu1:75	----
+membus:cache1:rd:cpu1:75	----
+membus:mem:rd:cpu0:91	----
+cache1:cpu1:rd:cpu1:75	----
+mem:membus:rd:cpu0:91	----
+membus:cache0:wt:cpu0:91	----
+membus:mem:rd:cpu1:76	----
+cache0:cpu0:wt:cpu0:91	----
+mem:membus:rd:cpu1:76	----
+membus:cache1:rd:cpu1:76	----
+membus:mem:rd:cpu0:95	----
+cache1:cpu1:rd:cpu1:76	----
+mem:membus:rd:cpu0:95	----
+membus:cache0:wt:cpu0:95	----
+membus:mem:rd:cpu1:77	----
+cache0:cpu0:wt:cpu0:95	----
+mem:membus:rd:cpu1:77	----
+membus:cache1:wt:cpu1:77	----
+membus:mem:rd:cpu0:97	----
+cache1:cpu1:wt:cpu1:77	----
+mem:membus:rd:cpu0:97	----
+membus:cache0:rd:cpu0:97	----
+membus:mem:rd:cpu1:78	----
+cache0:cpu0:rd:cpu0:97	----
+mem:membus:rd:cpu1:78	----
+membus:cache1:rd:cpu1:78	----
+membus:mem:rd:cpu0:100	----
+cache1:cpu1:rd:cpu1:78	----
+mem:membus:rd:cpu0:100	----
+membus:cache0:wt:cpu0:100	----
+membus:mem:rd:cpu1:79	----
+cache0:cpu0:wt:cpu0:100	----
+mem:membus:rd:cpu1:79	----
+membus:cache1:rd:cpu1:79	----
+membus:mem:wt:gfx:1	----
+cache1:cpu1:rd:cpu1:79	----
+mem:membus:wt:gfx:1	----
+membus:gfx:upwt:gfx:1	----
+membus:mem:rd:cpu1:80	----
+cache0:membus:wtres:gfx:44
+cache0:cache1:wtreq:audio:44	----
+cache1:cache0:wtres:audio:44	----
+mem:membus:rd:cpu1:80	----
+membus:cache1:wt:cpu1:80	----
+cache1:cpu1:wt:cpu1:80	----
+membus:audio:upwt:audio:1	----
+membus:mem:rd:cpu1:81	----
+cache0:membus:wtres:audio:44
+mem:membus:rd:cpu1:81	----
+membus:cache1:wt:cpu1:81	----
+membus:mem:rd:usb:1	----
+mem:membus:rd:usb:1	----
+cache1:cpu1:wt:cpu1:81	----
+membus:usb:uprd:usb:1	----
+membus:mem:rd:cpu1:82	----
+cache0:membus:rdres:usb:44
+cache0:cache1:wtreq:gfx:45	----
+cache1:cache0:wtres:gfx:45	----
+mem:membus:rd:cpu1:82	----
+membus:cache1:rd:cpu1:82	----
+membus:mem:wt:gfx:2	----
+mem:membus:wt:gfx:2	----
+cache1:cpu1:rd:cpu1:82	----
+membus:gfx:upwt:gfx:2	----
+membus:mem:rd:cpu1:83	----
+cache0:membus:wtres:gfx:45
+cache0:cache1:wtreq:audio:45	----
+cache1:cache0:wtres:audio:45	----
+mem:membus:rd:cpu1:83	----
+membus:cache1:wt:cpu1:83	----
+cache1:cpu1:wt:cpu1:83	----
+membus:audio:upwt:audio:2	----
+membus:mem:rd:cpu1:84	----
+cache0:membus:wtres:audio:45
+mem:membus:rd:cpu1:84	----
+membus:cache1:rd:cpu1:84	----
+membus:mem:rd:usb:2	----
+mem:membus:rd:usb:2	----
+cache1:cpu1:rd:cpu1:84	----
+membus:usb:uprd:usb:2	----
+membus:mem:rd:cpu1:85	----
+cache0:membus:rdres:usb:45
+cache0:cache1:wtreq:gfx:46	----
+cache1:cache0:wtres:gfx:46	----
+mem:membus:rd:cpu1:85	----
+membus:cache1:wt:cpu1:85	----
+membus:mem:wt:gfx:3	----
+mem:membus:wt:gfx:3	----
+cache1:cpu1:wt:cpu1:85	----
+membus:gfx:upwt:gfx:3	----
+membus:mem:rd:cpu1:86	----
+cache0:membus:wtres:gfx:46
+cache0:cache1:wtreq:audio:46	----
+cache1:cache0:wtres:audio:46	----
+mem:membus:rd:cpu1:86	----
+membus:cache1:wt:cpu1:86	----
+cache1:cpu1:wt:cpu1:86	----
+membus:audio:upwt:audio:3	----
+membus:mem:rd:cpu1:87	----
+cache0:membus:wtres:audio:46
+mem:membus:rd:cpu1:87	----
+membus:cache1:rd:cpu1:87	----
+membus:mem:rd:usb:3	----
+mem:membus:rd:usb:3	----
+cache1:cpu1:rd:cpu1:87	----
+membus:usb:uprd:usb:3	----
+membus:mem:rd:cpu1:88	----
+cache0:membus:rdres:usb:46
+cache0:cache1:wtreq:gfx:47	----
+cache1:cache0:wtres:gfx:47	----
+mem:membus:rd:cpu1:88	----
+membus:cache1:rd:cpu1:88	----
+membus:mem:wt:gfx:4	----
+mem:membus:wt:gfx:4	----
+cache1:cpu1:rd:cpu1:88	----
+membus:gfx:upwt:gfx:4	----
+membus:mem:rd:cpu1:89	----
+cache0:membus:wtres:gfx:47
+cache0:cache1:wtreq:audio:47	----
+cache1:cache0:wtres:audio:47	----
+mem:membus:rd:cpu1:89	----
+membus:cache1:wt:cpu1:89	----
+cache1:cpu1:wt:cpu1:89	----
+membus:audio:upwt:audio:4	----
+membus:mem:rd:cpu1:90	----
+cache0:membus:wtres:audio:47
+mem:membus:rd:cpu1:90	----
+membus:cache1:wt:cpu1:90	----
+membus:mem:rd:usb:4	----
+mem:membus:rd:usb:4	----
+cache1:cpu1:wt:cpu1:90	----
+membus:usb:uprd:usb:4	----
+membus:mem:rd:cpu1:91	----
+cache0:membus:rdres:usb:47
+cache0:cache1:wtreq:gfx:48	----
+cache1:cache0:wtres:gfx:48	----
+mem:membus:rd:cpu1:91	----
+membus:cache1:wt:cpu1:91	----
+membus:mem:wt:gfx:5	----
+mem:membus:wt:gfx:5	----
+cache1:cpu1:wt:cpu1:91	----
+membus:gfx:upwt:gfx:5	----
+membus:mem:rd:cpu1:92	----
+cache0:membus:wtres:gfx:48
+cache0:cache1:wtreq:audio:48	----
+cache1:cache0:wtres:audio:48	----
+mem:membus:rd:cpu1:92	----
+membus:cache1:rd:cpu1:92	----
+cache1:cpu1:rd:cpu1:92	----
+membus:audio:upwt:audio:5	----
+membus:mem:rd:cpu1:93	----
+cache0:membus:wtres:audio:48
+mem:membus:rd:cpu1:93	----
+membus:cache1:rd:cpu1:93	----
+membus:mem:rd:usb:5	----
+mem:membus:rd:usb:5	----
+cache1:cpu1:rd:cpu1:93	----
+membus:usb:uprd:usb:5	----
+membus:mem:rd:cpu1:94	----
+cache0:membus:rdres:usb:48
+cache0:cache1:wtreq:gfx:49	----
+cache1:cache0:wtres:gfx:49	----
+mem:membus:rd:cpu1:94	----
+membus:cache1:rd:cpu1:94	----
+membus:mem:wt:gfx:6	----
+mem:membus:wt:gfx:6	----
+cache1:cpu1:rd:cpu1:94	----
+membus:gfx:upwt:gfx:6	----
+membus:mem:rd:cpu1:95	----
+cache0:membus:wtres:gfx:49
+cache0:cache1:wtreq:audio:49	----
+cache1:cache0:wtres:audio:49	----
+mem:membus:rd:cpu1:95	----
+membus:cache1:wt:cpu1:95	----
+cache1:cpu1:wt:cpu1:95	----
+membus:audio:upwt:audio:6	----
+membus:mem:rd:cpu1:96	----
+cache0:membus:wtres:audio:49
+cache0:cache1:rdreq:usb:49	----
+cache1:cache0:rdres:usb:49	----
+mem:membus:rd:cpu1:96	----
+membus:cache1:wt:cpu1:96	----
+membus:mem:rd:usb:6	----
+mem:membus:rd:usb:6	----
+cache1:cpu1:wt:cpu1:96	----
+membus:usb:uprd:usb:6	----
+membus:mem:rd:cpu1:97	----
+cache0:membus:rdres:usb:49
+cache0:cache1:wtreq:gfx:50	----
+cache1:cache0:wtres:gfx:50	----
+mem:membus:rd:cpu1:97	----
+membus:cache1:rd:cpu1:97	----
+membus:mem:wt:gfx:7	----
+mem:membus:wt:gfx:7	----
+cache1:cpu1:rd:cpu1:97	----
+membus:gfx:upwt:gfx:7	----
+membus:mem:rd:cpu1:98	----
+cache0:membus:wtres:gfx:50
+cache0:cache1:wtreq:audio:50	----
+cache1:cache0:wtres:audio:50	----
+mem:membus:rd:cpu1:98	----
+membus:cache1:rd:cpu1:98	----
+cache1:cpu1:rd:cpu1:98	----
+membus:audio:upwt:audio:7	----
+membus:mem:rd:cpu1:99	----
+cache0:membus:wtres:audio:50
+mem:membus:rd:cpu1:99	----
+membus:cache1:wt:cpu1:99	----
+membus:mem:rd:usb:7	----
+mem:membus:rd:usb:7	----
+cache1:cpu1:wt:cpu1:99	----
+membus:usb:uprd:usb:7	----
+membus:mem:rd:cpu1:100	----
+cache0:membus:rdres:usb:50
+cache0:cache1:wtreq:gfx:51	----
+cache1:cache0:wtres:gfx:51	----
+mem:membus:rd:cpu1:100	----
+membus:cache1:wt:cpu1:100	----
+membus:mem:wt:gfx:8	----
+mem:membus:wt:gfx:8	----
+cache1:cpu1:wt:cpu1:100	----
+membus:gfx:upwt:gfx:8	----
+cache0:membus:wtres:gfx:51	----
+cache0:cache1:wtreq:audio:51	----
+membus:audio:upwt:audio:8	----
+membus:mem:rd:usb:8	----
+mem:membus:rd:usb:8	----
+cache1:cache0:wtres:audio:51	----
+cache0:membus:wtres:audio:51	----
+membus:usb:uprd:usb:8	----
+cache0:membus:rdres:usb:51	----
+membus:mem:wt:gfx:9	----
+mem:membus:wt:gfx:9	----
+membus:gfx:upwt:gfx:9	----
+cache0:cache1:wtreq:gfx:52	----
+cache1:cache0:wtres:gfx:52	----
+membus:audio:upwt:audio:9	----
+cache0:membus:wtres:gfx:52	----
+membus:mem:rd:usb:9	----
+mem:membus:rd:usb:9	----
+cache0:cache1:wtreq:audio:52
+membus:usb:uprd:usb:9	----
+membus:mem:wt:gfx:10	----
+cache1:cache0:wtres:audio:52
+mem:membus:wt:gfx:10	----
+cache0:membus:wtres:audio:52
+membus:gfx:upwt:gfx:10	----
+cache0:membus:rdres:usb:52	----
+cache0:cache1:wtreq:gfx:53	----
+membus:audio:upwt:audio:10	----
+membus:mem:rd:usb:10	----
+mem:membus:rd:usb:10	----
+cache1:cache0:wtres:gfx:53
+cache0:membus:wtres:gfx:53	----
+membus:usb:uprd:usb:10	----
+cache0:cache1:wtreq:audio:53	----
+membus:mem:wt:gfx:11	----
+mem:membus:wt:gfx:11	----
+membus:gfx:upwt:gfx:11	----
+cache1:cache0:wtres:audio:53	----
+cache0:membus:wtres:audio:53	----
+cache0:membus:rdres:usb:53	----
+membus:audio:upwt:audio:11	----
+membus:mem:rd:usb:11	----
+cache0:cache1:wtreq:gfx:54	----
+mem:membus:rd:usb:11	----
+membus:usb:uprd:usb:11	----
+cache1:cache0:wtres:gfx:54	----
+membus:mem:wt:gfx:12	----
+cache0:membus:wtres:gfx:54	----
+mem:membus:wt:gfx:12	----
+membus:gfx:upwt:gfx:12	----
+cache0:cache1:wtreq:audio:54	----
+membus:audio:upwt:audio:12	----
+cache1:cache0:wtres:audio:54	----
+cache0:membus:wtres:audio:54	----
+membus:mem:rd:usb:12	----
+mem:membus:rd:usb:12	----
+cache0:membus:rdres:usb:54
+membus:usb:uprd:usb:12	----
+cache0:cache1:wtreq:gfx:55	----
+membus:mem:wt:gfx:13	----
+mem:membus:wt:gfx:13	----
+membus:gfx:upwt:gfx:13	----
+cache1:cache0:wtres:gfx:55	----
+cache0:membus:wtres:gfx:55	----
+membus:audio:upwt:audio:13	----
+cache0:cache1:wtreq:audio:55	----
+membus:mem:rd:usb:13	----
+mem:membus:rd:usb:13	----
+cache1:cache0:wtres:audio:55	----
+membus:usb:uprd:usb:13	----
+cache0:membus:wtres:audio:55	----
+membus:mem:wt:gfx:14	----
+cache0:membus:rdres:usb:55
+mem:membus:wt:gfx:14	----
+membus:gfx:upwt:gfx:14	----
+cache0:cache1:wtreq:gfx:56	----
+membus:audio:upwt:audio:14	----
+cache1:cache0:wtres:gfx:56	----
+cache0:membus:wtres:gfx:56	----
+membus:usb:uprd:usb:14	----
+cache0:cache1:wtreq:audio:56	----
+membus:mem:wt:gfx:15	----
+mem:membus:wt:gfx:15	----
+membus:gfx:upwt:gfx:15	----
+cache1:cache0:wtres:audio:56	----
+cache0:membus:wtres:audio:56	----
+cache0:membus:rdres:usb:56	----
+membus:audio:upwt:audio:15	----
+membus:usb:uprd:usb:15	----
+cache0:cache1:wtreq:gfx:57	----
+membus:mem:wt:gfx:16	----
+mem:membus:wt:gfx:16	----
+membus:gfx:upwt:gfx:16	----
+cache1:cache0:wtres:gfx:57	----
+cache0:membus:wtres:gfx:57	----
+cache0:cache1:wtreq:audio:57	----
+membus:audio:upwt:audio:16	----
+membus:mem:rd:usb:16	----
+mem:membus:rd:usb:16	----
+cache1:cache0:wtres:audio:57	----
+cache0:membus:wtres:audio:57	----
+membus:usb:uprd:usb:16	----
+cache0:membus:rdres:usb:57	----
+membus:mem:wt:gfx:17	----
+mem:membus:wt:gfx:17	----
+membus:gfx:upwt:gfx:17	----
+cache0:cache1:wtreq:gfx:58	----
+cache1:cache0:wtres:gfx:58	----
+membus:audio:upwt:audio:17	----
+cache0:membus:wtres:gfx:58	----
+membus:mem:rd:usb:17	----
+mem:membus:rd:usb:17	----
+cache0:cache1:wtreq:audio:58
+membus:usb:uprd:usb:17	----
+membus:mem:wt:gfx:18	----
+cache1:cache0:wtres:audio:58
+mem:membus:wt:gfx:18	----
+cache0:membus:wtres:audio:58
+membus:gfx:upwt:gfx:18	----
+cache0:membus:rdres:usb:58	----
+cache0:cache1:wtreq:gfx:59	----
+membus:audio:upwt:audio:18	----
+membus:mem:rd:usb:18	----
+mem:membus:rd:usb:18	----
+cache1:cache0:wtres:gfx:59
+cache0:membus:wtres:gfx:59	----
+membus:usb:uprd:usb:18	----
+cache0:cache1:wtreq:audio:59	----
+membus:mem:wt:gfx:19	----
+mem:membus:wt:gfx:19	----
+membus:gfx:upwt:gfx:19	----
+cache1:cache0:wtres:audio:59	----
+cache0:membus:wtres:audio:59	----
+cache0:membus:rdres:usb:59	----
+membus:audio:upwt:audio:19	----
+membus:mem:rd:usb:19	----
+cache0:cache1:wtreq:gfx:60	----
+mem:membus:rd:usb:19	----
+membus:usb:uprd:usb:19	----
+cache1:cache0:wtres:gfx:60	----
+membus:mem:wt:gfx:20	----
+cache0:membus:wtres:gfx:60	----
+mem:membus:wt:gfx:20	----
+membus:gfx:upwt:gfx:20	----
+cache0:cache1:wtreq:audio:60	----
+membus:audio:upwt:audio:20	----
+cache1:cache0:wtres:audio:60	----
+cache0:membus:wtres:audio:60	----
+membus:usb:uprd:usb:20	----
+cache0:membus:rdres:usb:60	----
+membus:mem:wt:gfx:21	----
+mem:membus:wt:gfx:21	----
+membus:gfx:upwt:gfx:21	----
+cache0:cache1:wtreq:gfx:61	----
+cache1:cache0:wtres:gfx:61	----
+membus:audio:upwt:audio:21	----
+cache0:membus:wtres:gfx:61	----
+membus:usb:uprd:usb:21	----
+cache0:cache1:wtreq:audio:61	----
+membus:mem:wt:gfx:22	----
+mem:membus:wt:gfx:22	----
+membus:gfx:upwt:gfx:22	----
+cache1:cache0:wtres:audio:61	----
+cache0:membus:wtres:audio:61	----
+cache0:membus:rdres:usb:61	----
+membus:audio:upwt:audio:22	----
+membus:usb:uprd:usb:22	----
+cache0:cache1:wtreq:gfx:62	----
+membus:mem:wt:gfx:23	----
+mem:membus:wt:gfx:23	----
+membus:gfx:upwt:gfx:23	----
+cache1:cache0:wtres:gfx:62
+cache0:membus:wtres:gfx:62	----
+cache0:cache1:wtreq:audio:62	----
+membus:audio:upwt:audio:23	----
+membus:usb:uprd:usb:23	----
+cache1:cache0:wtres:audio:62	----
+cache0:membus:wtres:audio:62	----
+membus:mem:wt:gfx:24	----
+mem:membus:wt:gfx:24	----
+cache0:membus:rdres:usb:62	----
+membus:gfx:upwt:gfx:24	----
+cache0:cache1:wtreq:gfx:63	----
+membus:audio:upwt:audio:24	----
+cache1:cache0:wtres:gfx:63	----
+membus:usb:uprd:usb:24	----
+cache0:membus:wtres:gfx:63	----
+membus:mem:wt:gfx:25	----
+mem:membus:wt:gfx:25	----
+cache0:cache1:wtreq:audio:63	----
+membus:gfx:upwt:gfx:25	----
+cache1:cache0:wtres:audio:63	----
+cache0:membus:wtres:audio:63	----
+membus:audio:upwt:audio:25	----
+cache0:membus:rdres:usb:63	----
+membus:usb:uprd:usb:25	----
+membus:mem:wt:gfx:26	----
+cache0:cache1:wtreq:gfx:64	----
+mem:membus:wt:gfx:26	----
+membus:gfx:upwt:gfx:26	----
+cache1:cache0:wtres:gfx:64	----
+cache0:membus:wtres:gfx:64	----
+membus:audio:upwt:audio:26	----
+cache0:cache1:wtreq:audio:64	----
+membus:mem:rd:usb:26	----
+mem:membus:rd:usb:26	----
+membus:usb:uprd:usb:26	----
+cache1:cache0:wtres:audio:64	----
+cache0:membus:wtres:audio:64	----
+membus:mem:wt:gfx:27	----
+cache0:membus:rdres:usb:64	----
+mem:membus:wt:gfx:27	----
+membus:gfx:upwt:gfx:27	----
+cache0:cache1:wtreq:gfx:65	----
+membus:audio:upwt:audio:27	----
+cache1:cache0:wtres:gfx:65	----
+cache0:membus:wtres:gfx:65	----
+membus:mem:rd:usb:27	----
+mem:membus:rd:usb:27	----
+membus:usb:uprd:usb:27	----
+cache0:cache1:wtreq:audio:65	----
+membus:mem:wt:gfx:28	----
+mem:membus:wt:gfx:28	----
+cache1:cache0:wtres:audio:65	----
+membus:gfx:upwt:gfx:28	----
+cache0:membus:wtres:audio:65	----
+cache0:cache1:rdreq:usb:65	----
+membus:audio:upwt:audio:28	----
+membus:mem:rd:usb:28	----
+cache1:cache0:rdres:usb:65
+cache0:membus:rdres:usb:65	----
+mem:membus:rd:usb:28	----
+membus:usb:uprd:usb:28	----
+cache0:cache1:wtreq:gfx:66	----
+membus:mem:wt:gfx:29	----
+mem:membus:wt:gfx:29	----
+membus:gfx:upwt:gfx:29	----
+cache1:cache0:wtres:gfx:66	----
+cache0:membus:wtres:gfx:66	----
+cache0:cache1:wtreq:audio:66	----
+membus:audio:upwt:audio:29	----
+membus:mem:rd:usb:29	----
+mem:membus:rd:usb:29	----
+cache1:cache0:wtres:audio:66	----
+cache0:membus:wtres:audio:66	----
+membus:usb:uprd:usb:29	----
+cache0:membus:rdres:usb:66	----
+membus:mem:wt:gfx:30	----
+mem:membus:wt:gfx:30	----
+membus:gfx:upwt:gfx:30	----
+cache0:cache1:wtreq:gfx:67	----
+cache1:cache0:wtres:gfx:67	----
+membus:audio:upwt:audio:30	----
+cache0:membus:wtres:gfx:67	----
+membus:mem:rd:usb:30	----
+mem:membus:rd:usb:30	----
+cache0:cache1:wtreq:audio:67
+membus:usb:uprd:usb:30	----
+membus:mem:wt:gfx:31	----
+cache1:cache0:wtres:audio:67
+mem:membus:wt:gfx:31	----
+cache0:membus:wtres:audio:67
+membus:gfx:upwt:gfx:31	----
+cache0:membus:rdres:usb:67	----
+cache0:cache1:wtreq:gfx:68	----
+membus:audio:upwt:audio:31	----
+membus:mem:rd:usb:31	----
+mem:membus:rd:usb:31	----
+cache1:cache0:wtres:gfx:68
+cache0:membus:wtres:gfx:68	----
+membus:usb:uprd:usb:31	----
+cache0:cache1:wtreq:audio:68	----
+membus:mem:wt:gfx:32	----
+mem:membus:wt:gfx:32	----
+membus:gfx:upwt:gfx:32	----
+cache1:cache0:wtres:audio:68	----
+cache0:membus:wtres:audio:68	----
+cache0:membus:rdres:usb:68	----
+membus:audio:upwt:audio:32	----
+membus:mem:rd:usb:32	----
+cache0:cache1:wtreq:gfx:69	----
+mem:membus:rd:usb:32	----
+membus:usb:uprd:usb:32	----
+cache1:cache0:wtres:gfx:69	----
+membus:mem:wt:gfx:33	----
+cache0:membus:wtres:gfx:69	----
+mem:membus:wt:gfx:33	----
+membus:gfx:upwt:gfx:33	----
+cache0:cache1:wtreq:audio:69	----
+membus:audio:upwt:audio:33	----
+cache1:cache0:wtres:audio:69	----
+cache0:membus:wtres:audio:69	----
+membus:mem:rd:usb:33	----
+mem:membus:rd:usb:33	----
+cache0:membus:rdres:usb:69
+membus:usb:uprd:usb:33	----
+cache0:cache1:wtreq:gfx:70	----
+membus:mem:wt:gfx:34	----
+mem:membus:wt:gfx:34	----
+membus:gfx:upwt:gfx:34	----
+cache1:cache0:wtres:gfx:70	----
+cache0:membus:wtres:gfx:70	----
+membus:audio:upwt:audio:34	----
+cache0:cache1:wtreq:audio:70	----
+membus:usb:uprd:usb:34	----
+membus:mem:wt:gfx:35	----
+cache1:cache0:wtres:audio:70
+mem:membus:wt:gfx:35	----
+cache0:membus:wtres:audio:70
+membus:gfx:upwt:gfx:35	----
+cache0:membus:rdres:usb:70	----
+cache0:cache1:wtreq:gfx:71	----
+membus:audio:upwt:audio:35	----
+membus:usb:uprd:usb:35	----
+cache1:cache0:wtres:gfx:71	----
+cache0:membus:wtres:gfx:71	----
+membus:mem:wt:gfx:36	----
+mem:membus:wt:gfx:36	----
+membus:gfx:upwt:gfx:36	----
+cache0:cache1:wtreq:audio:71	----
+cache1:cache0:wtres:audio:71	----
+membus:audio:upwt:audio:36	----
+cache0:membus:wtres:audio:71	----
+membus:usb:uprd:usb:36	----
+cache0:membus:rdres:usb:71	----
+membus:mem:wt:gfx:37	----
+mem:membus:wt:gfx:37	----
+cache0:cache1:wtreq:gfx:72	----
+membus:gfx:upwt:gfx:37	----
+cache1:cache0:wtres:gfx:72	----
+cache0:membus:wtres:gfx:72	----
+membus:audio:upwt:audio:37	----
+membus:usb:uprd:usb:37	----
+cache0:cache1:wtreq:audio:72	----
+membus:mem:wt:gfx:38	----
+mem:membus:wt:gfx:38	----
+membus:gfx:upwt:gfx:38	----
+cache1:cache0:wtres:audio:72	----
+cache0:membus:wtres:audio:72	----
+cache0:membus:rdres:usb:72	----
+membus:audio:upwt:audio:38	----
+cache0:cache1:wtreq:gfx:73	----
+membus:usb:uprd:usb:38	----
+membus:mem:wt:gfx:39	----
+mem:membus:wt:gfx:39	----
+cache1:cache0:wtres:gfx:73	----
+membus:gfx:upwt:gfx:39	----
+cache0:membus:wtres:gfx:73
+cache0:cache1:wtreq:audio:73	----
+membus:audio:upwt:audio:39	----
+membus:usb:uprd:usb:39	----
+cache1:cache0:wtres:audio:73
+cache0:membus:wtres:audio:73	----
+membus:mem:wt:gfx:40	----
+cache0:membus:rdres:usb:73	----
+mem:membus:wt:gfx:40	----
+membus:gfx:upwt:gfx:40	----
+cache0:cache1:wtreq:gfx:74	----
+membus:audio:upwt:audio:40	----
+cache1:cache0:wtres:gfx:74	----
+cache0:membus:wtres:gfx:74	----
+membus:usb:uprd:usb:40	----
+membus:mem:wt:gfx:41	----
+cache0:cache1:wtreq:audio:74	----
+mem:membus:wt:gfx:41	----
+membus:gfx:upwt:gfx:41	----
+cache1:cache0:wtres:audio:74	----
+cache0:membus:wtres:audio:74	----
+membus:audio:upwt:audio:41	----
+cache0:membus:rdres:usb:74	----
+membus:usb:uprd:usb:41	----
+cache0:cache1:wtreq:gfx:75	----
+membus:mem:wt:gfx:42	----
+mem:membus:wt:gfx:42	----
+membus:gfx:upwt:gfx:42	----
+cache1:cache0:wtres:gfx:75	----
+cache0:membus:wtres:gfx:75	----
+membus:audio:upwt:audio:42	----
+cache0:cache1:wtreq:audio:75	----
+membus:mem:rd:usb:42	----
+mem:membus:rd:usb:42	----
+cache1:cache0:wtres:audio:75	----
+membus:usb:uprd:usb:42	----
+cache0:membus:wtres:audio:75	----
+cache0:membus:rdres:usb:75	----
+membus:mem:wt:gfx:43	----
+mem:membus:wt:gfx:43	----
+membus:gfx:upwt:gfx:43	----
+cache0:cache1:wtreq:gfx:76	----
+membus:audio:upwt:audio:43	----
+cache1:cache0:wtres:gfx:76	----
+cache0:membus:wtres:gfx:76	----
+membus:usb:uprd:usb:43	----
+cache0:cache1:wtreq:audio:76	----
+membus:mem:wt:gfx:44	----
+mem:membus:wt:gfx:44	----
+membus:gfx:upwt:gfx:44	----
+cache1:cache0:wtres:audio:76	----
+cache0:membus:wtres:audio:76	----
+cache0:membus:rdres:usb:76	----
+membus:audio:upwt:audio:44	----
+membus:usb:uprd:usb:44	----
+cache0:cache1:wtreq:gfx:77	----
+membus:mem:wt:gfx:45	----
+mem:membus:wt:gfx:45	----
+membus:gfx:upwt:gfx:45	----
+cache1:cache0:wtres:gfx:77	----
+cache0:membus:wtres:gfx:77	----
+cache0:cache1:wtreq:audio:77	----
+membus:audio:upwt:audio:45	----
+membus:usb:uprd:usb:45	----
+cache1:cache0:wtres:audio:77	----
+membus:mem:wt:gfx:46	----
+cache0:membus:wtres:audio:77
+mem:membus:wt:gfx:46	----
+membus:gfx:upwt:gfx:46	----
+cache0:membus:rdres:usb:77
+cache0:cache1:wtreq:gfx:78	----
+membus:audio:upwt:audio:46	----
+membus:usb:uprd:usb:46	----
+cache1:cache0:wtres:gfx:78	----
+cache0:membus:wtres:gfx:78	----
+membus:mem:wt:gfx:47	----
+mem:membus:wt:gfx:47	----
+membus:gfx:upwt:gfx:47	----
+cache0:cache1:wtreq:audio:78
+cache1:cache0:wtres:audio:78	----
+cache0:membus:wtres:audio:78	----
+membus:audio:upwt:audio:47	----
+membus:usb:uprd:usb:47	----
+cache0:membus:rdres:usb:78
+membus:mem:wt:gfx:48	----
+mem:membus:wt:gfx:48	----
+cache0:cache1:wtreq:gfx:79	----
+membus:gfx:upwt:gfx:48	----
+cache1:cache0:wtres:gfx:79	----
+cache0:membus:wtres:gfx:79	----
+membus:audio:upwt:audio:48	----
+cache0:cache1:wtreq:audio:79	----
+membus:usb:uprd:usb:48	----
+membus:mem:wt:gfx:49	----
+mem:membus:wt:gfx:49	----
+cache1:cache0:wtres:audio:79	----
+membus:gfx:upwt:gfx:49	----
+cache0:membus:wtres:audio:79	----
+cache0:membus:rdres:usb:79	----
+membus:audio:upwt:audio:49	----
+cache0:cache1:wtreq:gfx:80	----
+membus:mem:rd:usb:49	----
+mem:membus:rd:usb:49	----
+membus:usb:uprd:usb:49	----
+cache1:cache0:wtres:gfx:80	----
+cache0:membus:wtres:gfx:80	----
+membus:mem:wt:gfx:50	----
+mem:membus:wt:gfx:50	----
+cache0:cache1:wtreq:audio:80	----
+membus:gfx:upwt:gfx:50	----
+cache1:cache0:wtres:audio:80	----
+cache0:membus:wtres:audio:80	----
+membus:audio:upwt:audio:50	----
+cache0:membus:rdres:usb:80	----
+membus:usb:uprd:usb:50	----
+membus:mem:wt:gfx:51	----
+cache0:cache1:wtreq:gfx:81	----
+mem:membus:wt:gfx:51	----
+membus:gfx:upwt:gfx:51	----
+cache1:cache0:wtres:gfx:81	----
+cache0:membus:wtres:gfx:81	----
+membus:audio:upwt:audio:51	----
+cache0:cache1:wtreq:audio:81	----
+membus:usb:uprd:usb:51	----
+membus:mem:wt:gfx:52	----
+mem:membus:wt:gfx:52	----
+cache1:cache0:wtres:audio:81
+cache0:membus:wtres:audio:81	----
+membus:gfx:upwt:gfx:52	----
+cache0:cache1:rdreq:usb:81	----
+membus:audio:upwt:audio:52	----
+cache1:cache0:rdres:usb:81	----
+membus:usb:uprd:usb:52	----
+cache0:membus:rdres:usb:81	----
+membus:mem:wt:gfx:53	----
+mem:membus:wt:gfx:53	----
+cache0:cache1:wtreq:gfx:82	----
+membus:gfx:upwt:gfx:53	----
+cache1:cache0:wtres:gfx:82	----
+cache0:membus:wtres:gfx:82	----
+membus:audio:upwt:audio:53	----
+cache0:cache1:wtreq:audio:82	----
+membus:usb:uprd:usb:53	----
+membus:mem:wt:gfx:54	----
+mem:membus:wt:gfx:54	----
+cache1:cache0:wtres:audio:82	----
+membus:gfx:upwt:gfx:54	----
+cache0:membus:wtres:audio:82	----
+cache0:membus:rdres:usb:82	----
+membus:audio:upwt:audio:54	----
+cache0:cache1:wtreq:gfx:83	----
+membus:usb:uprd:usb:54	----
+membus:mem:wt:gfx:55	----
+cache1:cache0:wtres:gfx:83	----
+mem:membus:wt:gfx:55	----
+cache0:membus:wtres:gfx:83	----
+membus:gfx:upwt:gfx:55	----
+cache0:cache1:wtreq:audio:83	----
+membus:audio:upwt:audio:55	----
+cache1:cache0:wtres:audio:83	----
+membus:usb:uprd:usb:55	----
+cache0:membus:wtres:audio:83
+membus:mem:wt:gfx:56	----
+cache0:membus:rdres:usb:83
+mem:membus:wt:gfx:56	----
+membus:gfx:upwt:gfx:56	----
+cache0:cache1:wtreq:gfx:84	----
+membus:audio:upwt:audio:56	----
+cache1:cache0:wtres:gfx:84	----
+cache0:membus:wtres:gfx:84	----
+membus:usb:uprd:usb:56	----
+cache0:cache1:wtreq:audio:84	----
+membus:mem:wt:gfx:57	----
+mem:membus:wt:gfx:57	----
+membus:gfx:upwt:gfx:57	----
+cache1:cache0:wtres:audio:84	----
+cache0:membus:wtres:audio:84	----
+cache0:membus:rdres:usb:84	----
+membus:audio:upwt:audio:57	----
+membus:usb:uprd:usb:57	----
+cache0:cache1:wtreq:gfx:85	----
+membus:mem:wt:gfx:58	----
+mem:membus:wt:gfx:58	----
+membus:gfx:upwt:gfx:58	----
+cache1:cache0:wtres:gfx:85	----
+cache0:membus:wtres:gfx:85	----
+cache0:cache1:wtreq:audio:85	----
+membus:audio:upwt:audio:58	----
+membus:usb:uprd:usb:58	----
+cache1:cache0:wtres:audio:85	----
+membus:mem:wt:gfx:59	----
+cache0:membus:wtres:audio:85
+mem:membus:wt:gfx:59	----
+membus:gfx:upwt:gfx:59	----
+cache0:membus:rdres:usb:85	----
+cache0:cache1:wtreq:gfx:86	----
+membus:audio:upwt:audio:59	----
+membus:usb:uprd:usb:59	----
+cache1:cache0:wtres:gfx:86	----
+cache0:membus:wtres:gfx:86	----
+membus:mem:wt:gfx:60	----
+mem:membus:wt:gfx:60	----
+membus:gfx:upwt:gfx:60	----
+cache0:cache1:wtreq:audio:86
+cache1:cache0:wtres:audio:86	----
+cache0:membus:wtres:audio:86	----
+membus:audio:upwt:audio:60	----
+cache0:membus:rdres:usb:86	----
+membus:usb:uprd:usb:60	----
+membus:mem:wt:gfx:61	----
+mem:membus:wt:gfx:61	----
+cache0:cache1:wtreq:gfx:87	----
+membus:gfx:upwt:gfx:61	----
+cache1:cache0:wtres:gfx:87	----
+cache0:membus:wtres:gfx:87	----
+membus:audio:upwt:audio:61	----
+cache0:cache1:wtreq:audio:87	----
+membus:usb:uprd:usb:61	----
+membus:mem:wt:gfx:62	----
+mem:membus:wt:gfx:62	----
+cache1:cache0:wtres:audio:87	----
+membus:gfx:upwt:gfx:62	----
+cache0:membus:wtres:audio:87	----
+cache0:membus:rdres:usb:87	----
+membus:audio:upwt:audio:62	----
+cache0:cache1:wtreq:gfx:88	----
+membus:usb:uprd:usb:62	----
+membus:mem:wt:gfx:63	----
+cache1:cache0:wtres:gfx:88	----
+mem:membus:wt:gfx:63	----
+cache0:membus:wtres:gfx:88	----
+membus:gfx:upwt:gfx:63	----
+cache0:cache1:wtreq:audio:88	----
+membus:audio:upwt:audio:63	----
+cache1:cache0:wtres:audio:88	----
+membus:usb:uprd:usb:63	----
+cache0:membus:wtres:audio:88
+cache0:membus:rdres:usb:88	----
+membus:mem:wt:gfx:64	----
+mem:membus:wt:gfx:64	----
+membus:gfx:upwt:gfx:64	----
+cache0:cache1:wtreq:gfx:89	----
+membus:audio:upwt:audio:64	----
+cache1:cache0:wtres:gfx:89	----
+cache0:membus:wtres:gfx:89	----
+membus:usb:uprd:usb:64	----
+cache0:cache1:wtreq:audio:89	----
+membus:mem:wt:gfx:65	----
+mem:membus:wt:gfx:65	----
+membus:gfx:upwt:gfx:65	----
+cache1:cache0:wtres:audio:89	----
+cache0:membus:wtres:audio:89	----
+cache0:membus:rdres:usb:89	----
+membus:audio:upwt:audio:65	----
+membus:mem:rd:usb:65	----
+cache0:cache1:wtreq:gfx:90	----
+mem:membus:rd:usb:65	----
+membus:usb:uprd:usb:65	----
+cache1:cache0:wtres:gfx:90	----
+membus:mem:wt:gfx:66	----
+cache0:membus:wtres:gfx:90	----
+mem:membus:wt:gfx:66	----
+membus:gfx:upwt:gfx:66	----
+cache0:cache1:wtreq:audio:90	----
+membus:audio:upwt:audio:66	----
+cache1:cache0:wtres:audio:90	----
+cache0:membus:wtres:audio:90	----
+membus:usb:uprd:usb:66	----
+cache0:membus:rdres:usb:90	----
+membus:mem:wt:gfx:67	----
+mem:membus:wt:gfx:67	----
+membus:gfx:upwt:gfx:67	----
+cache0:cache1:wtreq:gfx:91	----
+cache1:cache0:wtres:gfx:91	----
+membus:audio:upwt:audio:67	----
+cache0:membus:wtres:gfx:91	----
+membus:usb:uprd:usb:67	----
+cache0:cache1:wtreq:audio:91	----
+membus:mem:wt:gfx:68	----
+mem:membus:wt:gfx:68	----
+membus:gfx:upwt:gfx:68	----
+cache1:cache0:wtres:audio:91	----
+cache0:membus:wtres:audio:91	----
+cache0:membus:rdres:usb:91	----
+membus:audio:upwt:audio:68	----
+membus:usb:uprd:usb:68	----
+cache0:cache1:wtreq:gfx:92	----
+membus:mem:wt:gfx:69	----
+mem:membus:wt:gfx:69	----
+membus:gfx:upwt:gfx:69	----
+cache1:cache0:wtres:gfx:92
+cache0:membus:wtres:gfx:92	----
+cache0:cache1:wtreq:audio:92	----
+membus:audio:upwt:audio:69	----
+membus:usb:uprd:usb:69	----
+cache1:cache0:wtres:audio:92	----
+cache0:membus:wtres:audio:92	----
+membus:mem:wt:gfx:70	----
+mem:membus:wt:gfx:70	----
+cache0:membus:rdres:usb:92	----
+membus:gfx:upwt:gfx:70	----
+cache0:cache1:wtreq:gfx:93	----
+membus:audio:upwt:audio:70	----
+cache1:cache0:wtres:gfx:93	----
+membus:usb:uprd:usb:70	----
+cache0:membus:wtres:gfx:93	----
+membus:mem:wt:gfx:71	----
+mem:membus:wt:gfx:71	----
+cache0:cache1:wtreq:audio:93	----
+membus:gfx:upwt:gfx:71	----
+cache1:cache0:wtres:audio:93	----
+cache0:membus:wtres:audio:93	----
+membus:audio:upwt:audio:71	----
+cache0:membus:rdres:usb:93	----
+membus:usb:uprd:usb:71	----
+membus:mem:wt:gfx:72	----
+cache0:cache1:wtreq:gfx:94	----
+mem:membus:wt:gfx:72	----
+membus:gfx:upwt:gfx:72	----
+cache1:cache0:wtres:gfx:94	----
+cache0:membus:wtres:gfx:94	----
+membus:audio:upwt:audio:72	----
+cache0:cache1:wtreq:audio:94	----
+membus:usb:uprd:usb:72	----
+membus:mem:wt:gfx:73	----
+mem:membus:wt:gfx:73	----
+cache1:cache0:wtres:audio:94
+cache0:membus:wtres:audio:94	----
+membus:gfx:upwt:gfx:73	----
+cache0:membus:rdres:usb:94	----
+membus:audio:upwt:audio:73	----
+cache0:cache1:wtreq:gfx:95
+membus:usb:uprd:usb:73	----
+cache1:cache0:wtres:gfx:95	----
+membus:mem:wt:gfx:74	----
+cache0:membus:wtres:gfx:95	----
+mem:membus:wt:gfx:74	----
+membus:gfx:upwt:gfx:74	----
+cache0:cache1:wtreq:audio:95	----
+membus:audio:upwt:audio:74	----
+cache1:cache0:wtres:audio:95	----
+cache0:membus:wtres:audio:95	----
+membus:usb:uprd:usb:74	----
+cache0:membus:rdres:usb:95	----
+membus:mem:wt:gfx:75	----
+mem:membus:wt:gfx:75	----
+membus:gfx:upwt:gfx:75	----
+cache0:cache1:wtreq:gfx:96	----
+cache1:cache0:wtres:gfx:96	----
+membus:audio:upwt:audio:75	----
+cache0:membus:wtres:gfx:96	----
+membus:usb:uprd:usb:75	----
+cache0:cache1:wtreq:audio:96	----
+membus:mem:wt:gfx:76	----
+mem:membus:wt:gfx:76	----
+membus:gfx:upwt:gfx:76	----
+cache1:cache0:wtres:audio:96	----
+cache0:membus:wtres:audio:96	----
+cache0:membus:rdres:usb:96	----
+membus:audio:upwt:audio:76	----
+membus:usb:uprd:usb:76	----
+cache0:cache1:wtreq:gfx:97	----
+membus:mem:wt:gfx:77	----
+mem:membus:wt:gfx:77	----
+membus:gfx:upwt:gfx:77	----
+cache1:cache0:wtres:gfx:97
+cache0:membus:wtres:gfx:97	----
+cache0:cache1:wtreq:audio:97	----
+membus:audio:upwt:audio:77	----
+membus:usb:uprd:usb:77	----
+cache1:cache0:wtres:audio:97	----
+cache0:membus:wtres:audio:97	----
+membus:mem:wt:gfx:78	----
+mem:membus:wt:gfx:78	----
+membus:gfx:upwt:gfx:78	----
+cache0:cache1:rdreq:usb:97	----
+cache1:cache0:rdres:usb:97	----
+membus:audio:upwt:audio:78	----
+cache0:membus:rdres:usb:97
+membus:usb:uprd:usb:78	----
+cache0:cache1:wtreq:gfx:98	----
+membus:mem:wt:gfx:79	----
+mem:membus:wt:gfx:79	----
+membus:gfx:upwt:gfx:79	----
+cache1:cache0:wtres:gfx:98	----
+cache0:membus:wtres:gfx:98	----
+cache0:cache1:wtreq:audio:98	----
+membus:audio:upwt:audio:79	----
+membus:usb:uprd:usb:79	----
+cache1:cache0:wtres:audio:98	----
+membus:mem:wt:gfx:80	----
+cache0:membus:wtres:audio:98
+mem:membus:wt:gfx:80	----
+membus:gfx:upwt:gfx:80	----
+cache0:membus:rdres:usb:98	----
+cache0:cache1:wtreq:gfx:99	----
+membus:audio:upwt:audio:80	----
+membus:usb:uprd:usb:80	----
+cache1:cache0:wtres:gfx:99	----
+cache0:membus:wtres:gfx:99	----
+membus:mem:wt:gfx:81	----
+mem:membus:wt:gfx:81	----
+membus:gfx:upwt:gfx:81	----
+cache0:cache1:wtreq:audio:99
+cache1:cache0:wtres:audio:99	----
+cache0:membus:wtres:audio:99	----
+membus:audio:upwt:audio:81	----
+cache0:membus:rdres:usb:99	----
+membus:mem:rd:usb:81	----
+mem:membus:rd:usb:81	----
+membus:usb:uprd:usb:81	----
+cache0:cache1:wtreq:gfx:100	----
+membus:mem:wt:gfx:82	----
+mem:membus:wt:gfx:82	----
+membus:gfx:upwt:gfx:82	----
+cache1:cache0:wtres:gfx:100
+cache0:membus:wtres:gfx:100	----
+cache0:cache1:wtreq:audio:100	----
+membus:audio:upwt:audio:82	----
+membus:usb:uprd:usb:82	----
+cache1:cache0:wtres:audio:100	----
+cache0:membus:wtres:audio:100	----
+membus:mem:wt:gfx:83	----
+mem:membus:wt:gfx:83	----
+cache0:membus:rdres:usb:100	----
+membus:gfx:upwt:gfx:83	----
+membus:audio:upwt:audio:83	----
+membus:usb:uprd:usb:83	----
+membus:mem:wt:gfx:84	----
+mem:membus:wt:gfx:84	----
+membus:gfx:upwt:gfx:84	----
+membus:audio:upwt:audio:84	----
+membus:usb:uprd:usb:84	----
+membus:mem:wt:gfx:85	----
+mem:membus:wt:gfx:85	----
+membus:gfx:upwt:gfx:85	----
+membus:audio:upwt:audio:85	----
+membus:usb:uprd:usb:85	----
+membus:mem:wt:gfx:86	----
+mem:membus:wt:gfx:86	----
+membus:gfx:upwt:gfx:86	----
+membus:audio:upwt:audio:86	----
+membus:usb:uprd:usb:86	----
+membus:mem:wt:gfx:87	----
+mem:membus:wt:gfx:87	----
+membus:gfx:upwt:gfx:87	----
+membus:audio:upwt:audio:87	----
+membus:usb:uprd:usb:87	----
+membus:mem:wt:gfx:88	----
+mem:membus:wt:gfx:88	----
+membus:gfx:upwt:gfx:88	----
+membus:audio:upwt:audio:88	----
+membus:usb:uprd:usb:88	----
+membus:mem:wt:gfx:89	----
+mem:membus:wt:gfx:89	----
+membus:gfx:upwt:gfx:89	----
+membus:audio:upwt:audio:89	----
+membus:usb:uprd:usb:89	----
+membus:mem:wt:gfx:90	----
+mem:membus:wt:gfx:90	----
+membus:gfx:upwt:gfx:90	----
+membus:audio:upwt:audio:90	----
+membus:usb:uprd:usb:90	----
+membus:mem:wt:gfx:91	----
+mem:membus:wt:gfx:91	----
+membus:gfx:upwt:gfx:91	----
+membus:audio:upwt:audio:91	----
+membus:usb:uprd:usb:91	----
+membus:mem:wt:gfx:92	----
+mem:membus:wt:gfx:92	----
+membus:gfx:upwt:gfx:92	----
+membus:audio:upwt:audio:92	----
+membus:usb:uprd:usb:92	----
+membus:mem:wt:gfx:93	----
+mem:membus:wt:gfx:93	----
+membus:gfx:upwt:gfx:93	----
+membus:audio:upwt:audio:93	----
+membus:usb:uprd:usb:93	----
+membus:mem:wt:gfx:94	----
+mem:membus:wt:gfx:94	----
+membus:gfx:upwt:gfx:94	----
+membus:audio:upwt:audio:94	----
+membus:usb:uprd:usb:94	----
+membus:mem:wt:gfx:95	----
+mem:membus:wt:gfx:95	----
+membus:gfx:upwt:gfx:95	----
+membus:audio:upwt:audio:95	----
+membus:usb:uprd:usb:95	----
+membus:mem:wt:gfx:96	----
+mem:membus:wt:gfx:96	----
+membus:gfx:upwt:gfx:96	----
+membus:audio:upwt:audio:96	----
+membus:usb:uprd:usb:96	----
+membus:mem:wt:gfx:97	----
+mem:membus:wt:gfx:97	----
+membus:gfx:upwt:gfx:97	----
+membus:audio:upwt:audio:97	----
+membus:mem:rd:usb:97	----
+mem:membus:rd:usb:97	----
+membus:usb:uprd:usb:97	----
+membus:mem:wt:gfx:98	----
+mem:membus:wt:gfx:98	----
+membus:gfx:upwt:gfx:98	----
+membus:audio:upwt:audio:98	----
+membus:usb:uprd:usb:98	----
+membus:mem:wt:gfx:99	----
+mem:membus:wt:gfx:99	----
+membus:gfx:upwt:gfx:99	----
+membus:audio:upwt:audio:99	----
+membus:usb:uprd:usb:99	----
+membus:mem:wt:gfx:100	----
+mem:membus:wt:gfx:100	----
+membus:gfx:upwt:gfx:100	----
+membus:audio:upwt:audio:100	----
+membus:usb:uprd:usb:100	----

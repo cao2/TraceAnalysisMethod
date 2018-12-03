@@ -11,7 +11,7 @@
 #include <stdlib.h>
 #include <iostream>
 #include <fstream>
-
+#include <map>
 class msgs{
     
     
@@ -27,6 +27,7 @@ private:
     message_t last_valid[75];
     
     message_t new_msg;
+    int msg_count;
     bool addr_en;
     bool cmd;
     bool tag;
@@ -35,8 +36,10 @@ private:
     bool control;
     vector<int> traced_signal;
     vector<int> be_signal;
+	std::map<std::string, int> unique_msg;
     bool rd_en, wt_en, pwron_en,pwroff_en;
     int id_offset;
+    
 public:
     msgs() {
         num_sigs=75;
@@ -49,6 +52,7 @@ public:
         uniq_en=false;
         id_offset=0;
         rd_en= wt_en=pwron_en=pwroff_en=true;
+        msg_count = 0;
     }
     void set_cmd_en(bool x, bool y, bool a, bool b){
         rd_en=x;
@@ -240,8 +244,7 @@ public:
             be_signal.push_back(64);
             if (selec==0){
                 for (int i=0;i<75;i++)
-                    traced_signal.push_back(i);
-                
+                    traced_signal.push_back(i);         
             }
             else{
                 
@@ -632,10 +635,10 @@ public:
         if (tmp_str.at(0)=='1'){//val
             
             uint32_t linkid= stoi(tmp_str.substr(1,5),nullptr,2);
-            
+           
             new_msg.src=tst_srcs[linkid];
             new_msg.dest=tst_dests[linkid];
-                                  
+            //cout << "linkid "<<linkid << "src " <<   tst_srcs[linkid] <<" dest "<< tst_dests[linkid] <<endl;               
             //check command
             //read
             //axi monitor
@@ -701,6 +704,21 @@ public:
         
         return new_msg;
     }
+    
+    int get_msg_index(std::string tmp_str) {
+    	std::string subline = tmp_str.substr(0, 13);
+    	int rst = msg_count;
+    	if (unique_msg.find(subline) != unique_msg.end())
+    	{
+    		return unique_msg[subline];
+    	} else {
+    		unique_msg[subline] = msg_count;
+    		rst = msg_count;
+    		msg_count++;
+    	}
+    	return rst;
+    }
+    
     void parse(std::string line){
         vector<message_t>().swap(trace);
         int pl[num_sigs+4];
@@ -838,8 +856,6 @@ public:
                     new_msg.tag=0;
                     new_msg.cmd=0;
                     bool valid=false;
-                    //                        this part is commented because I can't find my tag and id anymore,
-                    //                        maybe the file is lost or something, shit!
                     if (j==17 || j==19){
                         //cout<<j<<": "<<line.substr(pl[74],39)<<endl;
                         if (tag)
